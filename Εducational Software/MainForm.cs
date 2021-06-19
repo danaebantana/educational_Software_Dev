@@ -12,9 +12,16 @@ namespace Εducational_Software
 {
     public partial class MainForm : Form
     {
+        public User user;
         public MainForm()
         {
             InitializeComponent();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            label_username.Text = user.GetName() + " " + user.GetSurname();
+        }
+
     }
 }

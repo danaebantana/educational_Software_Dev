@@ -76,6 +76,7 @@
             this.button_login.TabIndex = 3;
             this.button_login.Text = "Είσοδος";
             this.button_login.UseVisualStyleBackColor = true;
+            this.button_login.Click += new System.EventHandler(this.button_login_Click);
             // 
             // linkLabel_register
             // 
@@ -86,6 +87,7 @@
             this.linkLabel_register.TabIndex = 4;
             this.linkLabel_register.TabStop = true;
             this.linkLabel_register.Text = "Δεν έχετε λογαριασμό; Εγγραφείτε εδώ";
+            this.linkLabel_register.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_register_LinkClicked);
             // 
             // panel_login
             // 
@@ -143,7 +145,6 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mathster";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.panel_login.ResumeLayout(false);
             this.panel_login.PerformLayout();
             this.ResumeLayout(false);

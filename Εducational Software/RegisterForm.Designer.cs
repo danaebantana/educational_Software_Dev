@@ -87,6 +87,7 @@
             this.textBox_password.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_password.Location = new System.Drawing.Point(159, 69);
             this.textBox_password.Name = "textBox_password";
+            this.textBox_password.PasswordChar = '*';
             this.textBox_password.Size = new System.Drawing.Size(181, 31);
             this.textBox_password.TabIndex = 5;
             // 
@@ -183,13 +184,14 @@
             this.button_register.TabIndex = 6;
             this.button_register.Text = "Εγγραφή";
             this.button_register.UseVisualStyleBackColor = true;
+            this.button_register.Click += new System.EventHandler(this.button_register_Click);
             // 
             // button_help
             // 
             this.button_help.Location = new System.Drawing.Point(300, 397);
             this.button_help.Name = "button_help";
             this.button_help.Size = new System.Drawing.Size(49, 41);
-            this.button_help.TabIndex = 8;
+            this.button_help.TabIndex = 7;
             this.button_help.Text = "Help";
             this.button_help.UseVisualStyleBackColor = true;
             // 

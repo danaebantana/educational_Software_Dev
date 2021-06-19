@@ -45,6 +45,7 @@
             this.label_username = new System.Windows.Forms.Label();
             this.button_revisionTest = new System.Windows.Forms.Button();
             this.button_help = new System.Windows.Forms.Button();
+            this.αποσύνδεσηToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -62,7 +63,8 @@
             this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
-            this.βοήθειαToolStripMenuItem});
+            this.βοήθειαToolStripMenuItem,
+            this.αποσύνδεσηToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(692, 29);
@@ -193,6 +195,13 @@
             this.button_help.Text = "Help";
             this.button_help.UseVisualStyleBackColor = true;
             // 
+            // αποσύνδεσηToolStripMenuItem
+            // 
+            this.αποσύνδεσηToolStripMenuItem.Name = "αποσύνδεσηToolStripMenuItem";
+            this.αποσύνδεσηToolStripMenuItem.ShowShortcutKeys = false;
+            this.αποσύνδεσηToolStripMenuItem.Size = new System.Drawing.Size(124, 25);
+            this.αποσύνδεσηToolStripMenuItem.Text = "Αποσύνδεση";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -219,6 +228,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mathster";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -253,5 +263,6 @@
         private System.Windows.Forms.Button button_revisionTest;
         private System.Windows.Forms.ToolStripMenuItem βοήθειαToolStripMenuItem;
         private System.Windows.Forms.Button button_help;
+        private System.Windows.Forms.ToolStripMenuItem αποσύνδεσηToolStripMenuItem;
     }
 }

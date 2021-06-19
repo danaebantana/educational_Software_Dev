@@ -17,9 +17,32 @@ namespace Εducational_Software
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void linkLabel_register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
+            RegisterForm rf = new RegisterForm();
+            rf.ShowDialog();
+            this.Show();
+        }
 
+        private void button_login_Click(object sender, EventArgs e)
+        {
+            DataConnection conn = new DataConnection();
+            User u = conn.Login(textBox_username.Text, textBox_password.Text);
+            if (u.GetName()!=(null))
+            {
+                this.Hide();
+                MainForm main = new MainForm();
+                main.user = u;
+                main.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Ο λογαριασμός δεν βρέθηκε!");
+                textBox_username.Clear();
+                textBox_password.Clear();
+            }
         }
     }
 }
