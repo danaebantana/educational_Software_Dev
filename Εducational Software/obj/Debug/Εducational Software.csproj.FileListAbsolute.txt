@@ -1,0 +1,15 @@
+C:\Users\Danae\Desktop\Πα.Πει\8ο ΕΞΑΜΗΝΟ\ΕΚΠΑΙΔΕΥΤΙΚΟ ΛΟΓΙΣΜΙΚΟ\educational_Software_Dev\Εducational Software\bin\Debug\Εducational Software.exe.config
+C:\Users\Danae\Desktop\Πα.Πει\8ο ΕΞΑΜΗΝΟ\ΕΚΠΑΙΔΕΥΤΙΚΟ ΛΟΓΙΣΜΙΚΟ\educational_Software_Dev\Εducational Software\bin\Debug\Εducational Software.exe
+C:\Users\Danae\Desktop\Πα.Πει\8ο ΕΞΑΜΗΝΟ\ΕΚΠΑΙΔΕΥΤΙΚΟ ΛΟΓΙΣΜΙΚΟ\educational_Software_Dev\Εducational Software\bin\Debug\Εducational Software.pdb
+C:\Users\Danae\Desktop\Πα.Πει\8ο ΕΞΑΜΗΝΟ\ΕΚΠΑΙΔΕΥΤΙΚΟ ΛΟΓΙΣΜΙΚΟ\educational_Software_Dev\Εducational Software\obj\Debug\Εducational Software.csprojAssemblyReference.cache
+C:\Users\Danae\Desktop\Πα.Πει\8ο ΕΞΑΜΗΝΟ\ΕΚΠΑΙΔΕΥΤΙΚΟ ΛΟΓΙΣΜΙΚΟ\educational_Software_Dev\Εducational Software\obj\Debug\Εducational_Software.LoginForm.resources
+C:\Users\Danae\Desktop\Πα.Πει\8ο ΕΞΑΜΗΝΟ\ΕΚΠΑΙΔΕΥΤΙΚΟ ΛΟΓΙΣΜΙΚΟ\educational_Software_Dev\Εducational Software\obj\Debug\Εducational_Software.MainForm.resources
+C:\Users\Danae\Desktop\Πα.Πει\8ο ΕΞΑΜΗΝΟ\ΕΚΠΑΙΔΕΥΤΙΚΟ ΛΟΓΙΣΜΙΚΟ\educational_Software_Dev\Εducational Software\obj\Debug\Εducational_Software.ProfileForm.resources
+C:\Users\Danae\Desktop\Πα.Πει\8ο ΕΞΑΜΗΝΟ\ΕΚΠΑΙΔΕΥΤΙΚΟ ΛΟΓΙΣΜΙΚΟ\educational_Software_Dev\Εducational Software\obj\Debug\Εducational_Software.Properties.Resources.resources
+C:\Users\Danae\Desktop\Πα.Πει\8ο ΕΞΑΜΗΝΟ\ΕΚΠΑΙΔΕΥΤΙΚΟ ΛΟΓΙΣΜΙΚΟ\educational_Software_Dev\Εducational Software\obj\Debug\Εducational_Software.RegisterForm.resources
+C:\Users\Danae\Desktop\Πα.Πει\8ο ΕΞΑΜΗΝΟ\ΕΚΠΑΙΔΕΥΤΙΚΟ ΛΟΓΙΣΜΙΚΟ\educational_Software_Dev\Εducational Software\obj\Debug\Εducational_Software.TestForm.resources
+C:\Users\Danae\Desktop\Πα.Πει\8ο ΕΞΑΜΗΝΟ\ΕΚΠΑΙΔΕΥΤΙΚΟ ΛΟΓΙΣΜΙΚΟ\educational_Software_Dev\Εducational Software\obj\Debug\Εducational_Software.TheoryForm.resources
+C:\Users\Danae\Desktop\Πα.Πει\8ο ΕΞΑΜΗΝΟ\ΕΚΠΑΙΔΕΥΤΙΚΟ ΛΟΓΙΣΜΙΚΟ\educational_Software_Dev\Εducational Software\obj\Debug\Εducational Software.csproj.GenerateResource.cache
+C:\Users\Danae\Desktop\Πα.Πει\8ο ΕΞΑΜΗΝΟ\ΕΚΠΑΙΔΕΥΤΙΚΟ ΛΟΓΙΣΜΙΚΟ\educational_Software_Dev\Εducational Software\obj\Debug\Εducational Software.csproj.CoreCompileInputs.cache
+C:\Users\Danae\Desktop\Πα.Πει\8ο ΕΞΑΜΗΝΟ\ΕΚΠΑΙΔΕΥΤΙΚΟ ΛΟΓΙΣΜΙΚΟ\educational_Software_Dev\Εducational Software\obj\Debug\Εducational Software.exe
+C:\Users\Danae\Desktop\Πα.Πει\8ο ΕΞΑΜΗΝΟ\ΕΚΠΑΙΔΕΥΤΙΚΟ ΛΟΓΙΣΜΙΚΟ\educational_Software_Dev\Εducational Software\obj\Debug\Εducational Software.pdb
