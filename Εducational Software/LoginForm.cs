@@ -12,9 +12,12 @@ namespace Εducational_Software
 {
     public partial class LoginForm : Form
     {
+        private DataConnection conn;
+
         public LoginForm()
         {
             InitializeComponent();
+            conn = new DataConnection();
         }
 
         private void linkLabel_register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -27,7 +30,6 @@ namespace Εducational_Software
 
         private void button_login_Click(object sender, EventArgs e)
         {
-            DataConnection conn = new DataConnection();
             User u = conn.Login(textBox_username.Text, textBox_password.Text);
             if (u.GetName()!=(null))
             {
