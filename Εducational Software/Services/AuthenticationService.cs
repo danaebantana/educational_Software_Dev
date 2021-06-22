@@ -23,6 +23,11 @@ namespace Εducational_Software.Services
             return user;
         }
 
+        public void Logout()
+        {
+            this.user = null;
+        }
+
         public void Register(String name, String surname, String email,
                     String username, String password) 
         {

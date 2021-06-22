@@ -28,5 +28,13 @@ namespace Εducational_Software
             label_username.Text = user.GetName() + " " + user.GetSurname();
         }
 
+        private void αποσύνδεσηToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            auth.Logout();
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
+            this.Close();
+        }
     }
 }
