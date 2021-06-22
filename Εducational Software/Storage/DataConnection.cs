@@ -28,7 +28,7 @@ namespace Εducational_Software
             }
         }
 
-        public User Login(String username, String password)
+        public User GetUser(String username, String password)
         {
             User user = new User();
 
@@ -59,43 +59,55 @@ namespace Εducational_Software
             return user;
         }
 
-        public String RegisterUser(User user)
+        public void CreateUser(String name, String surname, String email, String username, String password)
         {
-            try
+            
+            using (var conn = new SQLiteConnection(@"Data Source=database.sqlite3"))
             {
-                using (var conn = new SQLiteConnection(@"Data Source=database.sqlite3"))
-                {
-                    conn.Open();
+                conn.Open();
 
-                    string sql = "INSERT INTO users(name,surname,email,username,password)" +
-                    " VALUES(@name,@surname,@email,@username,@password)";
+                // Check if the username is already in use
+                if (CheckUsername(conn,  username))
+                    throw new UserExistsException(username);
 
-                    SQLiteCommand cmd = new SQLiteCommand(sql, conn);
+                string sql = "INSERT INTO users(name,surname,email,username,password)" +
+                " VALUES(@name,@surname,@email,@username,@password)";
+                SQLiteCommand cmd = new SQLiteCommand(sql, conn);
 
-                    cmd.Parameters.AddWithValue("@name", user.GetName());
-                    cmd.Parameters.AddWithValue("@surname", user.GetSurname());
-                    cmd.Parameters.AddWithValue("@email", user.GetEmail());
-                    cmd.Parameters.AddWithValue("@username", user.GetUsername());
-                    cmd.Parameters.AddWithValue("@password", user.GetPassword());
+                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Parameters.AddWithValue("@surname", surname);
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
 
-                    cmd.Prepare();
-                    cmd.ExecuteNonQuery();
-                }
-                return "Η εγγραφή έγινε με επιτυχία!";
-            }
-            catch (SQLiteException ex)
-            {
-                //NEEDS FIXING
-                if (ex.ErrorCode.ToString().Equals("23505"))
-                {
-                    return "Το 'Όνομα Χρήστη' υπάρχει ήδη. Επέλεξε κάτι διαφορετικό!";
-                }
-                else
-                {
-                    return "Ξαφνικό σφάλμα! Προσπάθησε ξανα!";
-                }
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
             }
         }
 
+        private bool CheckUsername(SQLiteConnection conn, String username)
+        {
+            string sql = "SELECT COUNT(*) FROM users WHERE username = @username";
+            SQLiteCommand cmd = new SQLiteCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@username", username);
+            int userCount = Convert.ToInt32(cmd.ExecuteScalar());
+            return userCount > 0;
+        }
+    }
+
+    class UserExistsException : Exception
+    {
+        private String username = "";
+        public UserExistsException() { }
+
+        public UserExistsException(string username) : base(String.Format("The user \"{0}\" already exists", username)) 
+        {
+            this.username = username;
+        }
+
+        public String GetUsername()
+        {
+            return username;
+        }
     }
 }

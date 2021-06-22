@@ -71,7 +71,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataConnection.cs" />
+    <Compile Include="Services\AuthenticationService.cs" />
+    <Compile Include="Storage\DataConnection.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

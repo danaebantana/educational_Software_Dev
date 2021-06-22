@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Εducational_Software.Services;
+
 namespace Εducational_Software
 {
     public partial class RegisterForm : Form
     {
-        public RegisterForm()
+        AuthenticationService auth;
+
+        public RegisterForm(AuthenticationService auth)
         {
             InitializeComponent();
+            this.auth = auth;
         }
 
         private void button_register_Click(object sender, EventArgs e)
@@ -27,15 +32,19 @@ namespace Εducational_Software
             }
             else
             {
-                User user = new User(textBox_name.Text, textBox_surname.Text, textBox_email.Text, 
-                    textBox_username.Text, textBox_password.Text);
-                DataConnection conn = new DataConnection();
-                String result = conn.RegisterUser(user);
-                MessageBox.Show(result);
-                if(result.Equals("Η εγγραφή έγινε με επιτυχία!"))
+                try
                 {
+                    auth.Register(textBox_name.Text, textBox_surname.Text, textBox_email.Text, textBox_username.Text, textBox_password.Text);
+                    MessageBox.Show("Η εγγραφή έγινε με επιτυχία!");
                     this.Close();
-                }           
+                } catch (UserExistsException uex) 
+                {
+                    
+                    MessageBox.Show(String.Format("Ο χρήστης με όνομα \"{0}\" υπάρχει ήδη.Επέλεξε κάτι διαφορετικό", uex.GetUsername()));
+                } catch (Exception)
+                {
+                    MessageBox.Show("Ξαφνικό σφάλμα! Προσπάθησε ξανα!");
+                }      
             }
         }
     }

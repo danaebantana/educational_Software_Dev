@@ -8,38 +8,38 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Εducational_Software.Services;
+
 namespace Εducational_Software
 {
     public partial class LoginForm : Form
     {
-        private DataConnection conn;
+        private AuthenticationService auth;
 
         public LoginForm()
         {
             InitializeComponent();
-            conn = new DataConnection();
+            auth = new AuthenticationService();
         }
 
         private void linkLabel_register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            RegisterForm rf = new RegisterForm();
+            RegisterForm rf = new RegisterForm(auth);
             rf.ShowDialog();
             this.Show();
         }
 
         private void button_login_Click(object sender, EventArgs e)
         {
-            User u = conn.Login(textBox_username.Text, textBox_password.Text);
-            if (u.GetName()!=(null))
+            try
             {
+                User u = auth.Login(textBox_username.Text, textBox_password.Text);
                 this.Hide();
-                MainForm main = new MainForm();
-                main.user = u;
+                MainForm main = new MainForm(auth);
                 main.ShowDialog();
                 this.Close();
-            }
-            else
+            } catch (UserExistsException)
             {
                 MessageBox.Show("Ο λογαριασμός δεν βρέθηκε!");
                 textBox_username.Clear();
