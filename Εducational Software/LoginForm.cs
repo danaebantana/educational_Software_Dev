@@ -39,7 +39,7 @@ namespace Εducational_Software
                 MainForm main = new MainForm(auth);
                 main.ShowDialog();
                 this.Close();
-            } catch (UserExistsException)
+            } catch (InvalidCredentialsException)
             {
                 MessageBox.Show("Ο λογαριασμός δεν βρέθηκε!");
                 textBox_username.Clear();
