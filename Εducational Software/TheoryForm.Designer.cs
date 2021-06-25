@@ -30,10 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TheoryForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.πίσωToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.βοήθειαToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel_multiplicationTable = new System.Windows.Forms.Panel();
             this.label_result10 = new System.Windows.Forms.Label();
             this.label_result9 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
@@ -85,106 +84,102 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label_multiNum1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_unit = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_test = new System.Windows.Forms.Button();
             this.button_help = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label_multiTableNum = new System.Windows.Forms.Label();
+            this.pictureBox_helper = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panel_multiplicationTable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_helper)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.πίσωToolStripMenuItem,
-            this.βοήθειαToolStripMenuItem});
+            this.backToolStripMenuItem,
+            this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(692, 29);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // πίσωToolStripMenuItem
+            // backToolStripMenuItem
             // 
-            this.πίσωToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.πίσωToolStripMenuItem.Name = "πίσωToolStripMenuItem";
-            this.πίσωToolStripMenuItem.Size = new System.Drawing.Size(60, 25);
-            this.πίσωToolStripMenuItem.Text = "Πίσω";
+            this.backToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(60, 25);
+            this.backToolStripMenuItem.Text = "Πίσω";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
-            // βοήθειαToolStripMenuItem
+            // helpToolStripMenuItem
             // 
-            this.βοήθειαToolStripMenuItem.Name = "βοήθειαToolStripMenuItem";
-            this.βοήθειαToolStripMenuItem.Size = new System.Drawing.Size(82, 25);
-            this.βοήθειαToolStripMenuItem.Text = "Βοήθεια";
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(82, 25);
+            this.helpToolStripMenuItem.Text = "Βοήθεια";
             // 
-            // pictureBox1
+            // panel_multiplicationTable
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(26, 285);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 156);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label_result10);
-            this.panel1.Controls.Add(this.label_result9);
-            this.panel1.Controls.Add(this.label52);
-            this.panel1.Controls.Add(this.label47);
-            this.panel1.Controls.Add(this.label53);
-            this.panel1.Controls.Add(this.label54);
-            this.panel1.Controls.Add(this.label48);
-            this.panel1.Controls.Add(this.label_multiNum10);
-            this.panel1.Controls.Add(this.label49);
-            this.panel1.Controls.Add(this.label_multiNum9);
-            this.panel1.Controls.Add(this.label_result8);
-            this.panel1.Controls.Add(this.label42);
-            this.panel1.Controls.Add(this.label43);
-            this.panel1.Controls.Add(this.label44);
-            this.panel1.Controls.Add(this.label_multiNum8);
-            this.panel1.Controls.Add(this.label_result7);
-            this.panel1.Controls.Add(this.label37);
-            this.panel1.Controls.Add(this.label38);
-            this.panel1.Controls.Add(this.label39);
-            this.panel1.Controls.Add(this.label_multiNum7);
-            this.panel1.Controls.Add(this.label_result6);
-            this.panel1.Controls.Add(this.label32);
-            this.panel1.Controls.Add(this.label33);
-            this.panel1.Controls.Add(this.label34);
-            this.panel1.Controls.Add(this.label_multiNum6);
-            this.panel1.Controls.Add(this.label_result5);
-            this.panel1.Controls.Add(this.label27);
-            this.panel1.Controls.Add(this.label28);
-            this.panel1.Controls.Add(this.label29);
-            this.panel1.Controls.Add(this.label_multiNum5);
-            this.panel1.Controls.Add(this.label_result4);
-            this.panel1.Controls.Add(this.label22);
-            this.panel1.Controls.Add(this.label23);
-            this.panel1.Controls.Add(this.label24);
-            this.panel1.Controls.Add(this.label_multiNum4);
-            this.panel1.Controls.Add(this.label_result3);
-            this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.label_multiNum3);
-            this.panel1.Controls.Add(this.label_result2);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.label_multiNum2);
-            this.panel1.Controls.Add(this.label_result1);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label_multiNum1);
-            this.panel1.Location = new System.Drawing.Point(193, 91);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(217, 350);
-            this.panel1.TabIndex = 8;
+            this.panel_multiplicationTable.BackColor = System.Drawing.Color.Transparent;
+            this.panel_multiplicationTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_multiplicationTable.Controls.Add(this.label_result10);
+            this.panel_multiplicationTable.Controls.Add(this.label_result9);
+            this.panel_multiplicationTable.Controls.Add(this.label52);
+            this.panel_multiplicationTable.Controls.Add(this.label47);
+            this.panel_multiplicationTable.Controls.Add(this.label53);
+            this.panel_multiplicationTable.Controls.Add(this.label54);
+            this.panel_multiplicationTable.Controls.Add(this.label48);
+            this.panel_multiplicationTable.Controls.Add(this.label_multiNum10);
+            this.panel_multiplicationTable.Controls.Add(this.label49);
+            this.panel_multiplicationTable.Controls.Add(this.label_multiNum9);
+            this.panel_multiplicationTable.Controls.Add(this.label_result8);
+            this.panel_multiplicationTable.Controls.Add(this.label42);
+            this.panel_multiplicationTable.Controls.Add(this.label43);
+            this.panel_multiplicationTable.Controls.Add(this.label44);
+            this.panel_multiplicationTable.Controls.Add(this.label_multiNum8);
+            this.panel_multiplicationTable.Controls.Add(this.label_result7);
+            this.panel_multiplicationTable.Controls.Add(this.label37);
+            this.panel_multiplicationTable.Controls.Add(this.label38);
+            this.panel_multiplicationTable.Controls.Add(this.label39);
+            this.panel_multiplicationTable.Controls.Add(this.label_multiNum7);
+            this.panel_multiplicationTable.Controls.Add(this.label_result6);
+            this.panel_multiplicationTable.Controls.Add(this.label32);
+            this.panel_multiplicationTable.Controls.Add(this.label33);
+            this.panel_multiplicationTable.Controls.Add(this.label34);
+            this.panel_multiplicationTable.Controls.Add(this.label_multiNum6);
+            this.panel_multiplicationTable.Controls.Add(this.label_result5);
+            this.panel_multiplicationTable.Controls.Add(this.label27);
+            this.panel_multiplicationTable.Controls.Add(this.label28);
+            this.panel_multiplicationTable.Controls.Add(this.label29);
+            this.panel_multiplicationTable.Controls.Add(this.label_multiNum5);
+            this.panel_multiplicationTable.Controls.Add(this.label_result4);
+            this.panel_multiplicationTable.Controls.Add(this.label22);
+            this.panel_multiplicationTable.Controls.Add(this.label23);
+            this.panel_multiplicationTable.Controls.Add(this.label24);
+            this.panel_multiplicationTable.Controls.Add(this.label_multiNum4);
+            this.panel_multiplicationTable.Controls.Add(this.label_result3);
+            this.panel_multiplicationTable.Controls.Add(this.label17);
+            this.panel_multiplicationTable.Controls.Add(this.label18);
+            this.panel_multiplicationTable.Controls.Add(this.label19);
+            this.panel_multiplicationTable.Controls.Add(this.label_multiNum3);
+            this.panel_multiplicationTable.Controls.Add(this.label_result2);
+            this.panel_multiplicationTable.Controls.Add(this.label12);
+            this.panel_multiplicationTable.Controls.Add(this.label13);
+            this.panel_multiplicationTable.Controls.Add(this.label14);
+            this.panel_multiplicationTable.Controls.Add(this.label_multiNum2);
+            this.panel_multiplicationTable.Controls.Add(this.label_result1);
+            this.panel_multiplicationTable.Controls.Add(this.label9);
+            this.panel_multiplicationTable.Controls.Add(this.label8);
+            this.panel_multiplicationTable.Controls.Add(this.label7);
+            this.panel_multiplicationTable.Controls.Add(this.label_multiNum1);
+            this.panel_multiplicationTable.Location = new System.Drawing.Point(193, 91);
+            this.panel_multiplicationTable.Name = "panel_multiplicationTable";
+            this.panel_multiplicationTable.Size = new System.Drawing.Size(217, 350);
+            this.panel_multiplicationTable.TabIndex = 8;
             // 
             // label_result10
             // 
@@ -192,7 +187,7 @@
             this.label_result10.Location = new System.Drawing.Point(164, 315);
             this.label_result10.Name = "label_result10";
             this.label_result10.Size = new System.Drawing.Size(28, 21);
-            this.label_result10.TabIndex = 13;
+            this.label_result10.TabIndex = 44;
             this.label_result10.Text = "10";
             // 
             // label_result9
@@ -201,7 +196,7 @@
             this.label_result9.Location = new System.Drawing.Point(164, 282);
             this.label_result9.Name = "label_result9";
             this.label_result9.Size = new System.Drawing.Size(19, 21);
-            this.label_result9.TabIndex = 44;
+            this.label_result9.TabIndex = 39;
             this.label_result9.Text = "9";
             // 
             // label52
@@ -282,7 +277,7 @@
             this.label_result8.Location = new System.Drawing.Point(164, 247);
             this.label_result8.Name = "label_result8";
             this.label_result8.Size = new System.Drawing.Size(19, 21);
-            this.label_result8.TabIndex = 39;
+            this.label_result8.TabIndex = 34;
             this.label_result8.Text = "8";
             // 
             // label42
@@ -327,7 +322,7 @@
             this.label_result7.Location = new System.Drawing.Point(164, 213);
             this.label_result7.Name = "label_result7";
             this.label_result7.Size = new System.Drawing.Size(19, 21);
-            this.label_result7.TabIndex = 34;
+            this.label_result7.TabIndex = 29;
             this.label_result7.Text = "7";
             // 
             // label37
@@ -372,7 +367,7 @@
             this.label_result6.Location = new System.Drawing.Point(164, 180);
             this.label_result6.Name = "label_result6";
             this.label_result6.Size = new System.Drawing.Size(19, 21);
-            this.label_result6.TabIndex = 29;
+            this.label_result6.TabIndex = 24;
             this.label_result6.Text = "6";
             // 
             // label32
@@ -417,7 +412,7 @@
             this.label_result5.Location = new System.Drawing.Point(164, 145);
             this.label_result5.Name = "label_result5";
             this.label_result5.Size = new System.Drawing.Size(19, 21);
-            this.label_result5.TabIndex = 24;
+            this.label_result5.TabIndex = 19;
             this.label_result5.Text = "5";
             // 
             // label27
@@ -462,7 +457,7 @@
             this.label_result4.Location = new System.Drawing.Point(164, 112);
             this.label_result4.Name = "label_result4";
             this.label_result4.Size = new System.Drawing.Size(19, 21);
-            this.label_result4.TabIndex = 19;
+            this.label_result4.TabIndex = 14;
             this.label_result4.Text = "4";
             // 
             // label22
@@ -507,7 +502,7 @@
             this.label_result3.Location = new System.Drawing.Point(164, 80);
             this.label_result3.Name = "label_result3";
             this.label_result3.Size = new System.Drawing.Size(19, 21);
-            this.label_result3.TabIndex = 14;
+            this.label_result3.TabIndex = 13;
             this.label_result3.Text = "3";
             // 
             // label17
@@ -645,14 +640,14 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Ενότητα:";
             // 
-            // label2
+            // label_unit
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(104, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(15, 21);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "-";
+            this.label_unit.AutoSize = true;
+            this.label_unit.Location = new System.Drawing.Point(104, 91);
+            this.label_unit.Name = "label_unit";
+            this.label_unit.Size = new System.Drawing.Size(15, 21);
+            this.label_unit.TabIndex = 5;
+            this.label_unit.Text = "-";
             // 
             // label3
             // 
@@ -664,14 +659,15 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Θεωρία";
             // 
-            // button1
+            // button_test
             // 
-            this.button1.Location = new System.Drawing.Point(485, 392);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 49);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Τεστ Αυτοαξιολόγησης";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_test.Location = new System.Drawing.Point(485, 392);
+            this.button_test.Name = "button_test";
+            this.button_test.Size = new System.Drawing.Size(195, 49);
+            this.button_test.TabIndex = 0;
+            this.button_test.Text = "Τεστ Αυτοαξιολόγησης";
+            this.button_test.UseVisualStyleBackColor = true;
+            this.button_test.Click += new System.EventHandler(this.button_test_Click);
             // 
             // button_help
             // 
@@ -691,29 +687,37 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Προπαίδεια του ";
             // 
-            // label5
+            // label_multiTableNum
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(357, 60);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(15, 21);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "-";
+            this.label_multiTableNum.AutoSize = true;
+            this.label_multiTableNum.Location = new System.Drawing.Point(357, 60);
+            this.label_multiTableNum.Name = "label_multiTableNum";
+            this.label_multiTableNum.Size = new System.Drawing.Size(15, 21);
+            this.label_multiTableNum.TabIndex = 7;
+            this.label_multiTableNum.Text = "-";
+            // 
+            // pictureBox_helper
+            // 
+            this.pictureBox_helper.Location = new System.Drawing.Point(26, 286);
+            this.pictureBox_helper.Name = "pictureBox_helper";
+            this.pictureBox_helper.Size = new System.Drawing.Size(125, 155);
+            this.pictureBox_helper.TabIndex = 2;
+            this.pictureBox_helper.TabStop = false;
             // 
             // TheoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 453);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label_multiTableNum);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button_help);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_test);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label_unit);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel_multiplicationTable);
+            this.Controls.Add(this.pictureBox_helper);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -721,11 +725,12 @@
             this.Name = "TheoryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mathster";
+            this.Load += new System.EventHandler(this.TheoryForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel_multiplicationTable.ResumeLayout(false);
+            this.panel_multiplicationTable.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_helper)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -734,17 +739,17 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem πίσωToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem βοήθειαToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox_helper;
+        private System.Windows.Forms.Panel panel_multiplicationTable;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_unit;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_test;
         private System.Windows.Forms.Button button_help;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label_multiTableNum;
         private System.Windows.Forms.Label label_result9;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label48;

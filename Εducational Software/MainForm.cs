@@ -36,5 +36,18 @@ namespace Εducational_Software
             loginForm.ShowDialog();
             this.Close();
         }
+
+        private void SelectUnit(object sender, EventArgs e)
+        {
+            PictureBox clickedPictureBox = sender as PictureBox;
+            //Get the selected unit
+            string[] pictureBoxName = clickedPictureBox.Name.Split('_');
+            int unit = Int32.Parse(pictureBoxName[1]);
+
+            this.Hide();
+            TheoryForm theoryForm = new TheoryForm(auth, unit);
+            theoryForm.ShowDialog();
+            this.Close();
+        }
     }
 }

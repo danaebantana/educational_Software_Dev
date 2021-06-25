@@ -33,29 +33,29 @@
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.βοήθειαToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.αποσύνδεσηToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_9 = new System.Windows.Forms.PictureBox();
             this.label_welcome = new System.Windows.Forms.Label();
             this.label_username = new System.Windows.Forms.Label();
             this.button_revisionTest = new System.Windows.Forms.Button();
             this.button_help = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_9)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -92,77 +92,81 @@
             this.αποσύνδεσηToolStripMenuItem.Text = "Αποσύνδεση";
             this.αποσύνδεσηToolStripMenuItem.Click += new System.EventHandler(this.αποσύνδεσηToolStripMenuItem_Click);
             // 
-            // pictureBox1
+            // pictureBox_1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(251, 80);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(98, 93);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox_1.Location = new System.Drawing.Point(33, 80);
+            this.pictureBox_1.Name = "pictureBox_1";
+            this.pictureBox_1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox_1.TabIndex = 1;
+            this.pictureBox_1.TabStop = false;
+            this.pictureBox_1.Click += new System.EventHandler(this.SelectUnit);
             // 
-            // pictureBox2
+            // pictureBox_2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(398, 80);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(98, 93);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.pictureBox_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox_2.Location = new System.Drawing.Point(284, 80);
+            this.pictureBox_2.Name = "pictureBox_2";
+            this.pictureBox_2.Size = new System.Drawing.Size(98, 93);
+            this.pictureBox_2.TabIndex = 2;
+            this.pictureBox_2.TabStop = false;
+            this.pictureBox_2.Click += new System.EventHandler(this.SelectUnit);
             // 
-            // pictureBox3
+            // pictureBox_3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(544, 80);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(98, 93);
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
+            this.pictureBox_3.Location = new System.Drawing.Point(479, 59);
+            this.pictureBox_3.Name = "pictureBox_3";
+            this.pictureBox_3.Size = new System.Drawing.Size(98, 93);
+            this.pictureBox_3.TabIndex = 3;
+            this.pictureBox_3.TabStop = false;
             // 
-            // pictureBox4
+            // pictureBox_4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(251, 201);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(98, 93);
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
+            this.pictureBox_4.Location = new System.Drawing.Point(142, 201);
+            this.pictureBox_4.Name = "pictureBox_4";
+            this.pictureBox_4.Size = new System.Drawing.Size(98, 93);
+            this.pictureBox_4.TabIndex = 4;
+            this.pictureBox_4.TabStop = false;
             // 
-            // pictureBox5
+            // pictureBox_5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(398, 201);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(98, 93);
-            this.pictureBox5.TabIndex = 5;
-            this.pictureBox5.TabStop = false;
+            this.pictureBox_5.Location = new System.Drawing.Point(330, 211);
+            this.pictureBox_5.Name = "pictureBox_5";
+            this.pictureBox_5.Size = new System.Drawing.Size(98, 93);
+            this.pictureBox_5.TabIndex = 5;
+            this.pictureBox_5.TabStop = false;
             // 
-            // pictureBox6
+            // pictureBox_6
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(544, 201);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(98, 93);
-            this.pictureBox6.TabIndex = 6;
-            this.pictureBox6.TabStop = false;
+            this.pictureBox_6.Location = new System.Drawing.Point(504, 187);
+            this.pictureBox_6.Name = "pictureBox_6";
+            this.pictureBox_6.Size = new System.Drawing.Size(98, 93);
+            this.pictureBox_6.TabIndex = 6;
+            this.pictureBox_6.TabStop = false;
             // 
-            // pictureBox7
+            // pictureBox_7
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(251, 326);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(98, 93);
-            this.pictureBox7.TabIndex = 7;
-            this.pictureBox7.TabStop = false;
+            this.pictureBox_7.Location = new System.Drawing.Point(21, 284);
+            this.pictureBox_7.Name = "pictureBox_7";
+            this.pictureBox_7.Size = new System.Drawing.Size(98, 93);
+            this.pictureBox_7.TabIndex = 7;
+            this.pictureBox_7.TabStop = false;
             // 
-            // pictureBox8
+            // pictureBox_8
             // 
-            this.pictureBox8.Location = new System.Drawing.Point(398, 326);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(98, 93);
-            this.pictureBox8.TabIndex = 8;
-            this.pictureBox8.TabStop = false;
+            this.pictureBox_8.Location = new System.Drawing.Point(398, 326);
+            this.pictureBox_8.Name = "pictureBox_8";
+            this.pictureBox_8.Size = new System.Drawing.Size(98, 93);
+            this.pictureBox_8.TabIndex = 8;
+            this.pictureBox_8.TabStop = false;
             // 
-            // pictureBox9
+            // pictureBox_9
             // 
-            this.pictureBox9.Location = new System.Drawing.Point(544, 326);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(98, 93);
-            this.pictureBox9.TabIndex = 9;
-            this.pictureBox9.TabStop = false;
+            this.pictureBox_9.Location = new System.Drawing.Point(538, 317);
+            this.pictureBox_9.Name = "pictureBox_9";
+            this.pictureBox_9.Size = new System.Drawing.Size(98, 93);
+            this.pictureBox_9.TabIndex = 9;
+            this.pictureBox_9.TabStop = false;
             // 
             // label_welcome
             // 
@@ -212,15 +216,15 @@
             this.Controls.Add(this.button_revisionTest);
             this.Controls.Add(this.label_username);
             this.Controls.Add(this.label_welcome);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox_9);
+            this.Controls.Add(this.pictureBox_8);
+            this.Controls.Add(this.pictureBox_7);
+            this.Controls.Add(this.pictureBox_6);
+            this.Controls.Add(this.pictureBox_5);
+            this.Controls.Add(this.pictureBox_4);
+            this.Controls.Add(this.pictureBox_3);
+            this.Controls.Add(this.pictureBox_2);
+            this.Controls.Add(this.pictureBox_1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -232,15 +236,15 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,15 +254,15 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox_1;
+        private System.Windows.Forms.PictureBox pictureBox_2;
+        private System.Windows.Forms.PictureBox pictureBox_3;
+        private System.Windows.Forms.PictureBox pictureBox_4;
+        private System.Windows.Forms.PictureBox pictureBox_5;
+        private System.Windows.Forms.PictureBox pictureBox_6;
+        private System.Windows.Forms.PictureBox pictureBox_7;
+        private System.Windows.Forms.PictureBox pictureBox_8;
+        private System.Windows.Forms.PictureBox pictureBox_9;
         private System.Windows.Forms.Label label_welcome;
         private System.Windows.Forms.Label label_username;
         private System.Windows.Forms.Button button_revisionTest;

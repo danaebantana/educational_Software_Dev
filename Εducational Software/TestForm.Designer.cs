@@ -37,13 +37,13 @@
             this.button_help = new System.Windows.Forms.Button();
             this.label_message = new System.Windows.Forms.Label();
             this.pictureBox_message = new System.Windows.Forms.PictureBox();
-            this.pictureBox_animal = new System.Windows.Forms.PictureBox();
+            this.pictureBox_helper = new System.Windows.Forms.PictureBox();
             this.button_check = new System.Windows.Forms.Button();
             this.button_next_end = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel_test.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_message)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_animal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_helper)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -86,7 +86,7 @@
             this.panel_test.Controls.Add(this.button_help);
             this.panel_test.Controls.Add(this.label_message);
             this.panel_test.Controls.Add(this.pictureBox_message);
-            this.panel_test.Controls.Add(this.pictureBox_animal);
+            this.panel_test.Controls.Add(this.pictureBox_helper);
             this.panel_test.Controls.Add(this.button_check);
             this.panel_test.Controls.Add(this.button_next_end);
             this.panel_test.Location = new System.Drawing.Point(12, 81);
@@ -122,13 +122,13 @@
             this.pictureBox_message.TabIndex = 3;
             this.pictureBox_message.TabStop = false;
             // 
-            // pictureBox_animal
+            // pictureBox_helper
             // 
-            this.pictureBox_animal.Location = new System.Drawing.Point(23, 174);
-            this.pictureBox_animal.Name = "pictureBox_animal";
-            this.pictureBox_animal.Size = new System.Drawing.Size(125, 156);
-            this.pictureBox_animal.TabIndex = 2;
-            this.pictureBox_animal.TabStop = false;
+            this.pictureBox_helper.Location = new System.Drawing.Point(23, 174);
+            this.pictureBox_helper.Name = "pictureBox_helper";
+            this.pictureBox_helper.Size = new System.Drawing.Size(125, 155);
+            this.pictureBox_helper.TabIndex = 2;
+            this.pictureBox_helper.TabStop = false;
             // 
             // button_check
             // 
@@ -165,12 +165,13 @@
             this.Name = "TestForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mathster";
+            this.Load += new System.EventHandler(this.TestForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel_test.ResumeLayout(false);
             this.panel_test.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_message)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_animal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_helper)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,7 +186,7 @@
         private System.Windows.Forms.Button button_check;
         private System.Windows.Forms.Button button_next_end;
         private System.Windows.Forms.PictureBox pictureBox_message;
-        private System.Windows.Forms.PictureBox pictureBox_animal;
+        private System.Windows.Forms.PictureBox pictureBox_helper;
         private System.Windows.Forms.Label label_message;
         private System.Windows.Forms.Button button_help;
         private System.Windows.Forms.ToolStripMenuItem βοήθειαToolStripMenuItem;
