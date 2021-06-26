@@ -22,7 +22,7 @@ namespace Εducational_Software
             using (var conn = new SQLiteConnection("Data Source=database.sqlite3"))
             {
                 conn.Open();
-                string sql = "CREATE TABLE IF NOT EXISTS users (name varchar(32), surname varchar(32), email varchar(32), username varchar(32), password varchar(32))";
+                string sql = "CREATE TABLE IF NOT EXISTS users (id integer primary key autoincrement, name varchar(32), surname varchar(32), email varchar(32), username varchar(32), password varchar(32))";
                 SQLiteCommand cmd = new SQLiteCommand(sql, conn);
                 cmd.ExecuteNonQuery();
             }
@@ -42,19 +42,18 @@ namespace Εducational_Software
                 cmd.Parameters.AddWithValue("@password", password);
                 
                 SQLiteDataReader rdr = cmd.ExecuteReader();
-                int count = 0;
 
                 while (rdr.Read())
                 {
-                    user.SetName(rdr.GetString(0));
-                    user.SetSurname(rdr.GetString(1));
-                    user.SetEmail(rdr.GetString(2));
-                    user.SetUsername(rdr.GetString(3));
-                    user.SetPassword(rdr.GetString(4));
-                    count++;
+                    user.SetId(rdr.GetInt32(0));
+                    user.SetName(rdr.GetString(1));
+                    user.SetSurname(rdr.GetString(2));
+                    user.SetEmail(rdr.GetString(3));
+                    user.SetUsername(rdr.GetString(4));
+                    user.SetPassword(rdr.GetString(5));
                 }
                 rdr.Close();
-            }   
+            }
 
             return user;
         }

@@ -8,6 +8,7 @@ namespace Εducational_Software
 {
     public class User
     {
+        private int id;
         private string name, surname, email, username, password;
 
         public User()
@@ -15,13 +16,24 @@ namespace Εducational_Software
 
         }
 
-        public User(string _name, string _surname, string _email, string _username, string _password)
+        public User(int _id, string _name, string _surname, string _email, string _username, string _password)
         {
+            this.id = _id;
             this.name = _name;
             this.surname = _surname;
             this.email = _email;
             this.username = _username;
             this.password = _password;
+        }
+
+        public int GetId()
+        {
+            return this.id;
+        }
+
+        public void SetId(int _id)
+        {
+            this.id= _id;
         }
 
         public string GetName()
