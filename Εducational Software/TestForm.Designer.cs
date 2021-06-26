@@ -34,45 +34,45 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label_Test = new System.Windows.Forms.Label();
             this.panel_testForm = new System.Windows.Forms.Panel();
-            this.button_help = new System.Windows.Forms.Button();
-            this.label_message = new System.Windows.Forms.Label();
-            this.pictureBox_message = new System.Windows.Forms.PictureBox();
-            this.pictureBox_helper = new System.Windows.Forms.PictureBox();
-            this.button_check = new System.Windows.Forms.Button();
-            this.button_next_end = new System.Windows.Forms.Button();
-            this.button_start = new System.Windows.Forms.Button();
             this.panel_test = new System.Windows.Forms.Panel();
-            this.label_number1 = new System.Windows.Forms.Label();
-            this.label_multi = new System.Windows.Forms.Label();
-            this.label_number2 = new System.Windows.Forms.Label();
-            this.label_equal = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel_fillTheBlank = new System.Windows.Forms.Panel();
             this.panel_trueOrFalse = new System.Windows.Forms.Panel();
+            this.radioButton_false = new System.Windows.Forms.RadioButton();
+            this.radioButton_true = new System.Windows.Forms.RadioButton();
+            this.label_numberC = new System.Windows.Forms.Label();
             this.label_numberA = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label_numberB = new System.Windows.Forms.Label();
-            this.label_result = new System.Windows.Forms.Label();
-            this.radioButton_true = new System.Windows.Forms.RadioButton();
-            this.radioButton_false = new System.Windows.Forms.RadioButton();
-            this.panel_multiplyChoice = new System.Windows.Forms.Panel();
+            this.panel_multipleChoice = new System.Windows.Forms.Panel();
+            this.radioButton_choice3 = new System.Windows.Forms.RadioButton();
             this.radioButton_choice2 = new System.Windows.Forms.RadioButton();
             this.radioButton_choice1 = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label_numberIII = new System.Windows.Forms.Label();
+            this.label_numberI = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.radioButton_choice3 = new System.Windows.Forms.RadioButton();
+            this.label_numberII = new System.Windows.Forms.Label();
+            this.panel_fillTheBlank = new System.Windows.Forms.Panel();
+            this.textBox_result = new System.Windows.Forms.TextBox();
+            this.label_number1 = new System.Windows.Forms.Label();
+            this.label_equal = new System.Windows.Forms.Label();
+            this.label_multi = new System.Windows.Forms.Label();
+            this.label_number2 = new System.Windows.Forms.Label();
+            this.button_start = new System.Windows.Forms.Button();
+            this.button_check = new System.Windows.Forms.Button();
+            this.button_next_end = new System.Windows.Forms.Button();
+            this.button_help = new System.Windows.Forms.Button();
+            this.label_message = new System.Windows.Forms.Label();
+            this.pictureBox_message = new System.Windows.Forms.PictureBox();
+            this.pictureBox_helper = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.panel_testForm.SuspendLayout();
+            this.panel_test.SuspendLayout();
+            this.panel_trueOrFalse.SuspendLayout();
+            this.panel_multipleChoice.SuspendLayout();
+            this.panel_fillTheBlank.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_message)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_helper)).BeginInit();
-            this.panel_test.SuspendLayout();
-            this.panel_fillTheBlank.SuspendLayout();
-            this.panel_trueOrFalse.SuspendLayout();
-            this.panel_multiplyChoice.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -121,167 +121,71 @@
             this.panel_testForm.Name = "panel_testForm";
             this.panel_testForm.Size = new System.Drawing.Size(668, 360);
             this.panel_testForm.TabIndex = 2;
-            // 
-            // button_help
-            // 
-            this.button_help.Location = new System.Drawing.Point(165, 304);
-            this.button_help.Name = "button_help";
-            this.button_help.Size = new System.Drawing.Size(46, 36);
-            this.button_help.TabIndex = 8;
-            this.button_help.Text = "Help";
-            this.button_help.UseVisualStyleBackColor = true;
-            // 
-            // label_message
-            // 
-            this.label_message.AutoSize = true;
-            this.label_message.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_message.Location = new System.Drawing.Point(44, 71);
-            this.label_message.Name = "label_message";
-            this.label_message.Size = new System.Drawing.Size(145, 23);
-            this.label_message.TabIndex = 4;
-            this.label_message.Text = "Καλή επιτυχία!";
-            // 
-            // pictureBox_message
-            // 
-            this.pictureBox_message.BackgroundImage = global::Εducational_Software.Properties.Resources.messageCloud;
-            this.pictureBox_message.Location = new System.Drawing.Point(23, 34);
-            this.pictureBox_message.Name = "pictureBox_message";
-            this.pictureBox_message.Size = new System.Drawing.Size(188, 127);
-            this.pictureBox_message.TabIndex = 3;
-            this.pictureBox_message.TabStop = false;
-            // 
-            // pictureBox_helper
-            // 
-            this.pictureBox_helper.Location = new System.Drawing.Point(23, 185);
-            this.pictureBox_helper.Name = "pictureBox_helper";
-            this.pictureBox_helper.Size = new System.Drawing.Size(125, 155);
-            this.pictureBox_helper.TabIndex = 2;
-            this.pictureBox_helper.TabStop = false;
-            // 
-            // button_check
-            // 
-            this.button_check.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button_check.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_check.Location = new System.Drawing.Point(3, 259);
-            this.button_check.Name = "button_check";
-            this.button_check.Size = new System.Drawing.Size(98, 47);
-            this.button_check.TabIndex = 0;
-            this.button_check.Text = "Έλεγχος";
-            this.button_check.UseVisualStyleBackColor = false;
-            this.button_check.Visible = false;
-            // 
-            // button_next_end
-            // 
-            this.button_next_end.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.button_next_end.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_next_end.Location = new System.Drawing.Point(333, 259);
-            this.button_next_end.Name = "button_next_end";
-            this.button_next_end.Size = new System.Drawing.Size(103, 47);
-            this.button_next_end.TabIndex = 1;
-            this.button_next_end.Text = "Επόμενο";
-            this.button_next_end.UseVisualStyleBackColor = false;
-            this.button_next_end.Visible = false;
-            // 
-            // button_start
-            // 
-            this.button_start.BackColor = System.Drawing.Color.YellowGreen;
-            this.button_start.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_start.Location = new System.Drawing.Point(171, 210);
-            this.button_start.Name = "button_start";
-            this.button_start.Size = new System.Drawing.Size(116, 50);
-            this.button_start.TabIndex = 9;
-            this.button_start.Text = "Έναρξη";
-            this.button_start.UseVisualStyleBackColor = false;
-            this.button_start.Click += new System.EventHandler(this.button_start_Click);
+            this.panel_testForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_testForm_Paint);
             // 
             // panel_test
             // 
+            this.panel_test.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_test.Controls.Add(this.panel_trueOrFalse);
-            this.panel_test.Controls.Add(this.panel_multiplyChoice);
+            this.panel_test.Controls.Add(this.panel_multipleChoice);
             this.panel_test.Controls.Add(this.panel_fillTheBlank);
             this.panel_test.Controls.Add(this.button_start);
             this.panel_test.Controls.Add(this.button_check);
             this.panel_test.Controls.Add(this.button_next_end);
-            this.panel_test.Location = new System.Drawing.Point(220, 34);
+            this.panel_test.Location = new System.Drawing.Point(217, 34);
             this.panel_test.Name = "panel_test";
             this.panel_test.Size = new System.Drawing.Size(436, 306);
             this.panel_test.TabIndex = 10;
-            // 
-            // label_number1
-            // 
-            this.label_number1.AutoSize = true;
-            this.label_number1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_number1.Location = new System.Drawing.Point(32, 23);
-            this.label_number1.Name = "label_number1";
-            this.label_number1.Size = new System.Drawing.Size(20, 22);
-            this.label_number1.TabIndex = 2;
-            this.label_number1.Text = "_";
-            // 
-            // label_multi
-            // 
-            this.label_multi.AutoSize = true;
-            this.label_multi.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_multi.Location = new System.Drawing.Point(78, 22);
-            this.label_multi.Name = "label_multi";
-            this.label_multi.Size = new System.Drawing.Size(19, 22);
-            this.label_multi.TabIndex = 3;
-            this.label_multi.Text = "*";
-            // 
-            // label_number2
-            // 
-            this.label_number2.AutoSize = true;
-            this.label_number2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_number2.Location = new System.Drawing.Point(121, 23);
-            this.label_number2.Name = "label_number2";
-            this.label_number2.Size = new System.Drawing.Size(20, 22);
-            this.label_number2.TabIndex = 4;
-            this.label_number2.Text = "_";
-            // 
-            // label_equal
-            // 
-            this.label_equal.AutoSize = true;
-            this.label_equal.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_equal.Location = new System.Drawing.Point(170, 23);
-            this.label_equal.Name = "label_equal";
-            this.label_equal.Size = new System.Drawing.Size(22, 22);
-            this.label_equal.TabIndex = 5;
-            this.label_equal.Text = "=";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(219, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(40, 31);
-            this.textBox1.TabIndex = 6;
-            // 
-            // panel_fillTheBlank
-            // 
-            this.panel_fillTheBlank.Controls.Add(this.textBox1);
-            this.panel_fillTheBlank.Controls.Add(this.label_number1);
-            this.panel_fillTheBlank.Controls.Add(this.label_equal);
-            this.panel_fillTheBlank.Controls.Add(this.label_multi);
-            this.panel_fillTheBlank.Controls.Add(this.label_number2);
-            this.panel_fillTheBlank.Location = new System.Drawing.Point(94, 3);
-            this.panel_fillTheBlank.Name = "panel_fillTheBlank";
-            this.panel_fillTheBlank.Size = new System.Drawing.Size(279, 66);
-            this.panel_fillTheBlank.TabIndex = 7;
-            this.panel_fillTheBlank.Visible = false;
+            this.panel_test.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_test_Paint);
             // 
             // panel_trueOrFalse
             // 
             this.panel_trueOrFalse.Controls.Add(this.radioButton_false);
             this.panel_trueOrFalse.Controls.Add(this.radioButton_true);
-            this.panel_trueOrFalse.Controls.Add(this.label_result);
+            this.panel_trueOrFalse.Controls.Add(this.label_numberC);
             this.panel_trueOrFalse.Controls.Add(this.label_numberA);
             this.panel_trueOrFalse.Controls.Add(this.label2);
             this.panel_trueOrFalse.Controls.Add(this.label3);
             this.panel_trueOrFalse.Controls.Add(this.label_numberB);
-            this.panel_trueOrFalse.Location = new System.Drawing.Point(95, 108);
+            this.panel_trueOrFalse.Location = new System.Drawing.Point(81, 81);
             this.panel_trueOrFalse.Name = "panel_trueOrFalse";
-            this.panel_trueOrFalse.Size = new System.Drawing.Size(279, 96);
+            this.panel_trueOrFalse.Size = new System.Drawing.Size(279, 110);
             this.panel_trueOrFalse.TabIndex = 8;
             this.panel_trueOrFalse.Visible = false;
+            // 
+            // radioButton_false
+            // 
+            this.radioButton_false.AutoSize = true;
+            this.radioButton_false.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton_false.Location = new System.Drawing.Point(180, 68);
+            this.radioButton_false.Name = "radioButton_false";
+            this.radioButton_false.Size = new System.Drawing.Size(79, 25);
+            this.radioButton_false.TabIndex = 15;
+            this.radioButton_false.TabStop = true;
+            this.radioButton_false.Text = "Λάθος";
+            this.radioButton_false.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_true
+            // 
+            this.radioButton_true.AutoSize = true;
+            this.radioButton_true.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton_true.Location = new System.Drawing.Point(21, 68);
+            this.radioButton_true.Name = "radioButton_true";
+            this.radioButton_true.Size = new System.Drawing.Size(76, 25);
+            this.radioButton_true.TabIndex = 14;
+            this.radioButton_true.TabStop = true;
+            this.radioButton_true.Text = "Σωστό";
+            this.radioButton_true.UseVisualStyleBackColor = true;
+            // 
+            // label_numberC
+            // 
+            this.label_numberC.AutoSize = true;
+            this.label_numberC.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_numberC.Location = new System.Drawing.Point(228, 23);
+            this.label_numberC.Name = "label_numberC";
+            this.label_numberC.Size = new System.Drawing.Size(20, 22);
+            this.label_numberC.TabIndex = 11;
+            this.label_numberC.Text = "_";
             // 
             // label_numberA
             // 
@@ -323,55 +227,34 @@
             this.label_numberB.TabIndex = 9;
             this.label_numberB.Text = "_";
             // 
-            // label_result
+            // panel_multipleChoice
             // 
-            this.label_result.AutoSize = true;
-            this.label_result.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_result.Location = new System.Drawing.Point(228, 23);
-            this.label_result.Name = "label_result";
-            this.label_result.Size = new System.Drawing.Size(20, 22);
-            this.label_result.TabIndex = 11;
-            this.label_result.Text = "_";
+            this.panel_multipleChoice.Controls.Add(this.radioButton_choice3);
+            this.panel_multipleChoice.Controls.Add(this.radioButton_choice2);
+            this.panel_multipleChoice.Controls.Add(this.radioButton_choice1);
+            this.panel_multipleChoice.Controls.Add(this.label_numberIII);
+            this.panel_multipleChoice.Controls.Add(this.label_numberI);
+            this.panel_multipleChoice.Controls.Add(this.label5);
+            this.panel_multipleChoice.Controls.Add(this.label6);
+            this.panel_multipleChoice.Controls.Add(this.label_numberII);
+            this.panel_multipleChoice.Location = new System.Drawing.Point(81, 95);
+            this.panel_multipleChoice.Name = "panel_multipleChoice";
+            this.panel_multipleChoice.Size = new System.Drawing.Size(279, 96);
+            this.panel_multipleChoice.TabIndex = 9;
+            this.panel_multipleChoice.Visible = false;
             // 
-            // radioButton_true
+            // radioButton_choice3
             // 
-            this.radioButton_true.AutoSize = true;
-            this.radioButton_true.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_true.Location = new System.Drawing.Point(21, 68);
-            this.radioButton_true.Name = "radioButton_true";
-            this.radioButton_true.Size = new System.Drawing.Size(76, 25);
-            this.radioButton_true.TabIndex = 14;
-            this.radioButton_true.TabStop = true;
-            this.radioButton_true.Text = "Σωστό";
-            this.radioButton_true.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_false
-            // 
-            this.radioButton_false.AutoSize = true;
-            this.radioButton_false.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_false.Location = new System.Drawing.Point(180, 68);
-            this.radioButton_false.Name = "radioButton_false";
-            this.radioButton_false.Size = new System.Drawing.Size(79, 25);
-            this.radioButton_false.TabIndex = 15;
-            this.radioButton_false.TabStop = true;
-            this.radioButton_false.Text = "Λάθος";
-            this.radioButton_false.UseVisualStyleBackColor = true;
-            // 
-            // panel_multiplyChoice
-            // 
-            this.panel_multiplyChoice.Controls.Add(this.radioButton_choice3);
-            this.panel_multiplyChoice.Controls.Add(this.radioButton_choice2);
-            this.panel_multiplyChoice.Controls.Add(this.radioButton_choice1);
-            this.panel_multiplyChoice.Controls.Add(this.label1);
-            this.panel_multiplyChoice.Controls.Add(this.label4);
-            this.panel_multiplyChoice.Controls.Add(this.label5);
-            this.panel_multiplyChoice.Controls.Add(this.label6);
-            this.panel_multiplyChoice.Controls.Add(this.label7);
-            this.panel_multiplyChoice.Location = new System.Drawing.Point(75, 50);
-            this.panel_multiplyChoice.Name = "panel_multiplyChoice";
-            this.panel_multiplyChoice.Size = new System.Drawing.Size(279, 96);
-            this.panel_multiplyChoice.TabIndex = 9;
-            this.panel_multiplyChoice.Visible = false;
+            this.radioButton_choice3.AutoSize = true;
+            this.radioButton_choice3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton_choice3.Location = new System.Drawing.Point(232, 68);
+            this.radioButton_choice3.Name = "radioButton_choice3";
+            this.radioButton_choice3.Size = new System.Drawing.Size(36, 25);
+            this.radioButton_choice3.TabIndex = 16;
+            this.radioButton_choice3.TabStop = true;
+            this.radioButton_choice3.Text = "_";
+            this.radioButton_choice3.UseVisualStyleBackColor = true;
+            this.radioButton_choice3.CheckedChanged += new System.EventHandler(this.radiobutton_choice_Checked);
             // 
             // radioButton_choice2
             // 
@@ -384,6 +267,7 @@
             this.radioButton_choice2.TabStop = true;
             this.radioButton_choice2.Text = "_";
             this.radioButton_choice2.UseVisualStyleBackColor = true;
+            this.radioButton_choice2.CheckedChanged += new System.EventHandler(this.radiobutton_choice_Checked);
             // 
             // radioButton_choice1
             // 
@@ -396,26 +280,27 @@
             this.radioButton_choice1.TabStop = true;
             this.radioButton_choice1.Text = "_";
             this.radioButton_choice1.UseVisualStyleBackColor = true;
+            this.radioButton_choice1.CheckedChanged += new System.EventHandler(this.radiobutton_choice_Checked);
             // 
-            // label1
+            // label_numberIII
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(228, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 22);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "_";
+            this.label_numberIII.AutoSize = true;
+            this.label_numberIII.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_numberIII.Location = new System.Drawing.Point(228, 23);
+            this.label_numberIII.Name = "label_numberIII";
+            this.label_numberIII.Size = new System.Drawing.Size(20, 22);
+            this.label_numberIII.TabIndex = 11;
+            this.label_numberIII.Text = "_";
             // 
-            // label4
+            // label_numberI
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(26, 23);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(20, 22);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "_";
+            this.label_numberI.AutoSize = true;
+            this.label_numberI.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_numberI.Location = new System.Drawing.Point(26, 23);
+            this.label_numberI.Name = "label_numberI";
+            this.label_numberI.Size = new System.Drawing.Size(20, 22);
+            this.label_numberI.TabIndex = 7;
+            this.label_numberI.Text = "_";
             // 
             // label5
             // 
@@ -437,27 +322,150 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "*";
             // 
-            // label7
+            // label_numberII
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(115, 23);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(20, 22);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "_";
+            this.label_numberII.AutoSize = true;
+            this.label_numberII.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_numberII.Location = new System.Drawing.Point(115, 23);
+            this.label_numberII.Name = "label_numberII";
+            this.label_numberII.Size = new System.Drawing.Size(20, 22);
+            this.label_numberII.TabIndex = 9;
+            this.label_numberII.Text = "_";
             // 
-            // radioButton_choice3
+            // panel_fillTheBlank
             // 
-            this.radioButton_choice3.AutoSize = true;
-            this.radioButton_choice3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_choice3.Location = new System.Drawing.Point(232, 68);
-            this.radioButton_choice3.Name = "radioButton_choice3";
-            this.radioButton_choice3.Size = new System.Drawing.Size(36, 25);
-            this.radioButton_choice3.TabIndex = 16;
-            this.radioButton_choice3.TabStop = true;
-            this.radioButton_choice3.Text = "_";
-            this.radioButton_choice3.UseVisualStyleBackColor = true;
+            this.panel_fillTheBlank.Controls.Add(this.textBox_result);
+            this.panel_fillTheBlank.Controls.Add(this.label_number1);
+            this.panel_fillTheBlank.Controls.Add(this.label_equal);
+            this.panel_fillTheBlank.Controls.Add(this.label_multi);
+            this.panel_fillTheBlank.Controls.Add(this.label_number2);
+            this.panel_fillTheBlank.Location = new System.Drawing.Point(81, 115);
+            this.panel_fillTheBlank.Name = "panel_fillTheBlank";
+            this.panel_fillTheBlank.Size = new System.Drawing.Size(279, 66);
+            this.panel_fillTheBlank.TabIndex = 7;
+            this.panel_fillTheBlank.Visible = false;
+            // 
+            // textBox_result
+            // 
+            this.textBox_result.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_result.Location = new System.Drawing.Point(219, 20);
+            this.textBox_result.Name = "textBox_result";
+            this.textBox_result.Size = new System.Drawing.Size(40, 31);
+            this.textBox_result.TabIndex = 6;
+            // 
+            // label_number1
+            // 
+            this.label_number1.AutoSize = true;
+            this.label_number1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_number1.Location = new System.Drawing.Point(32, 23);
+            this.label_number1.Name = "label_number1";
+            this.label_number1.Size = new System.Drawing.Size(20, 22);
+            this.label_number1.TabIndex = 2;
+            this.label_number1.Text = "_";
+            // 
+            // label_equal
+            // 
+            this.label_equal.AutoSize = true;
+            this.label_equal.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_equal.Location = new System.Drawing.Point(170, 23);
+            this.label_equal.Name = "label_equal";
+            this.label_equal.Size = new System.Drawing.Size(22, 22);
+            this.label_equal.TabIndex = 5;
+            this.label_equal.Text = "=";
+            // 
+            // label_multi
+            // 
+            this.label_multi.AutoSize = true;
+            this.label_multi.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_multi.Location = new System.Drawing.Point(78, 22);
+            this.label_multi.Name = "label_multi";
+            this.label_multi.Size = new System.Drawing.Size(19, 22);
+            this.label_multi.TabIndex = 3;
+            this.label_multi.Text = "*";
+            // 
+            // label_number2
+            // 
+            this.label_number2.AutoSize = true;
+            this.label_number2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_number2.Location = new System.Drawing.Point(121, 23);
+            this.label_number2.Name = "label_number2";
+            this.label_number2.Size = new System.Drawing.Size(20, 22);
+            this.label_number2.TabIndex = 4;
+            this.label_number2.Text = "_";
+            // 
+            // button_start
+            // 
+            this.button_start.BackColor = System.Drawing.Color.YellowGreen;
+            this.button_start.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_start.Location = new System.Drawing.Point(162, 119);
+            this.button_start.Name = "button_start";
+            this.button_start.Size = new System.Drawing.Size(116, 50);
+            this.button_start.TabIndex = 9;
+            this.button_start.Text = "Έναρξη";
+            this.button_start.UseVisualStyleBackColor = false;
+            this.button_start.Click += new System.EventHandler(this.button_start_Click);
+            // 
+            // button_check
+            // 
+            this.button_check.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button_check.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_check.Location = new System.Drawing.Point(3, 259);
+            this.button_check.Name = "button_check";
+            this.button_check.Size = new System.Drawing.Size(98, 47);
+            this.button_check.TabIndex = 0;
+            this.button_check.Text = "Έλεγχος";
+            this.button_check.UseVisualStyleBackColor = false;
+            this.button_check.Visible = false;
+            this.button_check.Click += new System.EventHandler(this.button_check_Click);
+            // 
+            // button_next_end
+            // 
+            this.button_next_end.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.button_next_end.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_next_end.Location = new System.Drawing.Point(333, 259);
+            this.button_next_end.Name = "button_next_end";
+            this.button_next_end.Size = new System.Drawing.Size(103, 47);
+            this.button_next_end.TabIndex = 1;
+            this.button_next_end.Text = "Επόμενο";
+            this.button_next_end.UseVisualStyleBackColor = false;
+            this.button_next_end.Visible = false;
+            this.button_next_end.Click += new System.EventHandler(this.button_next_end_Click);
+            // 
+            // button_help
+            // 
+            this.button_help.Location = new System.Drawing.Point(165, 304);
+            this.button_help.Name = "button_help";
+            this.button_help.Size = new System.Drawing.Size(46, 36);
+            this.button_help.TabIndex = 8;
+            this.button_help.Text = "Help";
+            this.button_help.UseVisualStyleBackColor = true;
+            // 
+            // label_message
+            // 
+            this.label_message.AutoSize = true;
+            this.label_message.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_message.Location = new System.Drawing.Point(44, 71);
+            this.label_message.Name = "label_message";
+            this.label_message.Size = new System.Drawing.Size(145, 23);
+            this.label_message.TabIndex = 4;
+            this.label_message.Text = "Καλή επιτυχία!";
+            // 
+            // pictureBox_message
+            // 
+            this.pictureBox_message.BackgroundImage = global::Εducational_Software.Properties.Resources.messageCloud;
+            this.pictureBox_message.Location = new System.Drawing.Point(23, 34);
+            this.pictureBox_message.Name = "pictureBox_message";
+            this.pictureBox_message.Size = new System.Drawing.Size(188, 127);
+            this.pictureBox_message.TabIndex = 3;
+            this.pictureBox_message.TabStop = false;
+            // 
+            // pictureBox_helper
+            // 
+            this.pictureBox_helper.Location = new System.Drawing.Point(23, 185);
+            this.pictureBox_helper.Name = "pictureBox_helper";
+            this.pictureBox_helper.Size = new System.Drawing.Size(125, 155);
+            this.pictureBox_helper.TabIndex = 2;
+            this.pictureBox_helper.TabStop = false;
             // 
             // TestForm
             // 
@@ -479,15 +487,15 @@
             this.menuStrip1.PerformLayout();
             this.panel_testForm.ResumeLayout(false);
             this.panel_testForm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_message)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_helper)).EndInit();
             this.panel_test.ResumeLayout(false);
-            this.panel_fillTheBlank.ResumeLayout(false);
-            this.panel_fillTheBlank.PerformLayout();
             this.panel_trueOrFalse.ResumeLayout(false);
             this.panel_trueOrFalse.PerformLayout();
-            this.panel_multiplyChoice.ResumeLayout(false);
-            this.panel_multiplyChoice.PerformLayout();
+            this.panel_multipleChoice.ResumeLayout(false);
+            this.panel_multipleChoice.PerformLayout();
+            this.panel_fillTheBlank.ResumeLayout(false);
+            this.panel_fillTheBlank.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_message)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_helper)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -514,22 +522,22 @@
         private System.Windows.Forms.Label label_number1;
         private System.Windows.Forms.Panel panel_trueOrFalse;
         private System.Windows.Forms.Panel panel_fillTheBlank;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_result;
         private System.Windows.Forms.Label label_numberA;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label_numberB;
-        private System.Windows.Forms.Label label_result;
+        private System.Windows.Forms.Label label_numberC;
         private System.Windows.Forms.RadioButton radioButton_false;
         private System.Windows.Forms.RadioButton radioButton_true;
-        private System.Windows.Forms.Panel panel_multiplyChoice;
+        private System.Windows.Forms.Panel panel_multipleChoice;
         private System.Windows.Forms.RadioButton radioButton_choice2;
         private System.Windows.Forms.RadioButton radioButton_choice1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label_numberIII;
+        private System.Windows.Forms.Label label_numberI;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label_numberII;
         private System.Windows.Forms.RadioButton radioButton_choice3;
     }
 }
