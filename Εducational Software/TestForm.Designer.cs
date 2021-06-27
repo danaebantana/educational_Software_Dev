@@ -59,20 +59,19 @@
             this.label_multi = new System.Windows.Forms.Label();
             this.label_number2 = new System.Windows.Forms.Label();
             this.button_start = new System.Windows.Forms.Button();
-            this.button_check = new System.Windows.Forms.Button();
             this.button_next_end = new System.Windows.Forms.Button();
             this.button_help = new System.Windows.Forms.Button();
+            this.pictureBox_helper = new System.Windows.Forms.PictureBox();
             this.label_message = new System.Windows.Forms.Label();
             this.pictureBox_message = new System.Windows.Forms.PictureBox();
-            this.pictureBox_helper = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.panel_testForm.SuspendLayout();
             this.panel_test.SuspendLayout();
             this.panel_trueOrFalse.SuspendLayout();
             this.panel_multipleChoice.SuspendLayout();
             this.panel_fillTheBlank.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_message)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_helper)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_message)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -93,6 +92,7 @@
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.Size = new System.Drawing.Size(60, 25);
             this.backToolStripMenuItem.Text = "Πίσω";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -113,15 +113,14 @@
             // panel_testForm
             // 
             this.panel_testForm.Controls.Add(this.panel_test);
-            this.panel_testForm.Controls.Add(this.button_help);
             this.panel_testForm.Controls.Add(this.label_message);
-            this.panel_testForm.Controls.Add(this.pictureBox_message);
+            this.panel_testForm.Controls.Add(this.button_help);
             this.panel_testForm.Controls.Add(this.pictureBox_helper);
+            this.panel_testForm.Controls.Add(this.pictureBox_message);
             this.panel_testForm.Location = new System.Drawing.Point(12, 81);
             this.panel_testForm.Name = "panel_testForm";
             this.panel_testForm.Size = new System.Drawing.Size(668, 360);
             this.panel_testForm.TabIndex = 2;
-            this.panel_testForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_testForm_Paint);
             // 
             // panel_test
             // 
@@ -130,13 +129,11 @@
             this.panel_test.Controls.Add(this.panel_multipleChoice);
             this.panel_test.Controls.Add(this.panel_fillTheBlank);
             this.panel_test.Controls.Add(this.button_start);
-            this.panel_test.Controls.Add(this.button_check);
             this.panel_test.Controls.Add(this.button_next_end);
             this.panel_test.Location = new System.Drawing.Point(217, 34);
             this.panel_test.Name = "panel_test";
             this.panel_test.Size = new System.Drawing.Size(436, 306);
             this.panel_test.TabIndex = 10;
-            this.panel_test.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_test_Paint);
             // 
             // panel_trueOrFalse
             // 
@@ -147,7 +144,7 @@
             this.panel_trueOrFalse.Controls.Add(this.label2);
             this.panel_trueOrFalse.Controls.Add(this.label3);
             this.panel_trueOrFalse.Controls.Add(this.label_numberB);
-            this.panel_trueOrFalse.Location = new System.Drawing.Point(81, 81);
+            this.panel_trueOrFalse.Location = new System.Drawing.Point(81, 89);
             this.panel_trueOrFalse.Name = "panel_trueOrFalse";
             this.panel_trueOrFalse.Size = new System.Drawing.Size(279, 110);
             this.panel_trueOrFalse.TabIndex = 8;
@@ -237,7 +234,7 @@
             this.panel_multipleChoice.Controls.Add(this.label5);
             this.panel_multipleChoice.Controls.Add(this.label6);
             this.panel_multipleChoice.Controls.Add(this.label_numberII);
-            this.panel_multipleChoice.Location = new System.Drawing.Point(81, 95);
+            this.panel_multipleChoice.Location = new System.Drawing.Point(81, 89);
             this.panel_multipleChoice.Name = "panel_multipleChoice";
             this.panel_multipleChoice.Size = new System.Drawing.Size(279, 96);
             this.panel_multipleChoice.TabIndex = 9;
@@ -339,7 +336,7 @@
             this.panel_fillTheBlank.Controls.Add(this.label_equal);
             this.panel_fillTheBlank.Controls.Add(this.label_multi);
             this.panel_fillTheBlank.Controls.Add(this.label_number2);
-            this.panel_fillTheBlank.Location = new System.Drawing.Point(81, 115);
+            this.panel_fillTheBlank.Location = new System.Drawing.Point(81, 103);
             this.panel_fillTheBlank.Name = "panel_fillTheBlank";
             this.panel_fillTheBlank.Size = new System.Drawing.Size(279, 66);
             this.panel_fillTheBlank.TabIndex = 7;
@@ -405,19 +402,6 @@
             this.button_start.UseVisualStyleBackColor = false;
             this.button_start.Click += new System.EventHandler(this.button_start_Click);
             // 
-            // button_check
-            // 
-            this.button_check.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button_check.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_check.Location = new System.Drawing.Point(3, 259);
-            this.button_check.Name = "button_check";
-            this.button_check.Size = new System.Drawing.Size(98, 47);
-            this.button_check.TabIndex = 0;
-            this.button_check.Text = "Έλεγχος";
-            this.button_check.UseVisualStyleBackColor = false;
-            this.button_check.Visible = false;
-            this.button_check.Click += new System.EventHandler(this.button_check_Click);
-            // 
             // button_next_end
             // 
             this.button_next_end.BackColor = System.Drawing.Color.DarkTurquoise;
@@ -440,25 +424,6 @@
             this.button_help.Text = "Help";
             this.button_help.UseVisualStyleBackColor = true;
             // 
-            // label_message
-            // 
-            this.label_message.AutoSize = true;
-            this.label_message.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_message.Location = new System.Drawing.Point(44, 71);
-            this.label_message.Name = "label_message";
-            this.label_message.Size = new System.Drawing.Size(145, 23);
-            this.label_message.TabIndex = 4;
-            this.label_message.Text = "Καλή επιτυχία!";
-            // 
-            // pictureBox_message
-            // 
-            this.pictureBox_message.BackgroundImage = global::Εducational_Software.Properties.Resources.messageCloud;
-            this.pictureBox_message.Location = new System.Drawing.Point(23, 34);
-            this.pictureBox_message.Name = "pictureBox_message";
-            this.pictureBox_message.Size = new System.Drawing.Size(188, 127);
-            this.pictureBox_message.TabIndex = 3;
-            this.pictureBox_message.TabStop = false;
-            // 
             // pictureBox_helper
             // 
             this.pictureBox_helper.Location = new System.Drawing.Point(23, 185);
@@ -466,6 +431,27 @@
             this.pictureBox_helper.Size = new System.Drawing.Size(125, 155);
             this.pictureBox_helper.TabIndex = 2;
             this.pictureBox_helper.TabStop = false;
+            // 
+            // label_message
+            // 
+            this.label_message.BackColor = System.Drawing.Color.Transparent;
+            this.label_message.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_message.Location = new System.Drawing.Point(47, 73);
+            this.label_message.Name = "label_message";
+            this.label_message.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label_message.Size = new System.Drawing.Size(144, 49);
+            this.label_message.TabIndex = 4;
+            this.label_message.Text = "Καλή επιτυχία!";
+            this.label_message.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox_message
+            // 
+            this.pictureBox_message.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_message.Location = new System.Drawing.Point(23, 34);
+            this.pictureBox_message.Name = "pictureBox_message";
+            this.pictureBox_message.Size = new System.Drawing.Size(188, 127);
+            this.pictureBox_message.TabIndex = 4;
+            this.pictureBox_message.TabStop = false;
             // 
             // TestForm
             // 
@@ -486,7 +472,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel_testForm.ResumeLayout(false);
-            this.panel_testForm.PerformLayout();
             this.panel_test.ResumeLayout(false);
             this.panel_trueOrFalse.ResumeLayout(false);
             this.panel_trueOrFalse.PerformLayout();
@@ -494,8 +479,8 @@
             this.panel_multipleChoice.PerformLayout();
             this.panel_fillTheBlank.ResumeLayout(false);
             this.panel_fillTheBlank.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_message)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_helper)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_message)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -507,9 +492,7 @@
         private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         private System.Windows.Forms.Label label_Test;
         private System.Windows.Forms.Panel panel_testForm;
-        private System.Windows.Forms.Button button_check;
         private System.Windows.Forms.Button button_next_end;
-        private System.Windows.Forms.PictureBox pictureBox_message;
         private System.Windows.Forms.PictureBox pictureBox_helper;
         private System.Windows.Forms.Label label_message;
         private System.Windows.Forms.Button button_help;
@@ -539,5 +522,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label_numberII;
         private System.Windows.Forms.RadioButton radioButton_choice3;
+        private System.Windows.Forms.PictureBox pictureBox_message;
     }
 }
