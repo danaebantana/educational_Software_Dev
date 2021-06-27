@@ -15,11 +15,13 @@ namespace Εducational_Software
     public partial class MainForm : Form
     {
         private AuthenticationService auth;
+        private StatisticsService statisticsService;
 
         public MainForm(AuthenticationService auth)
         {
             InitializeComponent();
             this.auth = auth;
+            this.statisticsService = new StatisticsService(auth.GetUser());
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -45,7 +47,7 @@ namespace Εducational_Software
             int unit = Int32.Parse(pictureBoxName[1]);
 
             this.Hide();
-            TheoryForm theoryForm = new TheoryForm(auth, unit);
+            TheoryForm theoryForm = new TheoryForm(auth, statisticsService, unit);
             theoryForm.ShowDialog();
             this.Close();
         }

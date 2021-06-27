@@ -14,17 +14,18 @@ namespace Εducational_Software
     public partial class TestForm : Form
     {
         private AuthenticationService auth;
+        private StatisticsService statisticsService;
         private int unit;
         private List<Panel> panelQuestionList;
         private Random random;
         private List<bool> answerList;
         private int questionCount;
-         
 
-        public TestForm(AuthenticationService _auth, int _unit)
+        public TestForm(AuthenticationService _auth, StatisticsService _statisticsService, int _unit)
         {
             InitializeComponent();
             this.auth = _auth;
+            this.statisticsService = _statisticsService;
             this.unit = _unit;
             panelQuestionList = new List<Panel>() { panel_fillTheBlank, panel_trueOrFalse, panel_multipleChoice };
             random = new Random();

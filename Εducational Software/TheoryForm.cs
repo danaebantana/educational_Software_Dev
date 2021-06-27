@@ -15,11 +15,13 @@ namespace Εducational_Software
     public partial class TheoryForm : Form
     {
         private AuthenticationService auth;
+        private StatisticsService statisticsService;
         private int unit;
-        public TheoryForm(AuthenticationService _auth, int _unit)
+        public TheoryForm(AuthenticationService _auth, StatisticsService _statisticsService,  int _unit)
         {
             InitializeComponent();
             this.auth = _auth;
+            this.statisticsService = _statisticsService;
             this.unit = _unit;
         }
 
@@ -29,6 +31,9 @@ namespace Εducational_Software
             label_multiTableNum.Text = unit.ToString();
             pictureBox_helper.Image = (Image)Properties.Resources.ResourceManager.GetObject(unit.ToString());
             Load_Unit_Theory(unit);
+
+            // Keep track of the theory revision
+            statisticsService.AddTheoryRevision(unit.ToString());
         }
 
         private void Load_Unit_Theory(int unit)
@@ -72,7 +77,7 @@ namespace Εducational_Software
         private void button_test_Click(object sender, EventArgs e)
         {
             this.Hide();
-            TestForm testForm = new TestForm(auth, unit);
+            TestForm testForm = new TestForm(auth, statisticsService, unit);
             testForm.ShowDialog();
             this.Close();
         }
