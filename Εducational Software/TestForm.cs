@@ -82,6 +82,8 @@ namespace Εducational_Software
                 var radioButtons = panel.Controls.OfType<RadioButton>();
                 int index = random.Next(3);
                 radioButtons.ElementAt(index).Text = resultNumber.ToString(); 
+
+                // TODO Please fix this
                 int randomNumber1 = random.Next(unit, (unit/2) * 10);
                 int randomNumber2 = random.Next((unit/2) * 10, (unit * 10) + 1);
                 if (radioButton_choice1.Text.Equals("_") && radioButton_choice2.Text.Equals("_"))
@@ -107,14 +109,9 @@ namespace Εducational_Software
             //See if it's the end of the Test.
             if (questionCount.Equals(maxNumberOfQuestions))   
             {
-                int correctAnswers = 0;
-                foreach (bool answer in answerList)
-                {
-                    if (answer.Equals(true))
-                    {
-                        correctAnswers++;
-                    }
-                }
+                // Count the correct answers
+                int correctAnswers = answerList.Where(answer => answer).Count();
+
                 //Calculate success percentage for Test
                 double successPer = ((double)correctAnswers / (double)maxNumberOfQuestions) * 100;
                 if (successPer <= 50)
@@ -125,25 +122,20 @@ namespace Εducational_Software
                 }
                 else
                 {
-                    if (successPer <= 70)
-                    {
-                        label_message.Text = "Μπράβο";
-                    }
-                    else
-                    {
-                        label_message.Text = "Εξαιρετικά";
-                    }
+                    label_message.Text = successPer <= 70 ? "Μπράβο" : "Εξαιρετικά";    
                     button_start.Visible = true;
                     button_start.Text = "ΤΕΛΟΣ";
                     button_start.BackColor = Color.BurlyWood;
                     button_start.Enabled = false;
                 }
-                foreach (Panel panel in panelQuestionList)
-                {
-                    panel.Visible = false;
-                }
+
+                // Hide all the question panels
+                panelQuestionList.ForEach(panel => panel.Visible = false);
                 button_next_end.Visible = false;
-                
+
+                // Store the sucess percentage for statistics
+                statisticsService.UpdateScore(unit.ToString(), successPer);
+
             } else
             {
                 NextQuestion(unit);

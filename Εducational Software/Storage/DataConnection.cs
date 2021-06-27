@@ -107,7 +107,7 @@ namespace Εducational_Software
             return userCount > 0;
         }
 
-        public void UpdateStatistics(User user, string quiz_id, int theory_revisions, float score)
+        public void UpdateStatistics(User user, string quiz_id, int theory_revisions, double score)
         {
 
             using (var conn = new SQLiteConnection(@"Data Source=database.sqlite3"))

@@ -46,14 +46,15 @@ namespace Εducational_Software.Services
         /// </summary>
         /// <param name="quiz_id">The id of the quiz.</param>
         /// <param name="score">The new score for the quiz.</param>
-        public void UpdateScore(string quiz_id, float score)
+        public void UpdateScore(string quiz_id, double score)
         {
             DataConnection conn = new DataConnection();
             Statistics statistics = conn.GetStatistics(user, quiz_id);
 
             int theory_revisions = statistics.GetTheoryRevisions();
 
-            conn.UpdateStatistics(user, quiz_id, theory_revisions, score);
+            if (score > statistics.GetScore())
+                conn.UpdateStatistics(user, quiz_id, theory_revisions, score);
         }
     }
 }
