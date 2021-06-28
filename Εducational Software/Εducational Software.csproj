@@ -197,6 +197,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\charts.png" />
+    <None Include="Resources\messageCloud.png" />
+    <None Include="Resources\messageCloudFailed.png" />
+    <None Include="Resources\messageCloudExcellent.png" />
+    <None Include="Resources\messageCloudBravo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

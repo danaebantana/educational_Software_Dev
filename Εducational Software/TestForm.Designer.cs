@@ -62,7 +62,6 @@
             this.button_next_end = new System.Windows.Forms.Button();
             this.button_help = new System.Windows.Forms.Button();
             this.pictureBox_helper = new System.Windows.Forms.PictureBox();
-            this.label_message = new System.Windows.Forms.Label();
             this.pictureBox_message = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.panel_testForm.SuspendLayout();
@@ -112,8 +111,8 @@
             // 
             // panel_testForm
             // 
+            this.panel_testForm.BackColor = System.Drawing.Color.Transparent;
             this.panel_testForm.Controls.Add(this.panel_test);
-            this.panel_testForm.Controls.Add(this.label_message);
             this.panel_testForm.Controls.Add(this.button_help);
             this.panel_testForm.Controls.Add(this.pictureBox_helper);
             this.panel_testForm.Controls.Add(this.pictureBox_message);
@@ -432,25 +431,14 @@
             this.pictureBox_helper.TabIndex = 2;
             this.pictureBox_helper.TabStop = false;
             // 
-            // label_message
-            // 
-            this.label_message.BackColor = System.Drawing.Color.Transparent;
-            this.label_message.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_message.Location = new System.Drawing.Point(47, 73);
-            this.label_message.Name = "label_message";
-            this.label_message.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label_message.Size = new System.Drawing.Size(144, 49);
-            this.label_message.TabIndex = 4;
-            this.label_message.Text = "Καλή επιτυχία!";
-            this.label_message.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pictureBox_message
             // 
             this.pictureBox_message.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_message.BackgroundImage = global::Εducational_Software.Properties.Resources.messageCloud;
             this.pictureBox_message.Location = new System.Drawing.Point(23, 34);
             this.pictureBox_message.Name = "pictureBox_message";
-            this.pictureBox_message.Size = new System.Drawing.Size(188, 127);
-            this.pictureBox_message.TabIndex = 4;
+            this.pictureBox_message.Size = new System.Drawing.Size(186, 125);
+            this.pictureBox_message.TabIndex = 11;
             this.pictureBox_message.TabStop = false;
             // 
             // TestForm
@@ -494,7 +482,6 @@
         private System.Windows.Forms.Panel panel_testForm;
         private System.Windows.Forms.Button button_next_end;
         private System.Windows.Forms.PictureBox pictureBox_helper;
-        private System.Windows.Forms.Label label_message;
         private System.Windows.Forms.Button button_help;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.Panel panel_test;

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Εducational_Software.Services;
@@ -41,7 +42,7 @@ namespace Εducational_Software
 
         private void button_start_Click(object sender, EventArgs e)
         {
-            label_message.Text = "Καλή επιτυχία!";
+            pictureBox_message.Image = (Image)Properties.Resources.ResourceManager.GetObject("messageCloud");
             button_start.Visible = false;
             button_next_end.Visible = true;
             questionCount = 1;
@@ -105,112 +106,147 @@ namespace Εducational_Software
 
         private void button_next_end_Click(object sender, EventArgs e)
         {
-            CheckQuestion();
-            //See if it's the end of the Test.
-            if (questionCount.Equals(maxNumberOfQuestions))   
+            bool answerChecked = CheckQuestion();
+            if (answerChecked)
             {
-                // Count the correct answers
-                int correctAnswers = answerList.Where(answer => answer).Count();
-
-                //Calculate success percentage for Test
-                double successPer = ((double)correctAnswers / (double)maxNumberOfQuestions) * 100;
-                if (successPer <= 50)
+                //See if it's the end of the Test.
+                if (questionCount.Equals(maxNumberOfQuestions))
                 {
-                    label_message.Text = "Προσπάθησε Ξανά";
-                    pictureBox_helper.Image = (Image)Properties.Resources.ResourceManager.GetObject("messageCloudFailed");
-                    button_start.Visible = true;
+                    // Count the correct answers
+                    int correctAnswers = answerList.Where(answer => answer).Count();
+
+                    //Calculate success percentage for Test
+                    double successPer = ((double)correctAnswers / (double)maxNumberOfQuestions) * 100;
+                    if (successPer <= 50)
+                    {
+                        pictureBox_message.Image = (Image)Properties.Resources.ResourceManager.GetObject("messageCloudFailed");
+                        button_start.Visible = true;
+                        ClearQuestions();
+                    }
+                    else
+                    {
+                        pictureBox_message.Image = successPer <= 70 ? (Image)Properties.Resources.ResourceManager.GetObject("messageCloudBravo") :
+                            (Image)Properties.Resources.ResourceManager.GetObject("messageCloudExcellent");
+                        button_start.Visible = true;
+                        button_start.Text = "ΤΕΛΟΣ";
+                        button_start.BackColor = Color.BurlyWood;
+                        button_start.Enabled = false;
+                    }
+
+                    // Hide all the question panels
+                    panelQuestionList.ForEach(panel => panel.Visible = false);
+                    button_next_end.Visible = false;
+
+                    // Store the sucess percentage for statistics
+                    statisticsService.UpdateScore(unit.ToString(), successPer);
+
                 }
                 else
                 {
-                    label_message.Text = successPer <= 70 ? "Μπράβο" : "Εξαιρετικά";    
-                    button_start.Visible = true;
-                    button_start.Text = "ΤΕΛΟΣ";
-                    button_start.BackColor = Color.BurlyWood;
-                    button_start.Enabled = false;
+                    NextQuestion(unit);
                 }
-
-                // Hide all the question panels
-                panelQuestionList.ForEach(panel => panel.Visible = false);
-                button_next_end.Visible = false;
-
-                // Store the sucess percentage for statistics
-                statisticsService.UpdateScore(unit.ToString(), successPer);
-
-            } else
-            {
-                NextQuestion(unit);
             }
         }
 
-        private void CheckQuestion()
+        private bool CheckQuestion()
         {
             if (panel_fillTheBlank.Visible)
             {
-                int result = Int32.Parse(label_number1.Text) * Int32.Parse(label_number2.Text);
-                if (result.Equals(Int32.Parse(textBox_result.Text)))
+                //Check if user gave an answer 
+                if (!textBox_result.Text.Length.Equals(0) && Regex.IsMatch(textBox_result.Text, @"^\d+$"))
                 {
-                    answerList.Add(true);
-                    //MessageBox.Show("YES");
+                    int result = Int32.Parse(label_number1.Text) * Int32.Parse(label_number2.Text);
+                    if (result.Equals(Int32.Parse(textBox_result.Text)))
+                    {
+                        answerList.Add(true);
+                    }
+                    else
+                    {
+                        answerList.Add(false);
+                    }
+                    return true;
                 }
                 else
                 {
-                    answerList.Add(false);
-                    //MessageBox.Show("NO");
+                    MessageBox.Show("Πρέπει να συμπληρώσεις το πεδίο με έναν ακέραιο αριθμό!");
+                    textBox_result.Clear();
+                    return false;
                 }
             }
             else if (panel_trueOrFalse.Visible)
             {
-                int result = Int32.Parse(label_numberA.Text) * Int32.Parse(label_numberB.Text);
-                if (result.Equals(Int32.Parse(label_numberC.Text)) && radioButton_true.Checked)
+                //Check if user gave an answer
+                if (radioButton_false.Checked || radioButton_true.Checked)
                 {
-                    answerList.Add(true);
-                    //MessageBox.Show("YES");
-                }
-                else if (!result.Equals(Int32.Parse(label_numberC.Text)) && radioButton_false.Checked)
+                    int result = Int32.Parse(label_numberA.Text) * Int32.Parse(label_numberB.Text);
+                    if (result.Equals(Int32.Parse(label_numberC.Text)) && radioButton_true.Checked)
+                    {
+                        answerList.Add(true);
+                    }
+                    else if (!result.Equals(Int32.Parse(label_numberC.Text)) && radioButton_false.Checked)
+                    {
+                        answerList.Add(true);
+                    }
+                    else
+                    {
+                        answerList.Add(false);
+                    }
+                    return true;
+                } else
                 {
-                    answerList.Add(true);
-                    //MessageBox.Show("YES");
-                }
-                else
-                {
-                    answerList.Add(false);
-                    //MessageBox.Show("NO");
-                }
+                    MessageBox.Show("Πρέπει να επιλέξεις είτε 'Σωστό' ή 'Λάθος'!");
+                    return false;
+                } 
             }
             else if (panel_multipleChoice.Visible)
             {
-                int result = Int32.Parse(label_numberI.Text) * Int32.Parse(label_numberII.Text);
-                if (radioButton_choice1.Checked && radioButton_choice1.Text.Equals(result.ToString()))
+                //Check if user gave an answer
+                if (radioButton_choice1.Checked || radioButton_choice2.Checked || radioButton_choice3.Checked)
                 {
-                    answerList.Add(true);
-                    //MessageBox.Show("YES");
-                }
-                else if (radioButton_choice2.Checked && radioButton_choice2.Text.Equals(result.ToString()))
+                    int result = Int32.Parse(label_numberI.Text) * Int32.Parse(label_numberII.Text);
+                    if (radioButton_choice1.Checked && radioButton_choice1.Text.Equals(result.ToString()))
+                    {
+                        answerList.Add(true);
+                    }
+                    else if (radioButton_choice2.Checked && radioButton_choice2.Text.Equals(result.ToString()))
+                    {
+                        answerList.Add(true);
+                    }
+                    else if (radioButton_choice3.Checked && radioButton_choice3.Text.Equals(result.ToString()))
+                    {
+                        answerList.Add(true);
+                    }
+                    else
+                    {
+                        answerList.Add(false);
+                    }
+                    return true;
+                } else
                 {
-                    answerList.Add(true);
-                    //MessageBox.Show("YES");
-                }
-                else if (radioButton_choice3.Checked && radioButton_choice3.Text.Equals(result.ToString()))
-                {
-                    answerList.Add(true);
-                    //MessageBox.Show("YES");
-                }
-                else
-                {
-                    answerList.Add(false);
-                    //MessageBox.Show("NO");
+                    MessageBox.Show("Πρέπει να επιλέξεις μία από τις επιλογές!");
+                    return false;
                 }
             }
+            return true;
         }
 
         private void NextQuestion(int unit)
+        {
+            //Clear question panels 
+            ClearQuestions();
+
+            questionCount++;
+            GenerateQuestion(unit);
+        }
+
+        private void ClearQuestions()
         {
             //Clear question panels 
             foreach (Panel panel in panelQuestionList)
             {
                 panel.Visible = false;
             }
-            textBox_result.Clear(); 
+            textBox_result.Clear();
             foreach (RadioButton rb in panel_trueOrFalse.Controls.OfType<RadioButton>())
             {
                 rb.Checked = false;
@@ -223,9 +259,6 @@ namespace Εducational_Software
             radioButton_choice1.Text.Equals("_");
             radioButton_choice2.Text.Equals("_");
             radioButton_choice2.Text.Equals("_");
-
-            questionCount++;
-            GenerateQuestion(unit);
         }
 
         private void radiobutton_choice_Checked(object sender, EventArgs e)
