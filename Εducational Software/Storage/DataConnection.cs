@@ -164,7 +164,7 @@ namespace Εducational_Software
             {
                 conn.Open();
 
-                string sql = "SELECT theory_revisions, score FROM statistics WHERE user_id = @user_id and quiz_id = @quiz_id and score >= 50";
+                string sql = "SELECT theory_revisions, score FROM statistics WHERE user_id = @user_id and quiz_id = @quiz_id";
                 SQLiteCommand cmd = new SQLiteCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@user_id", user.GetId());
                 cmd.Parameters.AddWithValue("@quiz_id", quiz_id);
