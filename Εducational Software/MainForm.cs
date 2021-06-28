@@ -17,6 +17,7 @@ namespace Εducational_Software
     {
         private AuthenticationService auth;
         private StatisticsService statisticsService;
+        private int[] units;
 
         public MainForm(AuthenticationService auth)
         {
@@ -29,6 +30,29 @@ namespace Εducational_Software
         {
             User user = auth.GetUser();
             label_username.Text = user.GetName() + " " + user.GetSurname();
+            LoadUnlockedUnits();
+        }
+
+        private void LoadUnlockedUnits()
+        {
+            List<int> unitList = statisticsService.GetCompletedUnits();
+            units = unitList.ToArray();
+            if (!unitList.Count.Equals(9))
+            {
+                unitList.Add(unitList.Count + 1);
+            }
+            var pictureBoxUnits = panel_units.Controls.OfType<PictureBox>();
+            foreach (int unit in unitList)
+            {
+                foreach (PictureBox pictureBox in pictureBoxUnits)
+                {
+                    if (pictureBox.Name.Contains(unit.ToString()))
+                    {
+                        pictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(unit.ToString());
+                        pictureBox.Enabled = true;
+                    }
+                }
+            }
         }
 
         private void SelectUnit(object sender, EventArgs e)
@@ -64,7 +88,7 @@ namespace Εducational_Software
         private void button_revisionTest_Click(object sender, EventArgs e)
         {
             this.Hide();
-            TestForm testForm = new TestForm(auth, statisticsService, "revision", new int[] { 1,2,3 });
+            TestForm testForm = new TestForm(auth, statisticsService, "revision", units);
             testForm.ShowDialog();
             this.Close();
         }

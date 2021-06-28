@@ -155,6 +155,31 @@ namespace Εducational_Software
 
             return statistics;
         }
+
+        public Statistics GetCompletedUnit(User user, string quiz_id)
+        {
+            Statistics statistics = null;
+
+            using (var conn = new SQLiteConnection("Data Source=database.sqlite3"))
+            {
+                conn.Open();
+
+                string sql = "SELECT theory_revisions, score FROM statistics WHERE user_id = @user_id and quiz_id = @quiz_id and score >= 50";
+                SQLiteCommand cmd = new SQLiteCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@user_id", user.GetId());
+                cmd.Parameters.AddWithValue("@quiz_id", quiz_id);
+
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    statistics = new Statistics(user, quiz_id, rdr.GetInt32(0), rdr.GetFloat(1));
+                }
+                rdr.Close();
+            }
+
+            return statistics;
+        }
     }
 
     class UserExistsException : Exception

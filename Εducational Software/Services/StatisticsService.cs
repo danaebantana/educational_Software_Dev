@@ -56,5 +56,21 @@ namespace Εducational_Software.Services
             if (score > statistics.GetScore())
                 conn.UpdateStatistics(user, quiz_id, theory_revisions, score);
         }
+
+        public List<int> GetCompletedUnits()
+        {
+            DataConnection conn = new DataConnection();
+            List<int> units = new List<int>();
+
+            for (int i = 1; i < 10; i++)
+            {
+                if (conn.GetCompletedUnit(user, i.ToString()) != null)
+                {
+                    units.Add(i);
+                }
+            }
+
+            return units;
+        }
     }
 }

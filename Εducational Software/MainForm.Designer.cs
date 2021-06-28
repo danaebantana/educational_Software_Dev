@@ -47,6 +47,7 @@
             this.button_revisionTest = new System.Windows.Forms.Button();
             this.button_help = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel_units = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2)).BeginInit();
@@ -58,6 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel_units.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -96,79 +98,110 @@
             // 
             // pictureBox_1
             // 
-            this.pictureBox_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox_1.Location = new System.Drawing.Point(33, 80);
+            this.pictureBox_1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_1.Location = new System.Drawing.Point(12, 18);
             this.pictureBox_1.Name = "pictureBox_1";
             this.pictureBox_1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox_1.TabIndex = 1;
             this.pictureBox_1.TabStop = false;
             this.pictureBox_1.Click += new System.EventHandler(this.SelectUnit);
             // 
             // pictureBox_2
             // 
-            this.pictureBox_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox_2.Location = new System.Drawing.Point(284, 80);
+            this.pictureBox_2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_2.Enabled = false;
+            this.pictureBox_2.Location = new System.Drawing.Point(148, 50);
             this.pictureBox_2.Name = "pictureBox_2";
             this.pictureBox_2.Size = new System.Drawing.Size(98, 93);
+            this.pictureBox_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox_2.TabIndex = 2;
             this.pictureBox_2.TabStop = false;
             this.pictureBox_2.Click += new System.EventHandler(this.SelectUnit);
             // 
             // pictureBox_3
             // 
-            this.pictureBox_3.Location = new System.Drawing.Point(479, 59);
+            this.pictureBox_3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_3.Enabled = false;
+            this.pictureBox_3.Location = new System.Drawing.Point(286, 10);
             this.pictureBox_3.Name = "pictureBox_3";
             this.pictureBox_3.Size = new System.Drawing.Size(98, 93);
+            this.pictureBox_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox_3.TabIndex = 3;
             this.pictureBox_3.TabStop = false;
+            this.pictureBox_3.Click += new System.EventHandler(this.SelectUnit);
             // 
             // pictureBox_4
             // 
-            this.pictureBox_4.Location = new System.Drawing.Point(142, 201);
+            this.pictureBox_4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_4.Enabled = false;
+            this.pictureBox_4.Location = new System.Drawing.Point(14, 147);
             this.pictureBox_4.Name = "pictureBox_4";
             this.pictureBox_4.Size = new System.Drawing.Size(98, 93);
+            this.pictureBox_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox_4.TabIndex = 4;
             this.pictureBox_4.TabStop = false;
+            this.pictureBox_4.Click += new System.EventHandler(this.SelectUnit);
             // 
             // pictureBox_5
             // 
-            this.pictureBox_5.Location = new System.Drawing.Point(330, 211);
+            this.pictureBox_5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_5.Enabled = false;
+            this.pictureBox_5.Location = new System.Drawing.Point(323, 133);
             this.pictureBox_5.Name = "pictureBox_5";
             this.pictureBox_5.Size = new System.Drawing.Size(98, 93);
+            this.pictureBox_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox_5.TabIndex = 5;
             this.pictureBox_5.TabStop = false;
+            this.pictureBox_5.Click += new System.EventHandler(this.SelectUnit);
             // 
             // pictureBox_6
             // 
-            this.pictureBox_6.Location = new System.Drawing.Point(504, 187);
+            this.pictureBox_6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_6.Enabled = false;
+            this.pictureBox_6.Location = new System.Drawing.Point(494, 50);
             this.pictureBox_6.Name = "pictureBox_6";
             this.pictureBox_6.Size = new System.Drawing.Size(98, 93);
+            this.pictureBox_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox_6.TabIndex = 6;
             this.pictureBox_6.TabStop = false;
+            this.pictureBox_6.Click += new System.EventHandler(this.SelectUnit);
             // 
             // pictureBox_7
             // 
-            this.pictureBox_7.Location = new System.Drawing.Point(21, 284);
+            this.pictureBox_7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_7.Enabled = false;
+            this.pictureBox_7.Location = new System.Drawing.Point(148, 196);
             this.pictureBox_7.Name = "pictureBox_7";
             this.pictureBox_7.Size = new System.Drawing.Size(98, 93);
+            this.pictureBox_7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox_7.TabIndex = 7;
             this.pictureBox_7.TabStop = false;
+            this.pictureBox_7.Click += new System.EventHandler(this.SelectUnit);
             // 
             // pictureBox_8
             // 
-            this.pictureBox_8.Location = new System.Drawing.Point(398, 326);
+            this.pictureBox_8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_8.Enabled = false;
+            this.pictureBox_8.Location = new System.Drawing.Point(286, 263);
             this.pictureBox_8.Name = "pictureBox_8";
             this.pictureBox_8.Size = new System.Drawing.Size(98, 93);
+            this.pictureBox_8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox_8.TabIndex = 8;
             this.pictureBox_8.TabStop = false;
+            this.pictureBox_8.Click += new System.EventHandler(this.SelectUnit);
             // 
             // pictureBox_9
             // 
-            this.pictureBox_9.Location = new System.Drawing.Point(538, 317);
+            this.pictureBox_9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_9.Enabled = false;
+            this.pictureBox_9.Location = new System.Drawing.Point(474, 209);
             this.pictureBox_9.Name = "pictureBox_9";
             this.pictureBox_9.Size = new System.Drawing.Size(98, 93);
+            this.pictureBox_9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox_9.TabIndex = 9;
             this.pictureBox_9.TabStop = false;
+            this.pictureBox_9.Click += new System.EventHandler(this.SelectUnit);
             // 
             // label_welcome
             // 
@@ -193,7 +226,7 @@
             // button_revisionTest
             // 
             this.button_revisionTest.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_revisionTest.Location = new System.Drawing.Point(12, 383);
+            this.button_revisionTest.Location = new System.Drawing.Point(55, 334);
             this.button_revisionTest.Name = "button_revisionTest";
             this.button_revisionTest.Size = new System.Drawing.Size(176, 36);
             this.button_revisionTest.TabIndex = 12;
@@ -204,7 +237,7 @@
             // button_help
             // 
             this.button_help.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_help.Location = new System.Drawing.Point(194, 383);
+            this.button_help.Location = new System.Drawing.Point(3, 334);
             this.button_help.Name = "button_help";
             this.button_help.Size = new System.Drawing.Size(46, 36);
             this.button_help.TabIndex = 13;
@@ -216,32 +249,41 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::Εducational_Software.Properties.Resources.charts;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(630, 47);
+            this.pictureBox1.Location = new System.Drawing.Point(326, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.OpenStatistcsForm);
             // 
+            // panel_units
+            // 
+            this.panel_units.Controls.Add(this.pictureBox_1);
+            this.panel_units.Controls.Add(this.pictureBox_4);
+            this.panel_units.Controls.Add(this.button_help);
+            this.panel_units.Controls.Add(this.pictureBox_7);
+            this.panel_units.Controls.Add(this.button_revisionTest);
+            this.panel_units.Controls.Add(this.pictureBox_2);
+            this.panel_units.Controls.Add(this.pictureBox_5);
+            this.panel_units.Controls.Add(this.pictureBox_8);
+            this.panel_units.Controls.Add(this.pictureBox_9);
+            this.panel_units.Controls.Add(this.pictureBox_3);
+            this.panel_units.Controls.Add(this.pictureBox_6);
+            this.panel_units.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel_units.Location = new System.Drawing.Point(16, 71);
+            this.panel_units.Name = "panel_units";
+            this.panel_units.Size = new System.Drawing.Size(664, 380);
+            this.panel_units.TabIndex = 15;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 453);
+            this.Controls.Add(this.panel_units);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button_help);
-            this.Controls.Add(this.button_revisionTest);
             this.Controls.Add(this.label_username);
             this.Controls.Add(this.label_welcome);
-            this.Controls.Add(this.pictureBox_9);
-            this.Controls.Add(this.pictureBox_8);
-            this.Controls.Add(this.pictureBox_7);
-            this.Controls.Add(this.pictureBox_6);
-            this.Controls.Add(this.pictureBox_5);
-            this.Controls.Add(this.pictureBox_4);
-            this.Controls.Add(this.pictureBox_3);
-            this.Controls.Add(this.pictureBox_2);
-            this.Controls.Add(this.pictureBox_1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -263,6 +305,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel_units.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,5 +331,6 @@
         private System.Windows.Forms.Button button_help;
         private System.Windows.Forms.ToolStripMenuItem αποσύνδεσηToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel_units;
     }
 }
