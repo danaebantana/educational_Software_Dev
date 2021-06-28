@@ -62,37 +62,37 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
             this.βοήθειαToolStripMenuItem,
             this.αποσύνδεσηToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(692, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(692, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // homeToolStripMenuItem
             // 
-            this.homeToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(74, 25);
             this.homeToolStripMenuItem.Text = "Αρχική";
             // 
             // βοήθειαToolStripMenuItem
             // 
             this.βοήθειαToolStripMenuItem.Name = "βοήθειαToolStripMenuItem";
-            this.βοήθειαToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
+            this.βοήθειαToolStripMenuItem.Size = new System.Drawing.Size(82, 25);
             this.βοήθειαToolStripMenuItem.Text = "Βοήθεια";
             // 
             // αποσύνδεσηToolStripMenuItem
             // 
             this.αποσύνδεσηToolStripMenuItem.Name = "αποσύνδεσηToolStripMenuItem";
             this.αποσύνδεσηToolStripMenuItem.ShowShortcutKeys = false;
-            this.αποσύνδεσηToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
+            this.αποσύνδεσηToolStripMenuItem.Size = new System.Drawing.Size(124, 25);
             this.αποσύνδεσηToolStripMenuItem.Text = "Αποσύνδεση";
-            this.αποσύνδεσηToolStripMenuItem.Click += new System.EventHandler(this.αποσύνδεσηToolStripMenuItem_Click);
+            this.αποσύνδεσηToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // pictureBox_1
             // 
@@ -173,35 +173,37 @@
             // label_welcome
             // 
             this.label_welcome.AutoSize = true;
-            this.label_welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_welcome.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_welcome.Location = new System.Drawing.Point(12, 47);
             this.label_welcome.Name = "label_welcome";
-            this.label_welcome.Size = new System.Drawing.Size(107, 20);
+            this.label_welcome.Size = new System.Drawing.Size(116, 21);
             this.label_welcome.TabIndex = 10;
             this.label_welcome.Text = "Καλως ήρθες,";
             // 
             // label_username
             // 
             this.label_username.AutoSize = true;
-            this.label_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_username.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_username.Location = new System.Drawing.Point(134, 47);
             this.label_username.Name = "label_username";
-            this.label_username.Size = new System.Drawing.Size(80, 20);
+            this.label_username.Size = new System.Drawing.Size(87, 21);
             this.label_username.TabIndex = 11;
             this.label_username.Text = "username";
             // 
             // button_revisionTest
             // 
-            this.button_revisionTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_revisionTest.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_revisionTest.Location = new System.Drawing.Point(12, 383);
             this.button_revisionTest.Name = "button_revisionTest";
             this.button_revisionTest.Size = new System.Drawing.Size(176, 36);
             this.button_revisionTest.TabIndex = 12;
             this.button_revisionTest.Text = "Επαναληπτικό Τεστ";
             this.button_revisionTest.UseVisualStyleBackColor = true;
+            this.button_revisionTest.Click += new System.EventHandler(this.button_revisionTest_Click);
             // 
             // button_help
             // 
+            this.button_help.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_help.Location = new System.Drawing.Point(194, 383);
             this.button_help.Name = "button_help";
             this.button_help.Size = new System.Drawing.Size(46, 36);

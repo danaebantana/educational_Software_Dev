@@ -77,7 +77,7 @@ namespace Εducational_Software
         private void button_test_Click(object sender, EventArgs e)
         {
             this.Hide();
-            TestForm testForm = new TestForm(auth, statisticsService, unit, 5);
+            TestForm testForm = new TestForm(auth, statisticsService, unit.ToString(), new int[]{ unit });
             testForm.ShowDialog();
             this.Close();
         }

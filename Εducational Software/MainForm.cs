@@ -31,15 +31,6 @@ namespace Εducational_Software
             label_username.Text = user.GetName() + " " + user.GetSurname();
         }
 
-        private void αποσύνδεσηToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            auth.Logout();
-            LoginForm loginForm = new LoginForm();
-            loginForm.ShowDialog();
-            this.Close();
-        }
-
         private void SelectUnit(object sender, EventArgs e)
         {
             PictureBox clickedPictureBox = sender as PictureBox;
@@ -59,6 +50,23 @@ namespace Εducational_Software
             StatisticsForm statisticsForm = new StatisticsForm(statisticsService);
             statisticsForm.ShowDialog();
             this.Show();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            auth.Logout();
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
+            this.Close();
+        }
+
+        private void button_revisionTest_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TestForm testForm = new TestForm(auth, statisticsService, "revision", new int[] { 1,2,3 });
+            testForm.ShowDialog();
+            this.Close();
         }
     }
 }

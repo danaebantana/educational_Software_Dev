@@ -197,6 +197,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\charts.png" />
+    <None Include="Resources\revision.png" />
     <None Include="Resources\messageCloud.png" />
     <None Include="Resources\messageCloudFailed.png" />
     <None Include="Resources\messageCloudExcellent.png" />

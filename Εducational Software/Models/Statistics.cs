@@ -23,6 +23,11 @@ namespace Εducational_Software.Models
             this.score = score;
         }
 
+        public string GetQuizID()
+        {
+            return this.quiz_id;
+        }
+
         public int GetTheoryRevisions()
         {
             return theory_revisions;

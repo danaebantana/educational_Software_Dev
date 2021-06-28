@@ -16,28 +16,44 @@ namespace Εducational_Software
     {
         private AuthenticationService auth;
         private StatisticsService statisticsService;
-        private int unit;
+        private string quiz_id;
+        private int[] unit;
         private List<Panel> panelQuestionList;
         private Random random;
         private List<bool> answerList;
         private int questionCount;
         private int maxNumberOfQuestions;
 
-        public TestForm(AuthenticationService _auth, StatisticsService _statisticsService, int _unit, int _maxNumberOfQuestions)
+        public TestForm(AuthenticationService _auth, StatisticsService _statisticsService, string _quiz_id, int[] _unit)
         {
             InitializeComponent();
             this.auth = _auth;
             this.statisticsService = _statisticsService;
+            this.quiz_id = _quiz_id;
             this.unit = _unit;
             panelQuestionList = new List<Panel>() { panel_fillTheBlank, panel_trueOrFalse, panel_multipleChoice };
             random = new Random();
             answerList = new List<bool>();
-            this.maxNumberOfQuestions = _maxNumberOfQuestions;
+            if (quiz_id.Equals("revision"))
+            {
+                this.maxNumberOfQuestions = 10;
+            }
+            else
+            {
+                this.maxNumberOfQuestions = 5;
+            }
         }
 
         private void TestForm_Load(object sender, EventArgs e)
         {
-            pictureBox_helper.Image = (Image)Properties.Resources.ResourceManager.GetObject(unit.ToString());
+            if (quiz_id.Equals("revision"))
+            {
+                pictureBox_helper.Image = (Image)Properties.Resources.ResourceManager.GetObject("revision");
+            }
+            else
+            {
+                pictureBox_helper.Image = (Image)Properties.Resources.ResourceManager.GetObject(unit[0].ToString());
+            }
         }
 
         private void button_start_Click(object sender, EventArgs e)
@@ -49,12 +65,24 @@ namespace Εducational_Software
             GenerateQuestion(unit);
         }
 
-        private void GenerateQuestion(int unitNumber)
+        private void GenerateQuestion(int[] unit)
         {
             //Randomly pick a type of Question through the panelQuestionList
             int index = random.Next(panelQuestionList.Count);
             Panel panel = panelQuestionList.ElementAt(index);
             panel.Visible = true;
+            int unitNumber = 0;
+
+            //Pick the unitNumber
+            if (quiz_id.Equals("revision"))
+            {
+                index = random.Next(unit.Length);
+                unitNumber = unit[index];
+            } 
+            else
+            {
+                unitNumber = unit[0];
+            }
 
             //Randomly pick the number that will get multiplied with the unit number
             int randomNumber = random.Next(1, 11);
@@ -76,7 +104,7 @@ namespace Εducational_Software
                 }
                 else
                 {
-                    panelLabels.ElementAt(2).Text = random.Next(unit, unit * 10).ToString();
+                    panelLabels.ElementAt(2).Text = random.Next(unitNumber, unitNumber * 10).ToString();
                 }
             } else if (panel.Name.Equals("panel_multipleChoice"))
             {
@@ -85,8 +113,8 @@ namespace Εducational_Software
                 radioButtons.ElementAt(index).Text = resultNumber.ToString(); 
 
                 // TODO Please fix this
-                int randomNumber1 = random.Next(unit, (unit/2) * 10);
-                int randomNumber2 = random.Next((unit/2) * 10, (unit * 10) + 1);
+                int randomNumber1 = random.Next(unitNumber, (unitNumber * 10) + 1);
+                int randomNumber2 = random.Next(unitNumber, (unitNumber * 10) + 1);
                 if (radioButton_choice1.Text.Equals("_") && radioButton_choice2.Text.Equals("_"))
                 {
                     radioButton_choice1.Text = randomNumber1.ToString();
@@ -121,7 +149,7 @@ namespace Εducational_Software
                     {
                         pictureBox_message.Image = (Image)Properties.Resources.ResourceManager.GetObject("messageCloudFailed");
                         button_start.Visible = true;
-                        ClearQuestions();
+                        ClearQuestions(); 
                     }
                     else
                     {
@@ -139,7 +167,6 @@ namespace Εducational_Software
 
                     // Store the sucess percentage for statistics
                     statisticsService.UpdateScore(unit.ToString(), successPer);
-
                 }
                 else
                 {
@@ -230,7 +257,7 @@ namespace Εducational_Software
             return true;
         }
 
-        private void NextQuestion(int unit)
+        private void NextQuestion(int[] unit)
         {
             //Clear question panels 
             ClearQuestions();
@@ -270,8 +297,15 @@ namespace Εducational_Software
         private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            TheoryForm theoryForm = new TheoryForm(auth, statisticsService, unit);
-            theoryForm.ShowDialog();
+            if (unit.Length.Equals(1))  //Return to TheoryForm
+            {
+                TheoryForm theoryForm = new TheoryForm(auth, statisticsService, unit[0]);
+                theoryForm.ShowDialog();
+            } else  //Return to MainForm
+            {
+                MainForm mainForm = new MainForm(auth);
+                mainForm.ShowDialog();
+            }
             this.Close();
         }
     }
