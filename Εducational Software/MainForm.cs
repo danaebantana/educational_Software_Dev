@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Εducational_Software.Services;
-using Εducational_Software.Storage;
 
 namespace Εducational_Software
 {
@@ -70,14 +69,6 @@ namespace Εducational_Software
             TheoryForm theoryForm = new TheoryForm(auth, statisticsService, unit);
             theoryForm.ShowDialog();
             this.Close();
-        }
-
-        private void OpenStatistcsForm(object sender, EventArgs e)
-        {
-            this.Hide();
-            StatisticsForm statisticsForm = new StatisticsForm(statisticsService);
-            statisticsForm.ShowDialog();
-            this.Show();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)

@@ -15,8 +15,11 @@ namespace Εducational_Software
     {
         private AuthenticationService auth;
         private ProgressService progressService;
-        private List<double> unitsSuccessRates;
-        private List<double> unitsFailureRates;
+        private List<double> unitsTestsSuccess;
+        private List<double> unitsTestsFailure;
+        private List<double> unitsTestsRate;
+        private double revisionTestSuccess;
+        private double revisionTestFailure;
         private List<int> units;
 
         public ProfileForm(AuthenticationService _auth)
@@ -34,24 +37,33 @@ namespace Εducational_Software
 
             LoadProgress();
             label_unit.Text = units.Count.ToString();
-            LoadCharts(unitsSuccessRates, unitsFailureRates);
+            LoadCharts(unitsTestsSuccess, unitsTestsFailure);
         }
 
         public void LoadProgress()
         {
-            unitsSuccessRates = progressService.GetRates(true);
-            unitsFailureRates = progressService.GetRates(false);
-            units = progressService.GetUnits();
+            unitsTestsSuccess = progressService.GetUnitTestScore(true);
+            unitsTestsFailure = progressService.GetUnitTestScore(false);
+            units = progressService.GetUnlockedUnits();
+            revisionTestSuccess = progressService.GetRevisionRates(true);
+            revisionTestFailure = progressService.GetRevisionRates(false);
         }
 
         private void LoadCharts(List<double> successRates, List<double> failureRates)
         {
+            //Load rates of Self-assessment tests
             foreach (int unit in units)
             {
                 chart_unitRates.Series["Επιτυχία"].Points.AddXY(unit.ToString(), successRates.ElementAt(unit-1));
                 chart_unitRates.Series["Αποτυχία"].Points.AddXY(unit.ToString(), failureRates.ElementAt(unit - 1));
             }
-            
+
+            //Load rates of Revision tests
+            chart_revisionRates.Series["Revision"].Points.AddXY("Επιτυχία", revisionTestSuccess.ToString());
+            chart_revisionRates.Series["Revision"].Points.AddXY("Αποτυχία", revisionTestFailure.ToString());
+            chart_revisionRates.Series["Revision"].Points[1].Color = Color.Red;
+
+            //Load rates of 
         }
     }
 }

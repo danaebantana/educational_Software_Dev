@@ -26,4 +26,3 @@ C:\Users\Danae\Desktop\Πα.Πει\8ο ΕΞΑΜΗΝΟ\ΕΚΠΑΙΔΕΥΤΙΚΟ �
 C:\Users\Danae\Desktop\Πα.Πει\8ο ΕΞΑΜΗΝΟ\ΕΚΠΑΙΔΕΥΤΙΚΟ ΛΟΓΙΣΜΙΚΟ\educational_Software_Dev\Εducational Software\bin\Debug\EntityFramework.xml
 C:\Users\Danae\Desktop\Πα.Πει\8ο ΕΞΑΜΗΝΟ\ΕΚΠΑΙΔΕΥΤΙΚΟ ΛΟΓΙΣΜΙΚΟ\educational_Software_Dev\Εducational Software\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Danae\Desktop\Πα.Πει\8ο ΕΞΑΜΗΝΟ\ΕΚΠΑΙΔΕΥΤΙΚΟ ΛΟΓΙΣΜΙΚΟ\educational_Software_Dev\Εducational Software\bin\Debug\System.Data.SQLite.xml
-C:\Users\Danae\Desktop\Πα.Πει\8ο ΕΞΑΜΗΝΟ\ΕΚΠΑΙΔΕΥΤΙΚΟ ΛΟΓΙΣΜΙΚΟ\educational_Software_Dev\Εducational Software\obj\Debug\Εducational_Software.Storage.StatisticsForm.resources

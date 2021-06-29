@@ -15,7 +15,7 @@ namespace Εducational_Software.Services
         public ProgressService(User user)
         {
             this.user = user;
-            units = this.GetUnits();
+            units = this.GetUnlockedUnits();
         }
 
         private Statistics GetStatistics(string quiz_id)
@@ -24,7 +24,7 @@ namespace Εducational_Software.Services
             return conn.GetStatistics(user, quiz_id);
         }
 
-        public List<int> GetUnits()
+        public List<int> GetUnlockedUnits()
         {
             DataConnection conn = new DataConnection();
             List<int> units = new List<int>();
@@ -52,7 +52,7 @@ namespace Εducational_Software.Services
             return statistics;
         }
 
-        private double GetUnitRate(Statistics statistics, bool success)
+        private double GetUnitTestStatus(Statistics statistics, bool success)
         {
             List<double> scores = statistics.GetScores();
             int count = 0;
@@ -75,22 +75,36 @@ namespace Εducational_Software.Services
                     }
                 }
             }
-            
 
             return ((double)count / (double)scores.Count) * 100;
         }
 
-        public List<double> GetRates(bool success)
+        public List<double> GetUnitTestScore(bool success)
         {
             List<double> rates = new List<double>();
             List<Statistics> statistics = this.GetUserStatistics();
 
             foreach(Statistics statistic in statistics)
             {
-                rates.Add(this.GetUnitRate(statistic, success)); 
+                rates.Add(this.GetUnitTestStatus(statistic, success)); 
             }
 
             return rates;
+        }
+
+        public double GetRevisionRates(bool success)
+        {
+            Statistics statistic = this.GetUserRevisionStatistics();
+            double rate = this.GetUnitTestStatus(statistic, success);
+
+            return rate;
+        }
+
+        public Statistics GetUserRevisionStatistics()
+        {
+            Statistics statistics = this.GetStatistics("revision");
+
+            return statistics;
         }
     }
 }
