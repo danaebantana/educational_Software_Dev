@@ -37,7 +37,11 @@ namespace Εducational_Software
         {
             List<int> unitList = statisticsService.GetCompletedUnits();
             units = unitList.ToArray();
-            if (!unitList.Count.Equals(9))
+            if (!unitList.Count.Equals(9) && statisticsService.GetStatistics(unitList.Count.ToString()).IsUnlocked())
+            {
+                unitList.Add(unitList.Count + 1);
+            }
+            if (unitList.Count.Equals(0))
             {
                 unitList.Add(unitList.Count + 1);
             }

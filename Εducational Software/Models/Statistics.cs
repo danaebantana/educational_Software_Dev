@@ -47,5 +47,17 @@ namespace Εducational_Software.Models
             scores.Add(score);
         }
 
+        public bool IsUnlocked()
+        {
+            foreach(double score in scores)
+            {
+                if(score >= 50)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 }
