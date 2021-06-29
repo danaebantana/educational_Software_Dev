@@ -21,8 +21,7 @@ namespace Εducational_Software
         private List<Panel> panelQuestionList;
         private Random random;
         private List<bool> answerList;
-        private int questionCount;
-        private int maxNumberOfQuestions;
+        private int questionCount, maxNumberOfQuestions, failures = 0;
         private List<int> randomNumberMultiplier;
 
         public TestForm(AuthenticationService _auth, StatisticsService _statisticsService, string _quiz_id, int[] _unit)
@@ -89,7 +88,7 @@ namespace Εducational_Software
                 unitNumber = unit[0];
                 index = random.Next(randomNumberMultiplier.Count);
                 randomNumber = randomNumberMultiplier.ElementAt(index);
-                randomNumberMultiplier.RemoveAt(index);
+                randomNumberMultiplier.RemoveAt(index); // TODO This fails after 2 failures. Needs fixing.
             }
 
             //Randomly pick the number that will get multiplied with the unit number
@@ -120,7 +119,6 @@ namespace Εducational_Software
                 int index = random.Next(3);
                 radioButtons.ElementAt(index).Text = resultNumber.ToString(); 
 
-                // TODO Please fix this
                 int randomNumber1 = random.Next(unitNumber, (unitNumber * 10) + 1);
                 int randomNumber2 = random.Next(unitNumber, (unitNumber * 10) + 1);
                 if (radioButton_choice1.Text.Equals("_") && radioButton_choice2.Text.Equals("_"))
@@ -157,7 +155,17 @@ namespace Εducational_Software
                     {
                         pictureBox_message.Image = (Image)Properties.Resources.ResourceManager.GetObject("messageCloudFailed");
                         button_start.Visible = true;
-                        ClearQuestions(); 
+                        ClearQuestions();
+
+                        // If the student fails 3 times, suggest them to revise the theory
+                        if (++failures >= 3)
+                        {
+                            MessageBox.Show("Μια επανάληψη στην προπαίδεια του " + unit[0].ToString() + " θα σε βοηθήσει να τα πας καλύτερα.");
+                            this.Hide();
+                            TheoryForm theoryForm = new TheoryForm(auth, statisticsService, unit[0]);
+                            theoryForm.ShowDialog();
+                            this.Close();
+                        }
                     }
                     else
                     {
