@@ -35,26 +35,20 @@ namespace Εducational_Software.Services
             DataConnection conn = new DataConnection();
             Statistics statistics = conn.GetStatistics(user, quiz_id);
 
-            int theory_revisions = statistics.GetTheoryRevisions();
-            float score = statistics.GetScore();
+            int revisions = (statistics != null ? statistics.GetTheoryRevisions() : 0);
 
-            conn.UpdateStatistics(user, quiz_id, ++theory_revisions, score);
+            conn.UpdateTheoryRevisions(user, quiz_id, ++revisions);
         }
 
         /// <summary>
-        /// Updates the score of a quiz.
+        /// Inserts a new score for a quiz.
         /// </summary>
         /// <param name="quiz_id">The id of the quiz.</param>
         /// <param name="score">The new score for the quiz.</param>
-        public void UpdateScore(string quiz_id, double score)
+        public void InsertScore(string quiz_id, double score)
         {
             DataConnection conn = new DataConnection();
-            Statistics statistics = conn.GetStatistics(user, quiz_id);
-
-            int theory_revisions = statistics.GetTheoryRevisions();
-
-            if (score > statistics.GetScore())
-                conn.UpdateStatistics(user, quiz_id, theory_revisions, score);
+            conn.InsertScore(user, quiz_id, score);
         }
 
         public List<int> GetCompletedUnits()
@@ -64,7 +58,7 @@ namespace Εducational_Software.Services
 
             for (int i = 1; i < 10; i++)
             {
-                if (conn.GetCompletedUnit(user, i.ToString()) != null)
+                if (conn.GetStatistics(user, i.ToString()).HasScores())
                 {
                     units.Add(i);
                 }

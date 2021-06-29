@@ -11,16 +11,16 @@ namespace Εducational_Software.Models
         private User user;
         private string quiz_id;
         private int theory_revisions;
-        private float score;
+        private List<double> scores;
 
         public Statistics() { }
 
-        public Statistics(User user, string quiz_id, int theory_revisions, float score)
+        public Statistics(User user, string quiz_id, int theory_revisions)
         {
             this.user = user;
             this.quiz_id = quiz_id;
             this.theory_revisions = theory_revisions;
-            this.score = score;
+            this.scores = new List<double>();
         }
 
         public string GetQuizID()
@@ -33,9 +33,19 @@ namespace Εducational_Software.Models
             return theory_revisions;
         }
 
-        public float GetScore()
+        public List<double> GetScores()
         {
-            return score;
+            return scores;
         }
+
+        public bool HasScores()
+        {
+            return scores.Count() > 0;
+        }
+
+        public void AddScore(double score) {
+            scores.Add(score);
+        }
+
     }
 }

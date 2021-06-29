@@ -24,7 +24,8 @@ namespace Εducational_Software
             {
                 conn.Open();
                 CreateUsersTable(conn);
-                CreateStatisticsTable(conn);
+                CreateScoresTable(conn);
+                CreateTheoryRevisionsTable(conn);
             }
         }
 
@@ -35,9 +36,16 @@ namespace Εducational_Software
             cmd.ExecuteNonQuery();
         }
 
-        private void CreateStatisticsTable(SQLiteConnection conn)
+        private void CreateScoresTable(SQLiteConnection conn)
         {
-            string sql = "CREATE TABLE IF NOT EXISTS statistics (user_id integer, quiz_id varchar(32), theory_revisions integer, score real, PRIMARY KEY (user_id, quiz_id))";
+            string sql = "CREATE TABLE IF NOT EXISTS scores (id integer primary key autoincrement, user_id integer, quiz_id varchar(32), score real)";
+            SQLiteCommand cmd = new SQLiteCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+        }
+
+        private void CreateTheoryRevisionsTable(SQLiteConnection conn)
+        {
+            string sql = "CREATE TABLE IF NOT EXISTS theory_revisions (user_id integer, quiz_id varchar(32), revisions integer, PRIMARY KEY (user_id, quiz_id))";
             SQLiteCommand cmd = new SQLiteCommand(sql, conn);
             cmd.ExecuteNonQuery();
         }
@@ -107,23 +115,39 @@ namespace Εducational_Software
             return userCount > 0;
         }
 
-        public void UpdateStatistics(User user, string quiz_id, int theory_revisions, double score)
+        public void UpdateTheoryRevisions(User user, string quiz_id, int revisions)
         {
-
             using (var conn = new SQLiteConnection(@"Data Source=database.sqlite3"))
             {
                 conn.Open();
 
-                string sql = "INSERT INTO statistics (user_id, quiz_id, theory_revisions, score)" +
-                " VALUES(@user_id, @quiz_id, @theory_revisions, @score)" +
+                string sql = "INSERT INTO theory_revisions (user_id, quiz_id, revisions)" +
+                " VALUES(@user_id, @quiz_id, @revisions)" +
                 "ON CONFLICT(user_id, quiz_id)" +
-                "DO UPDATE SET theory_revisions=excluded.theory_revisions, score=excluded.score;";
+                "DO UPDATE SET revisions=excluded.revisions";
 
                 SQLiteCommand cmd = new SQLiteCommand(sql, conn);
 
                 cmd.Parameters.AddWithValue("@user_id", user.GetId());
                 cmd.Parameters.AddWithValue("@quiz_id", quiz_id);
-                cmd.Parameters.AddWithValue("@theory_revisions", theory_revisions);
+                cmd.Parameters.AddWithValue("@revisions", revisions);
+
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void InsertScore(User user, string quiz_id, double score) {
+            using (var conn = new SQLiteConnection(@"Data Source=database.sqlite3"))
+            {
+                conn.Open();
+
+                string sql = "INSERT INTO scores (user_id, quiz_id, score) VALUES(@user_id, @quiz_id, @score)";
+
+                SQLiteCommand cmd = new SQLiteCommand(sql, conn);
+
+                cmd.Parameters.AddWithValue("@user_id", user.GetId());
+                cmd.Parameters.AddWithValue("@quiz_id", quiz_id);
                 cmd.Parameters.AddWithValue("@score", score);
 
                 cmd.Prepare();
@@ -133,47 +157,30 @@ namespace Εducational_Software
 
         public Statistics GetStatistics(User user, string quiz_id)
         {
-            Statistics statistics = new Statistics();
-
-            using (var conn = new SQLiteConnection("Data Source=database.sqlite3"))
-            {
-                conn.Open();
-
-                string sql = "SELECT theory_revisions, score FROM statistics WHERE user_id = @user_id and quiz_id = @quiz_id";
-                SQLiteCommand cmd = new SQLiteCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@user_id", user.GetId());
-                cmd.Parameters.AddWithValue("@quiz_id", quiz_id);
-
-                SQLiteDataReader rdr = cmd.ExecuteReader();
-
-                while (rdr.Read())
-                {
-                    statistics = new Statistics(user, quiz_id, rdr.GetInt32(0), rdr.GetFloat(1));
-                }
-                rdr.Close();
-            }
-
-            return statistics;
-        }
-
-        public Statistics GetCompletedUnit(User user, string quiz_id)
-        {
             Statistics statistics = null;
 
             using (var conn = new SQLiteConnection("Data Source=database.sqlite3"))
             {
                 conn.Open();
 
-                string sql = "SELECT theory_revisions, score FROM statistics WHERE user_id = @user_id and quiz_id = @quiz_id";
+                string sql = "SELECT revisions FROM theory_revisions WHERE user_id = @user_id and quiz_id = @quiz_id";
                 SQLiteCommand cmd = new SQLiteCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@user_id", user.GetId());
                 cmd.Parameters.AddWithValue("@quiz_id", quiz_id);
-
                 SQLiteDataReader rdr = cmd.ExecuteReader();
+                statistics = new Statistics(user, quiz_id, rdr.Read() ? rdr.GetInt32(0):0);
+                rdr.Close();
+
+                sql = "SELECT score FROM scores WHERE user_id = @user_id and quiz_id = @quiz_id";
+                cmd = new SQLiteCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@user_id", user.GetId());
+                cmd.Parameters.AddWithValue("@quiz_id", quiz_id);
+
+                rdr = cmd.ExecuteReader();
 
                 while (rdr.Read())
                 {
-                    statistics = new Statistics(user, quiz_id, rdr.GetInt32(0), rdr.GetFloat(1));
+                    statistics.AddScore(rdr.GetDouble(0));
                 }
                 rdr.Close();
             }
