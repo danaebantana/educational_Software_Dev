@@ -51,9 +51,13 @@ namespace Εducational_Software
                 {
                     if (pictureBox.Name.Contains(unit.ToString()))
                     {
-                        pictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(unit.ToString());
+                        pictureBox.Visible = true;
                         pictureBox.Enabled = true;
                     }
+                }
+                foreach (Label label in panel_units.Controls.OfType<Label>().Where(n => n.Text.Contains(unit.ToString())))
+                {
+                    label.Visible = true;
                 }
             }
         }
@@ -94,6 +98,24 @@ namespace Εducational_Software
             ProfileForm profileForm = new ProfileForm(auth);
             profileForm.ShowDialog();
             this.Close();
+        }
+
+        private void TakeUnitSelfAssessmentTest(object sender, EventArgs e)
+        {
+            PictureBox clickedPictureBox = sender as PictureBox;
+            //Get the selected unit
+            string[] pictureBoxName = clickedPictureBox.Name.Split('_');
+            int unit = Int32.Parse(pictureBoxName[2]);
+
+            this.Hide();
+            TestForm testForm = new TestForm(auth, statisticsService, unit.ToString(), new int[] { unit });
+            testForm.ShowDialog();
+            this.Close();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
