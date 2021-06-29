@@ -54,8 +54,8 @@ namespace Εducational_Software
             //Load rates of Self-assessment tests
             foreach (int unit in units)
             {
-                chart_unitRates.Series["Επιτυχία"].Points.AddXY(unit.ToString(), successRates.ElementAt(unit-1));
-                chart_unitRates.Series["Αποτυχία"].Points.AddXY(unit.ToString(), failureRates.ElementAt(unit - 1));
+                chart_unitRates.Series["Επιτυχία"].Points.AddXY("Ενότητα: "+ unit.ToString(), successRates.ElementAt(unit-1));
+                chart_unitRates.Series["Αποτυχία"].Points.AddXY("Ενότητα: " + unit.ToString(), failureRates.ElementAt(unit - 1));
             }
 
             //Load rates of Revision tests
@@ -63,7 +63,6 @@ namespace Εducational_Software
             chart_revisionRates.Series["Revision"].Points.AddXY("Αποτυχία", revisionTestFailure.ToString());
             chart_revisionRates.Series["Revision"].Points[1].Color = Color.Red;
 
-            //Load rates of 
         }
     }
 }

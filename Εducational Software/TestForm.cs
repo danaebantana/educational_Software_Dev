@@ -23,6 +23,7 @@ namespace Εducational_Software
         private List<bool> answerList;
         private int questionCount;
         private int maxNumberOfQuestions;
+        private List<int> randomNumberMultiplier;
 
         public TestForm(AuthenticationService _auth, StatisticsService _statisticsService, string _quiz_id, int[] _unit)
         {
@@ -37,10 +38,12 @@ namespace Εducational_Software
             if (quiz_id.Equals("revision"))
             {
                 this.maxNumberOfQuestions = 10;
+                label_Test.Text = "Επαναληπτικό Τεστ";
             }
             else
             {
                 this.maxNumberOfQuestions = 5;
+                randomNumberMultiplier = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             }
         }
 
@@ -72,20 +75,25 @@ namespace Εducational_Software
             Panel panel = panelQuestionList.ElementAt(index);
             panel.Visible = true;
             int unitNumber = 0;
+            int randomNumber = 0;
 
             //Pick the unitNumber
             if (quiz_id.Equals("revision"))
             {
                 index = random.Next(unit.Length);
                 unitNumber = unit[index];
+                randomNumber = random.Next(1, 11);
             } 
             else
             {
                 unitNumber = unit[0];
+                index = random.Next(randomNumberMultiplier.Count);
+                randomNumber = randomNumberMultiplier.ElementAt(index);
+                randomNumberMultiplier.RemoveAt(index);
             }
 
             //Randomly pick the number that will get multiplied with the unit number
-            int randomNumber = random.Next(1, 11);
+            
             int resultNumber = unitNumber * randomNumber;
             FillQuestion(panel, unitNumber, randomNumber, resultNumber);
         }
@@ -297,15 +305,8 @@ namespace Εducational_Software
         private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            if (unit.Length.Equals(1))  //Return to TheoryForm
-            {
-                TheoryForm theoryForm = new TheoryForm(auth, statisticsService, unit[0]);
-                theoryForm.ShowDialog();
-            } else  //Return to MainForm
-            {
-                MainForm mainForm = new MainForm(auth);
-                mainForm.ShowDialog();
-            }
+            MainForm mainForm = new MainForm(auth);
+            mainForm.ShowDialog();
             this.Close();
         }
     }

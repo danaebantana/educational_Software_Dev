@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,20 +54,20 @@
             this.label_surname = new System.Windows.Forms.Label();
             this.label_profile = new System.Windows.Forms.Label();
             this.groupBox_statisticalDetails = new System.Windows.Forms.GroupBox();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart_revisionRates = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart_unitRates = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label_unit = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button_help = new System.Windows.Forms.Button();
             this.panel_details = new System.Windows.Forms.Panel();
-            this.chart_revisionRates = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.menuStrip1.SuspendLayout();
             this.groupBox_personalDetails.SuspendLayout();
             this.groupBox_statisticalDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_revisionRates)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart_unitRates)).BeginInit();
             this.panel_details.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart_revisionRates)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -190,6 +190,65 @@
             this.groupBox_statisticalDetails.TabStop = false;
             this.groupBox_statisticalDetails.Text = "Στατιστικά Στοιχεία:";
             // 
+            // chart1
+            // 
+            this.chart1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.Transparent;
+            legend1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(45, 722);
+            this.chart1.Name = "chart1";
+            series1.BorderColor = System.Drawing.Color.DodgerBlue;
+            series1.ChartArea = "ChartArea1";
+            series1.Color = System.Drawing.Color.DodgerBlue;
+            series1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.Legend = "Legend1";
+            series1.Name = "Πλήρης Κατανόηση";
+            series1.YValuesPerPoint = 4;
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(540, 300);
+            this.chart1.TabIndex = 4;
+            this.chart1.Text = "chart1";
+            title1.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title1.BackColor = System.Drawing.Color.Transparent;
+            title1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Title1";
+            title1.Text = "Κατανόηση ανά Ενότητα";
+            this.chart1.Titles.Add(title1);
+            // 
+            // chart_revisionRates
+            // 
+            this.chart_revisionRates.BackColor = System.Drawing.Color.Transparent;
+            chartArea2.BackColor = System.Drawing.Color.Transparent;
+            chartArea2.Name = "ChartArea1";
+            this.chart_revisionRates.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.Color.Transparent;
+            legend2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            this.chart_revisionRates.Legends.Add(legend2);
+            this.chart_revisionRates.Location = new System.Drawing.Point(45, 372);
+            this.chart_revisionRates.Name = "chart_revisionRates";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Color = System.Drawing.SystemColors.MenuHighlight;
+            series2.CustomProperties = "PieLabelStyle=Disabled";
+            series2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.Legend = "Legend1";
+            series2.Name = "Revision";
+            this.chart_revisionRates.Series.Add(series2);
+            this.chart_revisionRates.Size = new System.Drawing.Size(516, 300);
+            this.chart_revisionRates.TabIndex = 3;
+            title2.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.Name = "Title1";
+            title2.Text = "Επαναληπτικά Τεστ";
+            this.chart_revisionRates.Titles.Add(title2);
+            // 
             // chart_unitRates
             // 
             this.chart_unitRates.BackColor = System.Drawing.Color.Transparent;
@@ -267,65 +326,6 @@
             this.panel_details.Size = new System.Drawing.Size(680, 422);
             this.panel_details.TabIndex = 10;
             // 
-            // chart_revisionRates
-            // 
-            this.chart_revisionRates.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            this.chart_revisionRates.ChartAreas.Add(chartArea2);
-            legend2.BackColor = System.Drawing.Color.Transparent;
-            legend2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            this.chart_revisionRates.Legends.Add(legend2);
-            this.chart_revisionRates.Location = new System.Drawing.Point(45, 372);
-            this.chart_revisionRates.Name = "chart_revisionRates";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Color = System.Drawing.SystemColors.MenuHighlight;
-            series2.CustomProperties = "PieLabelStyle=Disabled";
-            series2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series2.Legend = "Legend1";
-            series2.Name = "Revision";
-            this.chart_revisionRates.Series.Add(series2);
-            this.chart_revisionRates.Size = new System.Drawing.Size(516, 300);
-            this.chart_revisionRates.TabIndex = 3;
-            title2.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            title2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.Name = "Title1";
-            title2.Text = "Επαναληπτικά Τεστ";
-            this.chart_revisionRates.Titles.Add(title2);
-            // 
-            // chart1
-            // 
-            this.chart1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.Color.Transparent;
-            legend1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(45, 722);
-            this.chart1.Name = "chart1";
-            series1.BorderColor = System.Drawing.Color.DodgerBlue;
-            series1.ChartArea = "ChartArea1";
-            series1.Color = System.Drawing.Color.DodgerBlue;
-            series1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.Legend = "Legend1";
-            series1.Name = "Πλήρης Κατανόηση";
-            series1.YValuesPerPoint = 4;
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(540, 300);
-            this.chart1.TabIndex = 4;
-            this.chart1.Text = "chart1";
-            title1.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            title1.BackColor = System.Drawing.Color.Transparent;
-            title1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "Title1";
-            title1.Text = "Κατανόηση ανά Ενότητα";
-            this.chart1.Titles.Add(title1);
-            // 
             // ProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -347,11 +347,11 @@
             this.groupBox_personalDetails.PerformLayout();
             this.groupBox_statisticalDetails.ResumeLayout(false);
             this.groupBox_statisticalDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_revisionRates)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart_unitRates)).EndInit();
             this.panel_details.ResumeLayout(false);
             this.panel_details.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart_revisionRates)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
