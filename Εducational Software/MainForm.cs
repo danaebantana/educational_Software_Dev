@@ -96,5 +96,13 @@ namespace Εducational_Software
             testForm.ShowDialog();
             this.Close();
         }
+
+        private void profileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ProfileForm profileForm = new ProfileForm(auth);
+            profileForm.ShowDialog();
+            this.Close();
+        }
     }
 }

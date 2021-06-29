@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.βοήθειαToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label_nameOfUser = new System.Windows.Forms.Label();
             this.label_surnameOfUser = new System.Windows.Forms.Label();
             this.label_emailOfUser = new System.Windows.Forms.Label();
@@ -41,9 +46,16 @@
             this.label_surname = new System.Windows.Forms.Label();
             this.label_profile = new System.Windows.Forms.Label();
             this.groupBox_statisticalDetails = new System.Windows.Forms.GroupBox();
+            this.chart_unitRates = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label_unit = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.button_help = new System.Windows.Forms.Button();
+            this.panel_details = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.groupBox_personalDetails.SuspendLayout();
+            this.groupBox_statisticalDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_unitRates)).BeginInit();
+            this.panel_details.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -51,7 +63,7 @@
             this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.backToolStripMenuItem,
-            this.βοήθειαToolStripMenuItem});
+            this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(692, 29);
@@ -65,16 +77,16 @@
             this.backToolStripMenuItem.Size = new System.Drawing.Size(60, 25);
             this.backToolStripMenuItem.Text = "Πίσω";
             // 
-            // βοήθειαToolStripMenuItem
+            // helpToolStripMenuItem
             // 
-            this.βοήθειαToolStripMenuItem.Name = "βοήθειαToolStripMenuItem";
-            this.βοήθειαToolStripMenuItem.Size = new System.Drawing.Size(82, 25);
-            this.βοήθειαToolStripMenuItem.Text = "Βοήθεια";
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(82, 25);
+            this.helpToolStripMenuItem.Text = "Βοήθεια";
             // 
             // label_nameOfUser
             // 
             this.label_nameOfUser.AutoSize = true;
-            this.label_nameOfUser.Location = new System.Drawing.Point(34, 44);
+            this.label_nameOfUser.Location = new System.Drawing.Point(41, 33);
             this.label_nameOfUser.Name = "label_nameOfUser";
             this.label_nameOfUser.Size = new System.Drawing.Size(69, 21);
             this.label_nameOfUser.TabIndex = 2;
@@ -83,7 +95,7 @@
             // label_surnameOfUser
             // 
             this.label_surnameOfUser.AutoSize = true;
-            this.label_surnameOfUser.Location = new System.Drawing.Point(33, 80);
+            this.label_surnameOfUser.Location = new System.Drawing.Point(40, 69);
             this.label_surnameOfUser.Name = "label_surnameOfUser";
             this.label_surnameOfUser.Size = new System.Drawing.Size(70, 21);
             this.label_surnameOfUser.TabIndex = 3;
@@ -92,7 +104,7 @@
             // label_emailOfUser
             // 
             this.label_emailOfUser.AutoSize = true;
-            this.label_emailOfUser.Location = new System.Drawing.Point(47, 117);
+            this.label_emailOfUser.Location = new System.Drawing.Point(54, 106);
             this.label_emailOfUser.Name = "label_emailOfUser";
             this.label_emailOfUser.Size = new System.Drawing.Size(56, 21);
             this.label_emailOfUser.TabIndex = 4;
@@ -107,9 +119,9 @@
             this.groupBox_personalDetails.Controls.Add(this.label_emailOfUser);
             this.groupBox_personalDetails.Controls.Add(this.label_surnameOfUser);
             this.groupBox_personalDetails.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox_personalDetails.Location = new System.Drawing.Point(25, 107);
+            this.groupBox_personalDetails.Location = new System.Drawing.Point(13, 3);
             this.groupBox_personalDetails.Name = "groupBox_personalDetails";
-            this.groupBox_personalDetails.Size = new System.Drawing.Size(640, 168);
+            this.groupBox_personalDetails.Size = new System.Drawing.Size(640, 141);
             this.groupBox_personalDetails.TabIndex = 6;
             this.groupBox_personalDetails.TabStop = false;
             this.groupBox_personalDetails.Text = "Προσωπικά Στοιχεία";
@@ -117,7 +129,7 @@
             // label_email
             // 
             this.label_email.AutoSize = true;
-            this.label_email.Location = new System.Drawing.Point(149, 117);
+            this.label_email.Location = new System.Drawing.Point(156, 106);
             this.label_email.Name = "label_email";
             this.label_email.Size = new System.Drawing.Size(15, 21);
             this.label_email.TabIndex = 7;
@@ -126,7 +138,7 @@
             // label_name
             // 
             this.label_name.AutoSize = true;
-            this.label_name.Location = new System.Drawing.Point(149, 44);
+            this.label_name.Location = new System.Drawing.Point(156, 33);
             this.label_name.Name = "label_name";
             this.label_name.Size = new System.Drawing.Size(15, 21);
             this.label_name.TabIndex = 5;
@@ -135,7 +147,7 @@
             // label_surname
             // 
             this.label_surname.AutoSize = true;
-            this.label_surname.Location = new System.Drawing.Point(149, 80);
+            this.label_surname.Location = new System.Drawing.Point(156, 69);
             this.label_surname.Name = "label_surname";
             this.label_surname.Size = new System.Drawing.Size(15, 21);
             this.label_surname.TabIndex = 6;
@@ -153,32 +165,97 @@
             // 
             // groupBox_statisticalDetails
             // 
+            this.groupBox_statisticalDetails.Controls.Add(this.chart_unitRates);
+            this.groupBox_statisticalDetails.Controls.Add(this.label_unit);
+            this.groupBox_statisticalDetails.Controls.Add(this.label1);
             this.groupBox_statisticalDetails.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox_statisticalDetails.Location = new System.Drawing.Point(25, 294);
+            this.groupBox_statisticalDetails.Location = new System.Drawing.Point(13, 150);
             this.groupBox_statisticalDetails.Name = "groupBox_statisticalDetails";
-            this.groupBox_statisticalDetails.Size = new System.Drawing.Size(640, 147);
+            this.groupBox_statisticalDetails.Size = new System.Drawing.Size(640, 418);
             this.groupBox_statisticalDetails.TabIndex = 8;
             this.groupBox_statisticalDetails.TabStop = false;
             this.groupBox_statisticalDetails.Text = "Στατιστικά Στοιχεία:";
             // 
+            // chart_unitRates
+            // 
+            this.chart_unitRates.BackColor = System.Drawing.Color.Transparent;
+            this.chart_unitRates.BorderlineColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chart_unitRates.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart_unitRates.Legends.Add(legend1);
+            this.chart_unitRates.Location = new System.Drawing.Point(26, 66);
+            this.chart_unitRates.Name = "chart_unitRates";
+            this.chart_unitRates.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            this.chart_unitRates.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar100;
+            series1.Color = System.Drawing.Color.LawnGreen;
+            series1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.Legend = "Legend1";
+            series1.Name = "Επιτυχία";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar100;
+            series2.Color = System.Drawing.Color.Red;
+            series2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.Legend = "Legend1";
+            series2.Name = "Αποτυχία";
+            this.chart_unitRates.Series.Add(series1);
+            this.chart_unitRates.Series.Add(series2);
+            this.chart_unitRates.Size = new System.Drawing.Size(596, 300);
+            this.chart_unitRates.TabIndex = 2;
+            this.chart_unitRates.Text = "Ποσοστά Επιτυχίας-Αποτυχίας κάθε Κεφαλαίου";
+            title1.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Title_chart_unitRates";
+            title1.Text = "Τεστ Αυτοαξιολόγησης";
+            this.chart_unitRates.Titles.Add(title1);
+            // 
+            // label_unit
+            // 
+            this.label_unit.AutoSize = true;
+            this.label_unit.Location = new System.Drawing.Point(275, 35);
+            this.label_unit.Name = "label_unit";
+            this.label_unit.Size = new System.Drawing.Size(15, 21);
+            this.label_unit.TabIndex = 1;
+            this.label_unit.Text = "-";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(41, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(212, 21);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ολοκληρωμένες Ενότητες:";
+            // 
             // button_help
             // 
-            this.button_help.Location = new System.Drawing.Point(619, 53);
+            this.button_help.Location = new System.Drawing.Point(619, 46);
             this.button_help.Name = "button_help";
             this.button_help.Size = new System.Drawing.Size(46, 36);
             this.button_help.TabIndex = 9;
             this.button_help.Text = "Help";
             this.button_help.UseVisualStyleBackColor = true;
             // 
+            // panel_details
+            // 
+            this.panel_details.AutoScroll = true;
+            this.panel_details.Controls.Add(this.groupBox_personalDetails);
+            this.panel_details.Controls.Add(this.groupBox_statisticalDetails);
+            this.panel_details.Location = new System.Drawing.Point(12, 85);
+            this.panel_details.Name = "panel_details";
+            this.panel_details.Size = new System.Drawing.Size(680, 369);
+            this.panel_details.TabIndex = 10;
+            // 
             // ProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 453);
+            this.Controls.Add(this.panel_details);
             this.Controls.Add(this.button_help);
-            this.Controls.Add(this.groupBox_statisticalDetails);
             this.Controls.Add(this.label_profile);
-            this.Controls.Add(this.groupBox_personalDetails);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -187,10 +264,15 @@
             this.Name = "ProfileForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mathster";
+            this.Load += new System.EventHandler(this.ProfileForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox_personalDetails.ResumeLayout(false);
             this.groupBox_personalDetails.PerformLayout();
+            this.groupBox_statisticalDetails.ResumeLayout(false);
+            this.groupBox_statisticalDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_unitRates)).EndInit();
+            this.panel_details.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,7 +291,11 @@
         private System.Windows.Forms.Label label_surname;
         private System.Windows.Forms.Label label_profile;
         private System.Windows.Forms.GroupBox groupBox_statisticalDetails;
-        private System.Windows.Forms.ToolStripMenuItem βοήθειαToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.Button button_help;
+        private System.Windows.Forms.Panel panel_details;
+        private System.Windows.Forms.Label label_unit;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart_unitRates;
     }
 }

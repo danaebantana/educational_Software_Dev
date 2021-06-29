@@ -166,7 +166,7 @@ namespace Εducational_Software
                     button_next_end.Visible = false;
 
                     // Store the sucess percentage for statistics
-                    statisticsService.InsertScore(unit[0].ToString(), successPer);
+                    statisticsService.InsertScore(quiz_id, successPer);
                 }
                 else
                 {

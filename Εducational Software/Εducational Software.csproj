@@ -60,6 +60,7 @@
     <Reference Include="System.Threading.Tasks.Extensions">
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\PostgreSQL\Npgsql\bin\net45\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,6 +72,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Progress.cs" />
     <Compile Include="Models\Statistics.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -78,6 +80,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Services\AuthenticationService.cs" />
+    <Compile Include="Services\ProgressService.cs" />
     <Compile Include="Services\StatisticsService.cs" />
     <Compile Include="Storage\DataConnection.cs" />
     <Compile Include="LoginForm.cs">
