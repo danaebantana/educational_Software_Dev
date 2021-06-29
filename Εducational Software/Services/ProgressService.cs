@@ -18,7 +18,7 @@ namespace Εducational_Software.Services
             units = this.GetUnlockedUnits();
         }
 
-        private Statistics GetStatistics(string quiz_id)
+        public Statistics GetStatistics(string quiz_id)
         {
             DataConnection conn = new DataConnection();
             return conn.GetStatistics(user, quiz_id);

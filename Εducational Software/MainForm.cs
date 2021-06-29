@@ -97,7 +97,7 @@ namespace Εducational_Software
             this.Hide();
             ProfileForm profileForm = new ProfileForm(auth);
             profileForm.ShowDialog();
-            this.Close();
+            this.Show();
         }
 
         private void TakeUnitSelfAssessmentTest(object sender, EventArgs e)

@@ -51,44 +51,44 @@
             // label_Register
             // 
             this.label_Register.AutoSize = true;
-            this.label_Register.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Register.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Register.Location = new System.Drawing.Point(174, 29);
             this.label_Register.Name = "label_Register";
-            this.label_Register.Size = new System.Drawing.Size(158, 39);
+            this.label_Register.Size = new System.Drawing.Size(155, 37);
             this.label_Register.TabIndex = 0;
             this.label_Register.Text = "Εγγραφή";
             // 
             // textBox_name
             // 
-            this.textBox_name.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_name.Location = new System.Drawing.Point(159, 25);
             this.textBox_name.Name = "textBox_name";
-            this.textBox_name.Size = new System.Drawing.Size(181, 31);
+            this.textBox_name.Size = new System.Drawing.Size(181, 29);
             this.textBox_name.TabIndex = 1;
             // 
             // textBox_surname
             // 
-            this.textBox_surname.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_surname.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_surname.Location = new System.Drawing.Point(159, 69);
             this.textBox_surname.Name = "textBox_surname";
-            this.textBox_surname.Size = new System.Drawing.Size(181, 31);
+            this.textBox_surname.Size = new System.Drawing.Size(181, 29);
             this.textBox_surname.TabIndex = 2;
             // 
             // textBox_username
             // 
-            this.textBox_username.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_username.Location = new System.Drawing.Point(159, 28);
             this.textBox_username.Name = "textBox_username";
-            this.textBox_username.Size = new System.Drawing.Size(181, 31);
+            this.textBox_username.Size = new System.Drawing.Size(181, 29);
             this.textBox_username.TabIndex = 4;
             // 
             // textBox_password
             // 
-            this.textBox_password.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_password.Location = new System.Drawing.Point(159, 69);
             this.textBox_password.Name = "textBox_password";
             this.textBox_password.PasswordChar = '*';
-            this.textBox_password.Size = new System.Drawing.Size(181, 31);
+            this.textBox_password.Size = new System.Drawing.Size(181, 29);
             this.textBox_password.TabIndex = 5;
             // 
             // panel_registerUserDetails
@@ -108,38 +108,38 @@
             // label_email
             // 
             this.label_email.AutoSize = true;
-            this.label_email.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_email.Location = new System.Drawing.Point(97, 116);
             this.label_email.Name = "label_email";
-            this.label_email.Size = new System.Drawing.Size(56, 21);
+            this.label_email.Size = new System.Drawing.Size(52, 20);
             this.label_email.TabIndex = 13;
-            this.label_email.Text = "Εμαιλ:";
+            this.label_email.Text = "Email:";
             // 
             // textBox_email
             // 
-            this.textBox_email.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_email.Location = new System.Drawing.Point(159, 112);
             this.textBox_email.Name = "textBox_email";
-            this.textBox_email.Size = new System.Drawing.Size(181, 31);
+            this.textBox_email.Size = new System.Drawing.Size(181, 29);
             this.textBox_email.TabIndex = 3;
             // 
             // label_surname
             // 
             this.label_surname.AutoSize = true;
-            this.label_surname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_surname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_surname.Location = new System.Drawing.Point(84, 73);
             this.label_surname.Name = "label_surname";
-            this.label_surname.Size = new System.Drawing.Size(70, 21);
+            this.label_surname.Size = new System.Drawing.Size(72, 20);
             this.label_surname.TabIndex = 10;
             this.label_surname.Text = "Επίθετο:";
             // 
             // label_name
             // 
             this.label_name.AutoSize = true;
-            this.label_name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_name.Location = new System.Drawing.Point(85, 35);
             this.label_name.Name = "label_name";
-            this.label_name.Size = new System.Drawing.Size(69, 21);
+            this.label_name.Size = new System.Drawing.Size(60, 20);
             this.label_name.TabIndex = 9;
             this.label_name.Text = "Όνομα:";
             // 
@@ -158,26 +158,26 @@
             // label_password
             // 
             this.label_password.AutoSize = true;
-            this.label_password.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_password.Location = new System.Drawing.Point(78, 73);
             this.label_password.Name = "label_password";
-            this.label_password.Size = new System.Drawing.Size(75, 21);
+            this.label_password.Size = new System.Drawing.Size(71, 20);
             this.label_password.TabIndex = 12;
             this.label_password.Text = "Κωδικός:";
             // 
             // label_username
             // 
             this.label_username.AutoSize = true;
-            this.label_username.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_username.Location = new System.Drawing.Point(23, 32);
             this.label_username.Name = "label_username";
-            this.label_username.Size = new System.Drawing.Size(130, 21);
+            this.label_username.Size = new System.Drawing.Size(120, 20);
             this.label_username.TabIndex = 11;
             this.label_username.Text = "Όνομα Χρήστη:";
             // 
             // button_register
             // 
-            this.button_register.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_register.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_register.Location = new System.Drawing.Point(200, 397);
             this.button_register.Name = "button_register";
             this.button_register.Size = new System.Drawing.Size(94, 41);
@@ -197,7 +197,7 @@
             // 
             // RegisterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 467);
             this.Controls.Add(this.button_help);
@@ -205,7 +205,7 @@
             this.Controls.Add(this.panel_registerLoginUserDetails);
             this.Controls.Add(this.panel_registerUserDetails);
             this.Controls.Add(this.label_Register);
-            this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegisterForm";
