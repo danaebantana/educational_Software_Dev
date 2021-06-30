@@ -46,6 +46,7 @@
             System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label_nameOfUser = new System.Windows.Forms.Label();
             this.label_surnameOfUser = new System.Windows.Forms.Label();
@@ -64,7 +65,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button_help = new System.Windows.Forms.Button();
             this.panel_details = new System.Windows.Forms.Panel();
-            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox_personalDetails.SuspendLayout();
             this.groupBox_statisticalDetails.SuspendLayout();
@@ -87,6 +87,15 @@
             this.menuStrip1.Size = new System.Drawing.Size(692, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // backToolStripMenuItem
+            // 
+            this.backToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backToolStripMenuItem.Image = global::Εducational_Software.Properties.Resources.backArrow;
+            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(76, 25);
+            this.backToolStripMenuItem.Text = "Πίσω";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -332,12 +341,12 @@
             // 
             // button_help
             // 
+            this.button_help.BackgroundImage = global::Εducational_Software.Properties.Resources.help;
             this.button_help.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_help.Location = new System.Drawing.Point(619, 37);
+            this.button_help.Location = new System.Drawing.Point(640, 37);
             this.button_help.Name = "button_help";
-            this.button_help.Size = new System.Drawing.Size(46, 36);
+            this.button_help.Size = new System.Drawing.Size(40, 40);
             this.button_help.TabIndex = 9;
-            this.button_help.Text = "Help";
             this.button_help.UseVisualStyleBackColor = true;
             // 
             // panel_details
@@ -349,15 +358,6 @@
             this.panel_details.Name = "panel_details";
             this.panel_details.Size = new System.Drawing.Size(680, 375);
             this.panel_details.TabIndex = 10;
-            // 
-            // backToolStripMenuItem
-            // 
-            this.backToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backToolStripMenuItem.Image = global::Εducational_Software.Properties.Resources.backArrow;
-            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(76, 25);
-            this.backToolStripMenuItem.Text = "Πίσω";
-            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
             // ProfileForm
             // 

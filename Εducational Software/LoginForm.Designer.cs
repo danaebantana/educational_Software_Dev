@@ -71,10 +71,10 @@
             // 
             // button_login
             // 
-            this.button_login.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_login.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_login.Location = new System.Drawing.Point(149, 115);
             this.button_login.Name = "button_login";
-            this.button_login.Size = new System.Drawing.Size(102, 36);
+            this.button_login.Size = new System.Drawing.Size(135, 36);
             this.button_login.TabIndex = 3;
             this.button_login.Text = "Είσοδος";
             this.button_login.UseVisualStyleBackColor = true;
@@ -110,11 +110,11 @@
             // 
             // button_help
             // 
-            this.button_help.Location = new System.Drawing.Point(284, 115);
+            this.button_help.Image = global::Εducational_Software.Properties.Resources.help;
+            this.button_help.Location = new System.Drawing.Point(290, 114);
             this.button_help.Name = "button_help";
-            this.button_help.Size = new System.Drawing.Size(46, 36);
+            this.button_help.Size = new System.Drawing.Size(40, 40);
             this.button_help.TabIndex = 7;
-            this.button_help.Text = "Help";
             this.button_help.UseVisualStyleBackColor = true;
             // 
             // label_password

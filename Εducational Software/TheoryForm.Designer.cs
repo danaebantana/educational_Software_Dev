@@ -673,11 +673,11 @@
             // 
             // button_help
             // 
+            this.button_help.Image = global::Εducational_Software.Properties.Resources.help;
             this.button_help.Location = new System.Drawing.Point(425, 392);
             this.button_help.Name = "button_help";
             this.button_help.Size = new System.Drawing.Size(54, 49);
             this.button_help.TabIndex = 1;
-            this.button_help.Text = "Help";
             this.button_help.UseVisualStyleBackColor = true;
             // 
             // label4

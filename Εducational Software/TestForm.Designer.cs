@@ -419,11 +419,11 @@
             // 
             // button_help
             // 
+            this.button_help.Image = global::Εducational_Software.Properties.Resources.help;
             this.button_help.Location = new System.Drawing.Point(165, 304);
             this.button_help.Name = "button_help";
-            this.button_help.Size = new System.Drawing.Size(46, 36);
+            this.button_help.Size = new System.Drawing.Size(40, 40);
             this.button_help.TabIndex = 8;
-            this.button_help.Text = "Help";
             this.button_help.UseVisualStyleBackColor = true;
             // 
             // pictureBox_helper

@@ -194,11 +194,11 @@
             // 
             // button_help
             // 
+            this.button_help.Image = global::Εducational_Software.Properties.Resources.help;
             this.button_help.Location = new System.Drawing.Point(275, 420);
             this.button_help.Name = "button_help";
             this.button_help.Size = new System.Drawing.Size(49, 44);
             this.button_help.TabIndex = 7;
-            this.button_help.Text = "Help";
             this.button_help.UseVisualStyleBackColor = true;
             // 
             // menuStrip1

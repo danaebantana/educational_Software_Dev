@@ -154,7 +154,7 @@
             // panel_units
             // 
             this.panel_units.BackColor = System.Drawing.Color.Transparent;
-            this.panel_units.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_units.BackgroundImage")));
+            this.panel_units.BackgroundImage = global::Εducational_Software.Properties.Resources.background;
             this.panel_units.Controls.Add(this.label9);
             this.panel_units.Controls.Add(this.pictureBox_Test_9);
             this.panel_units.Controls.Add(this.pictureBox_Test_8);
@@ -441,11 +441,11 @@
             // button_help
             // 
             this.button_help.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_help.Location = new System.Drawing.Point(4, 340);
+            this.button_help.Image = global::Εducational_Software.Properties.Resources.help;
+            this.button_help.Location = new System.Drawing.Point(7, 335);
             this.button_help.Name = "button_help";
-            this.button_help.Size = new System.Drawing.Size(46, 36);
+            this.button_help.Size = new System.Drawing.Size(40, 40);
             this.button_help.TabIndex = 13;
-            this.button_help.Text = "Help";
             this.button_help.UseVisualStyleBackColor = true;
             // 
             // pictureBox_7
