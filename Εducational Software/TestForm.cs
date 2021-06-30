@@ -42,7 +42,6 @@ namespace Εducational_Software
             else
             {
                 this.maxNumberOfQuestions = 5;
-                randomNumberMultiplier = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             }
         }
 
@@ -63,6 +62,10 @@ namespace Εducational_Software
             pictureBox_message.Image = (Image)Properties.Resources.ResourceManager.GetObject("messageCloud");
             button_start.Visible = false;
             button_next_end.Visible = true;
+            if (!quiz_id.Equals("revision"))
+            {
+                randomNumberMultiplier = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            }
             questionCount = 1;
             GenerateQuestion(unit);
         }
@@ -160,7 +163,7 @@ namespace Εducational_Software
                         // If the student fails 3 times, suggest them to revise the theory
                         if (++failures >= 3)
                         {
-                            MessageBox.Show("Μια επανάληψη στην προπαίδεια του " + unit[0].ToString() + " θα σε βοηθήσει να τα πας καλύτερα.");
+                            MessageBox.Show("Μια επανάληψη στην προπαίδεια του " + unit[0].ToString() + " θα σε βοηθήσει να τα πας καλύτερα!");
                             this.Hide();
                             TheoryForm theoryForm = new TheoryForm(auth, statisticsService, unit[0]);
                             theoryForm.ShowDialog();
