@@ -66,6 +66,16 @@ namespace Εducational_Software
                         "Προπαίδεια του " + quiz_id,
                         progressService.GetStatistics(quiz_id).GetTheoryRevisions()
                     );
+
+                //Load units that the user faces understanding problems
+                if (failureRates.ElementAt(unit - 1) > successRates.ElementAt(unit - 1))
+                {
+                    chart_unitProblems.Series["Ενότητες"].Points.AddXY("Ενότητα: " + quiz_id, 100);
+                }
+                else
+                {
+                    chart_unitProblems.Series["Ενότητες"].Points.AddXY("Ενότητα: " + quiz_id, 0);
+                }
             }
 
             //Load rates of Revision tests

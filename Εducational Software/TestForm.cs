@@ -163,7 +163,7 @@ namespace Εducational_Software
                         // If the student fails 3 times, suggest them to revise the theory
                         if (++failures >= 3)
                         {
-                            MessageBox.Show("Μια επανάληψη στην προπαίδεια του " + unit[0].ToString() + " θα σε βοηθήσει να τα πας καλύτερα!");
+                            MessageBox.Show("Μια επανάληψη στην προπαίδεια του " + unit[0].ToString() + " θα σε βοηθήσει να τα πας καλύτερα! \n Μετά την επανάληψη δοκίμασε πάλι ένα 'Τεστ Αυτοαξιολόγησης'!");
                             this.Hide();
                             TheoryForm theoryForm = new TheoryForm(auth, statisticsService, unit[0]);
                             theoryForm.ShowDialog();
