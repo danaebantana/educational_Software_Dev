@@ -223,6 +223,16 @@ namespace Εducational_Software.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap loginBackground {
+            get {
+                object obj = ResourceManager.GetObject("loginBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap messageCloud {
             get {
                 object obj = ResourceManager.GetObject("messageCloud", resourceCulture);
@@ -266,6 +276,16 @@ namespace Εducational_Software.Properties {
         internal static System.Drawing.Bitmap octopus {
             get {
                 object obj = ResourceManager.GetObject("octopus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap registerBackground {
+            get {
+                object obj = ResourceManager.GetObject("registerBackground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -44,8 +44,9 @@
             // label_Mathster
             // 
             this.label_Mathster.AutoSize = true;
+            this.label_Mathster.BackColor = System.Drawing.Color.Transparent;
             this.label_Mathster.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Mathster.Location = new System.Drawing.Point(104, 25);
+            this.label_Mathster.Location = new System.Drawing.Point(135, 48);
             this.label_Mathster.Name = "label_Mathster";
             this.label_Mathster.Size = new System.Drawing.Size(151, 39);
             this.label_Mathster.TabIndex = 0;
@@ -54,7 +55,7 @@
             // textBox_username
             // 
             this.textBox_username.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_username.Location = new System.Drawing.Point(141, 92);
+            this.textBox_username.Location = new System.Drawing.Point(149, 12);
             this.textBox_username.Name = "textBox_username";
             this.textBox_username.Size = new System.Drawing.Size(181, 31);
             this.textBox_username.TabIndex = 1;
@@ -62,7 +63,7 @@
             // textBox_password
             // 
             this.textBox_password.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_password.Location = new System.Drawing.Point(141, 141);
+            this.textBox_password.Location = new System.Drawing.Point(149, 61);
             this.textBox_password.Name = "textBox_password";
             this.textBox_password.PasswordChar = '*';
             this.textBox_password.Size = new System.Drawing.Size(181, 31);
@@ -70,7 +71,8 @@
             // 
             // button_login
             // 
-            this.button_login.Location = new System.Drawing.Point(141, 195);
+            this.button_login.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_login.Location = new System.Drawing.Point(149, 115);
             this.button_login.Name = "button_login";
             this.button_login.Size = new System.Drawing.Size(102, 36);
             this.button_login.TabIndex = 3;
@@ -81,9 +83,11 @@
             // linkLabel_register
             // 
             this.linkLabel_register.AutoSize = true;
-            this.linkLabel_register.Location = new System.Drawing.Point(61, 234);
+            this.linkLabel_register.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel_register.LinkColor = System.Drawing.Color.Snow;
+            this.linkLabel_register.Location = new System.Drawing.Point(29, 154);
             this.linkLabel_register.Name = "linkLabel_register";
-            this.linkLabel_register.Size = new System.Drawing.Size(253, 17);
+            this.linkLabel_register.Size = new System.Drawing.Size(301, 21);
             this.linkLabel_register.TabIndex = 4;
             this.linkLabel_register.TabStop = true;
             this.linkLabel_register.Text = "Δεν έχετε λογαριασμό; Εγγραφείτε εδώ";
@@ -91,22 +95,22 @@
             // 
             // panel_login
             // 
+            this.panel_login.BackColor = System.Drawing.Color.Transparent;
             this.panel_login.Controls.Add(this.button_help);
             this.panel_login.Controls.Add(this.label_password);
             this.panel_login.Controls.Add(this.label_username);
-            this.panel_login.Controls.Add(this.label_Mathster);
             this.panel_login.Controls.Add(this.linkLabel_register);
             this.panel_login.Controls.Add(this.textBox_username);
             this.panel_login.Controls.Add(this.button_login);
             this.panel_login.Controls.Add(this.textBox_password);
-            this.panel_login.Location = new System.Drawing.Point(30, 36);
+            this.panel_login.Location = new System.Drawing.Point(35, 112);
             this.panel_login.Name = "panel_login";
-            this.panel_login.Size = new System.Drawing.Size(342, 307);
+            this.panel_login.Size = new System.Drawing.Size(342, 184);
             this.panel_login.TabIndex = 5;
             // 
             // button_help
             // 
-            this.button_help.Location = new System.Drawing.Point(276, 195);
+            this.button_help.Location = new System.Drawing.Point(284, 115);
             this.button_help.Name = "button_help";
             this.button_help.Size = new System.Drawing.Size(46, 36);
             this.button_help.TabIndex = 7;
@@ -117,7 +121,8 @@
             // 
             this.label_password.AutoSize = true;
             this.label_password.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_password.Location = new System.Drawing.Point(60, 145);
+            this.label_password.ForeColor = System.Drawing.Color.White;
+            this.label_password.Location = new System.Drawing.Point(68, 65);
             this.label_password.Name = "label_password";
             this.label_password.Size = new System.Drawing.Size(75, 21);
             this.label_password.TabIndex = 6;
@@ -127,7 +132,8 @@
             // 
             this.label_username.AutoSize = true;
             this.label_username.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_username.Location = new System.Drawing.Point(5, 96);
+            this.label_username.ForeColor = System.Drawing.Color.White;
+            this.label_username.Location = new System.Drawing.Point(13, 16);
             this.label_username.Name = "label_username";
             this.label_username.Size = new System.Drawing.Size(130, 21);
             this.label_username.TabIndex = 5;
@@ -137,8 +143,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Εducational_Software.Properties.Resources.loginBackground;
             this.ClientSize = new System.Drawing.Size(410, 375);
             this.Controls.Add(this.panel_login);
+            this.Controls.Add(this.label_Mathster);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -148,6 +156,7 @@
             this.panel_login.ResumeLayout(false);
             this.panel_login.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
