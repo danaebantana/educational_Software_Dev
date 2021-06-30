@@ -215,8 +215,9 @@
             // 
             // backToolStripMenuItem
             // 
+            this.backToolStripMenuItem.Image = global::Εducational_Software.Properties.Resources.backArrow;
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(60, 25);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(76, 25);
             this.backToolStripMenuItem.Text = "Πίσω";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 

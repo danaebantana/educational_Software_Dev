@@ -75,6 +75,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.backToolStripMenuItem,
@@ -88,8 +89,9 @@
             // backToolStripMenuItem
             // 
             this.backToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backToolStripMenuItem.Image = global::Εducational_Software.Properties.Resources.backArrow;
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(60, 25);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(76, 25);
             this.backToolStripMenuItem.Text = "Πίσω";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
@@ -123,6 +125,7 @@
             // 
             // panel_test
             // 
+            this.panel_test.BackColor = System.Drawing.SystemColors.Control;
             this.panel_test.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_test.Controls.Add(this.panel_trueOrFalse);
             this.panel_test.Controls.Add(this.panel_multipleChoice);
@@ -445,6 +448,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(692, 453);
             this.Controls.Add(this.panel_testForm);
             this.Controls.Add(this.label_Test);
