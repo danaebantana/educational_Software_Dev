@@ -72,6 +72,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Statistics.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -121,6 +127,9 @@
       <DependentUpon>TheoryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs" />
+    <EmbeddedResource Include="HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +219,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\backArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\HelpFormPhotos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theoryForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\autoSelfTestButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revisionTestForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profileForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\continuousFailures.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infoButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

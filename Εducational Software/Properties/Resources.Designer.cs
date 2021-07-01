@@ -153,6 +153,16 @@ namespace Εducational_Software.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap autoSelfTestButton {
+            get {
+                object obj = ResourceManager.GetObject("autoSelfTestButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap backArrow {
             get {
                 object obj = ResourceManager.GetObject("backArrow", resourceCulture);
@@ -176,6 +186,16 @@ namespace Εducational_Software.Properties {
         internal static System.Drawing.Bitmap clownfish {
             get {
                 object obj = ResourceManager.GetObject("clownfish", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap continuousFailures {
+            get {
+                object obj = ResourceManager.GetObject("continuousFailures", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,6 +253,16 @@ namespace Εducational_Software.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap infoButton {
+            get {
+                object obj = ResourceManager.GetObject("infoButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap jellyfish {
             get {
                 object obj = ResourceManager.GetObject("jellyfish", resourceCulture);
@@ -246,6 +276,16 @@ namespace Εducational_Software.Properties {
         internal static System.Drawing.Bitmap loginBackground {
             get {
                 object obj = ResourceManager.GetObject("loginBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mainForm {
+            get {
+                object obj = ResourceManager.GetObject("mainForm", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,6 +343,16 @@ namespace Εducational_Software.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap profileForm {
+            get {
+                object obj = ResourceManager.GetObject("profileForm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap registerBackground {
             get {
                 object obj = ResourceManager.GetObject("registerBackground", resourceCulture);
@@ -323,6 +373,16 @@ namespace Εducational_Software.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap revisionTestForm {
+            get {
+                object obj = ResourceManager.GetObject("revisionTestForm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap selfTest {
             get {
                 object obj = ResourceManager.GetObject("selfTest", resourceCulture);
@@ -336,6 +396,26 @@ namespace Εducational_Software.Properties {
         internal static System.Drawing.Bitmap starfish {
             get {
                 object obj = ResourceManager.GetObject("starfish", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap testForm {
+            get {
+                object obj = ResourceManager.GetObject("testForm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap theoryForm {
+            get {
+                object obj = ResourceManager.GetObject("theoryForm", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

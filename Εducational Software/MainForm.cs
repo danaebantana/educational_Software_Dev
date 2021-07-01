@@ -113,9 +113,12 @@ namespace Εducational_Software
             this.Close();
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            HelpForm helpForm = new HelpForm();
+            helpForm.ShowDialog();
+            this.Show();
         }
     }
 }

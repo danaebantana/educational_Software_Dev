@@ -32,7 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.προφίλToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.βοήθειαToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.αποσύνδεσηToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label_welcome = new System.Windows.Forms.Label();
             this.label_username = new System.Windows.Forms.Label();
@@ -95,7 +95,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
             this.προφίλToolStripMenuItem,
-            this.βοήθειαToolStripMenuItem,
+            this.helpToolStripMenuItem,
             this.αποσύνδεσηToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -117,11 +117,12 @@
             this.προφίλToolStripMenuItem.Text = "Προφίλ";
             this.προφίλToolStripMenuItem.Click += new System.EventHandler(this.profileToolStripMenuItem_Click);
             // 
-            // βοήθειαToolStripMenuItem
+            // helpToolStripMenuItem
             // 
-            this.βοήθειαToolStripMenuItem.Name = "βοήθειαToolStripMenuItem";
-            this.βοήθειαToolStripMenuItem.Size = new System.Drawing.Size(82, 25);
-            this.βοήθειαToolStripMenuItem.Text = "Βοήθεια";
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(82, 25);
+            this.helpToolStripMenuItem.Text = "Βοήθεια";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // αποσύνδεσηToolStripMenuItem
             // 
@@ -618,7 +619,7 @@
         private System.Windows.Forms.Label label_welcome;
         private System.Windows.Forms.Label label_username;
         private System.Windows.Forms.Button button_revisionTest;
-        private System.Windows.Forms.ToolStripMenuItem βοήθειαToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.Button button_help;
         private System.Windows.Forms.ToolStripMenuItem αποσύνδεσηToolStripMenuItem;
         private System.Windows.Forms.Panel panel_units;

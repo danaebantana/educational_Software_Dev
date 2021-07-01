@@ -88,5 +88,13 @@ namespace Εducational_Software
         {
             this.Close();
         }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HelpForm helpForm = new HelpForm();
+            helpForm.ShowDialog();
+            this.Show();
+        }
     }
 }

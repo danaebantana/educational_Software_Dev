@@ -123,6 +123,7 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(82, 25);
             this.helpToolStripMenuItem.Text = "Βοήθεια";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // panel_multiplicationTable
             // 
