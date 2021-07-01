@@ -200,6 +200,7 @@
             this.button_help.Size = new System.Drawing.Size(49, 44);
             this.button_help.TabIndex = 7;
             this.button_help.UseVisualStyleBackColor = true;
+            this.button_help.Click += new System.EventHandler(this.button_help_Click);
             // 
             // menuStrip1
             // 

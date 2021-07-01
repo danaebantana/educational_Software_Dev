@@ -67,6 +67,8 @@ namespace Εducational_Software
                 randomNumberMultiplier = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             }
             questionCount = 1;
+            label_correctLabel.Visible = false;
+            label_correct.Visible = false;
             GenerateQuestion(unit);
         }
 
@@ -150,7 +152,7 @@ namespace Εducational_Software
                 if (questionCount.Equals(maxNumberOfQuestions))
                 {
                     // Count the correct answers
-                    int correctAnswers = answerList.Where(answer => answer).Count();
+                    int correctAnswers = answerList.Where(answer => answer.Equals(true)).Count();
 
                     //Calculate success percentage for Test
                     double successPer = ((double)correctAnswers / (double)maxNumberOfQuestions) * 100;
@@ -183,7 +185,10 @@ namespace Εducational_Software
                     // Hide all the question panels
                     panelQuestionList.ForEach(panel => panel.Visible = false);
                     button_next_end.Visible = false;
-
+                    label_correctLabel.Visible = true;
+                    label_correct.Visible = true;
+                    label_correct.Text = correctAnswers.ToString() + "/" + maxNumberOfQuestions.ToString();
+ 
                     // Store the sucess percentage for statistics
                     statisticsService.InsertScore(quiz_id, successPer);
                 }
@@ -311,6 +316,17 @@ namespace Εducational_Software
         {
             RadioButton radioButton = sender as RadioButton;
             label_numberIII.Text = radioButton.Text;
+        }
+
+        private void button_help_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Πάτα το κουμπί 'Έναρξη' για να ξεκινήσεις το τεστ. Επέλεξε μία απάντηση για κάθε " +
+                "ερώτηση και πάτα το κουμπί 'Επόμενο' που θα εμφανιστεί, μόλις ξεκινήσει το τεστ. \n" +
+                "Στο τέλος του τεστ θα εμφανιστεί στο συννεφάκι από το ζωάκι και στο χώρο του τέστ μήνυμα αντίστοιχο με τη απόδοσή σου στο τεστ.\n" +
+                "Εάν περάσεις τότε θα εμφανιστεί ένα 'Τελος' στο χώρο των ερωτήσεων και πατώντας το 'Πίσω' μπορείς να πας " +
+                "στην αρχική σελίδα και να συνεχίσεις στην επόμενη ενότητα.\n" +
+                "Εάν έχεις αποτύχει θα σου δοθεί η ευκαιρία να ξαναδοκιμάσεις το τεστ πατώντας το κουμπί 'Έναρξη' ξανά.\n" +
+                "Τέλος για να δεις συνοπτικά τη λειτουργία της εφαρμογής μπορείς να πατήσεις το κουμπί του μενού 'Βοήθεια'.");
         }
 
         private void backToolStripMenuItem_Click(object sender, EventArgs e)

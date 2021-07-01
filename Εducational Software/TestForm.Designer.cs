@@ -63,6 +63,8 @@
             this.button_help = new System.Windows.Forms.Button();
             this.pictureBox_helper = new System.Windows.Forms.PictureBox();
             this.pictureBox_message = new System.Windows.Forms.PictureBox();
+            this.label_correctLabel = new System.Windows.Forms.Label();
+            this.label_correct = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel_testForm.SuspendLayout();
             this.panel_test.SuspendLayout();
@@ -128,6 +130,8 @@
             // 
             this.panel_test.BackColor = System.Drawing.SystemColors.Control;
             this.panel_test.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_test.Controls.Add(this.label_correct);
+            this.panel_test.Controls.Add(this.label_correctLabel);
             this.panel_test.Controls.Add(this.panel_trueOrFalse);
             this.panel_test.Controls.Add(this.panel_multipleChoice);
             this.panel_test.Controls.Add(this.panel_fillTheBlank);
@@ -426,6 +430,7 @@
             this.button_help.Size = new System.Drawing.Size(40, 40);
             this.button_help.TabIndex = 8;
             this.button_help.UseVisualStyleBackColor = true;
+            this.button_help.Click += new System.EventHandler(this.button_help_Click);
             // 
             // pictureBox_helper
             // 
@@ -444,6 +449,28 @@
             this.pictureBox_message.Size = new System.Drawing.Size(186, 125);
             this.pictureBox_message.TabIndex = 11;
             this.pictureBox_message.TabStop = false;
+            // 
+            // label_correctLabel
+            // 
+            this.label_correctLabel.AutoSize = true;
+            this.label_correctLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_correctLabel.Location = new System.Drawing.Point(297, 16);
+            this.label_correctLabel.Name = "label_correctLabel";
+            this.label_correctLabel.Size = new System.Drawing.Size(63, 21);
+            this.label_correctLabel.TabIndex = 10;
+            this.label_correctLabel.Text = "Σωστά:";
+            this.label_correctLabel.Visible = false;
+            // 
+            // label_correct
+            // 
+            this.label_correct.AutoSize = true;
+            this.label_correct.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_correct.Location = new System.Drawing.Point(366, 16);
+            this.label_correct.Name = "label_correct";
+            this.label_correct.Size = new System.Drawing.Size(53, 21);
+            this.label_correct.TabIndex = 11;
+            this.label_correct.Text = "10/10";
+            this.label_correct.Visible = false;
             // 
             // TestForm
             // 
@@ -466,6 +493,7 @@
             this.menuStrip1.PerformLayout();
             this.panel_testForm.ResumeLayout(false);
             this.panel_test.ResumeLayout(false);
+            this.panel_test.PerformLayout();
             this.panel_trueOrFalse.ResumeLayout(false);
             this.panel_trueOrFalse.PerformLayout();
             this.panel_multipleChoice.ResumeLayout(false);
@@ -515,5 +543,7 @@
         private System.Windows.Forms.Label label_numberII;
         private System.Windows.Forms.RadioButton radioButton_choice3;
         private System.Windows.Forms.PictureBox pictureBox_message;
+        private System.Windows.Forms.Label label_correct;
+        private System.Windows.Forms.Label label_correctLabel;
     }
 }

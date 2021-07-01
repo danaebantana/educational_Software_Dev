@@ -448,6 +448,7 @@
             this.button_help.Size = new System.Drawing.Size(40, 40);
             this.button_help.TabIndex = 13;
             this.button_help.UseVisualStyleBackColor = true;
+            this.button_help.Click += new System.EventHandler(this.button_help_Click);
             // 
             // pictureBox_7
             // 

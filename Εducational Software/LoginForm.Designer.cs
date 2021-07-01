@@ -72,9 +72,9 @@
             // button_login
             // 
             this.button_login.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_login.Location = new System.Drawing.Point(149, 115);
+            this.button_login.Location = new System.Drawing.Point(17, 115);
             this.button_login.Name = "button_login";
-            this.button_login.Size = new System.Drawing.Size(135, 36);
+            this.button_login.Size = new System.Drawing.Size(267, 36);
             this.button_login.TabIndex = 3;
             this.button_login.Text = "Είσοδος";
             this.button_login.UseVisualStyleBackColor = true;
@@ -83,11 +83,11 @@
             // linkLabel_register
             // 
             this.linkLabel_register.AutoSize = true;
-            this.linkLabel_register.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel_register.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel_register.LinkColor = System.Drawing.Color.Snow;
-            this.linkLabel_register.Location = new System.Drawing.Point(29, 154);
+            this.linkLabel_register.Location = new System.Drawing.Point(13, 154);
             this.linkLabel_register.Name = "linkLabel_register";
-            this.linkLabel_register.Size = new System.Drawing.Size(301, 21);
+            this.linkLabel_register.Size = new System.Drawing.Size(321, 21);
             this.linkLabel_register.TabIndex = 4;
             this.linkLabel_register.TabStop = true;
             this.linkLabel_register.Text = "Δεν έχετε λογαριασμό; Εγγραφείτε εδώ";
@@ -116,26 +116,27 @@
             this.button_help.Size = new System.Drawing.Size(40, 40);
             this.button_help.TabIndex = 7;
             this.button_help.UseVisualStyleBackColor = true;
+            this.button_help.Click += new System.EventHandler(this.button_help_Click);
             // 
             // label_password
             // 
             this.label_password.AutoSize = true;
-            this.label_password.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_password.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_password.ForeColor = System.Drawing.Color.White;
-            this.label_password.Location = new System.Drawing.Point(68, 65);
+            this.label_password.Location = new System.Drawing.Point(60, 65);
             this.label_password.Name = "label_password";
-            this.label_password.Size = new System.Drawing.Size(75, 21);
+            this.label_password.Size = new System.Drawing.Size(83, 21);
             this.label_password.TabIndex = 6;
             this.label_password.Text = "Κωδικός:";
             // 
             // label_username
             // 
             this.label_username.AutoSize = true;
-            this.label_username.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_username.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_username.ForeColor = System.Drawing.Color.White;
-            this.label_username.Location = new System.Drawing.Point(13, 16);
+            this.label_username.Location = new System.Drawing.Point(4, 16);
             this.label_username.Name = "label_username";
-            this.label_username.Size = new System.Drawing.Size(130, 21);
+            this.label_username.Size = new System.Drawing.Size(139, 21);
             this.label_username.TabIndex = 5;
             this.label_username.Text = "Όνομα Χρήστη:";
             // 

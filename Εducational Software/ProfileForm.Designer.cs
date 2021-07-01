@@ -342,13 +342,15 @@
             // 
             // button_help
             // 
+            this.button_help.BackColor = System.Drawing.Color.Transparent;
             this.button_help.BackgroundImage = global::Εducational_Software.Properties.Resources.help;
             this.button_help.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_help.Location = new System.Drawing.Point(640, 37);
             this.button_help.Name = "button_help";
             this.button_help.Size = new System.Drawing.Size(40, 40);
             this.button_help.TabIndex = 9;
-            this.button_help.UseVisualStyleBackColor = true;
+            this.button_help.UseVisualStyleBackColor = false;
+            this.button_help.Click += new System.EventHandler(this.button_help_Click);
             // 
             // panel_details
             // 

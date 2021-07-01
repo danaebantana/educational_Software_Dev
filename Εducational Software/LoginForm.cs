@@ -46,5 +46,12 @@ namespace Εducational_Software
                 textBox_password.Clear();
             }
         }
+
+        private void button_help_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Για να μπεις στην εφαρμογή βάλε το 'Όνομα χρήστη' σου και τον 'Κωδικό' σου στα αντίστοιχα πεδία " +
+                "και πάτησε το κουμπί 'Είσοδος'. \n" +
+                "Εάν δεν έχεις λογαριασμό πάτησε το λινκ 'Δεν έχετε λογαριασμό; Εγγραφείτε εδώ'.");
+        }
     }
 }
