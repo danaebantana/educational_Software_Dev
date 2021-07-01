@@ -17,12 +17,14 @@ namespace Εducational_Software
         private AuthenticationService auth;
         private StatisticsService statisticsService;
         private int unit;
-        public TheoryForm(AuthenticationService _auth, StatisticsService _statisticsService,  int _unit)
+        private bool mandatoryTest;
+        public TheoryForm(AuthenticationService _auth, StatisticsService _statisticsService,  int _unit, bool _mandatoryTest)
         {
             InitializeComponent();
             this.auth = _auth;
             this.statisticsService = _statisticsService;
             this.unit = _unit;
+            this.mandatoryTest = _mandatoryTest;
         }
 
         private void TheoryForm_Load(object sender, EventArgs e)
@@ -34,6 +36,13 @@ namespace Εducational_Software
 
             // Keep track of the theory revision
             statisticsService.AddTheoryRevision(unit.ToString());
+
+            //If Theory page is loaded after 3 failed attempts from unitTest -> Self-assessment test has to be mandatory.
+            if (mandatoryTest)
+            {
+                backToolStripMenuItem.Visible = false;
+                backToolStripMenuItem.Enabled = false; 
+            }
         }
 
         private void Load_Unit_Theory(int unit)
@@ -77,7 +86,7 @@ namespace Εducational_Software
         private void button_test_Click(object sender, EventArgs e)
         {
             this.Hide();
-            TestForm testForm = new TestForm(auth, statisticsService, unit.ToString(), new int[]{ unit });
+            TestForm testForm = new TestForm(auth, statisticsService, unit.ToString(), new int[]{ unit }, mandatoryTest);
             testForm.ShowDialog();
             this.Close();
         }

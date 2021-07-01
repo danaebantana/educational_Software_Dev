@@ -70,7 +70,7 @@ namespace Εducational_Software
             int unit = Int32.Parse(pictureBoxName[1]);
 
             this.Hide();
-            TheoryForm theoryForm = new TheoryForm(auth, statisticsService, unit);
+            TheoryForm theoryForm = new TheoryForm(auth, statisticsService, unit, false);
             theoryForm.ShowDialog();
             this.Close();
         }
@@ -87,7 +87,7 @@ namespace Εducational_Software
         private void button_revisionTest_Click(object sender, EventArgs e)
         {
             this.Hide();
-            TestForm testForm = new TestForm(auth, statisticsService, "revision", units);
+            TestForm testForm = new TestForm(auth, statisticsService, "revision", units, false);
             testForm.ShowDialog();
             this.Close();
         }
@@ -108,7 +108,7 @@ namespace Εducational_Software
             int unit = Int32.Parse(pictureBoxName[2]);
 
             this.Hide();
-            TestForm testForm = new TestForm(auth, statisticsService, unit.ToString(), new int[] { unit });
+            TestForm testForm = new TestForm(auth, statisticsService, unit.ToString(), new int[] { unit }, false);
             testForm.ShowDialog();
             this.Close();
         }

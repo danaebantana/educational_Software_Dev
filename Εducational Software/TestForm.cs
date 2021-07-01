@@ -23,14 +23,16 @@ namespace Εducational_Software
         private List<bool> answerList;
         private int questionCount, maxNumberOfQuestions, failures = 0;
         private List<int> randomNumberMultiplier;
+        private bool mandatoryTest;
 
-        public TestForm(AuthenticationService _auth, StatisticsService _statisticsService, string _quiz_id, int[] _unit)
+        public TestForm(AuthenticationService _auth, StatisticsService _statisticsService, string _quiz_id, int[] _unit, bool _mandatoryTest)
         {
             InitializeComponent();
             this.auth = _auth;
             this.statisticsService = _statisticsService;
             this.quiz_id = _quiz_id;
             this.unit = _unit;
+            this.mandatoryTest = _mandatoryTest;
             panelQuestionList = new List<Panel>() { panel_fillTheBlank, panel_trueOrFalse, panel_multipleChoice };
             random = new Random();
             answerList = new List<bool>();
@@ -54,6 +56,11 @@ namespace Εducational_Software
             else
             {
                 pictureBox_helper.Image = (Image)Properties.Resources.ResourceManager.GetObject(unit[0].ToString());
+            }
+            if (mandatoryTest)
+            {
+                backToolStripMenuItem.Visible = false;
+                backToolStripMenuItem.Enabled = false;
             }
         }
 
@@ -162,12 +169,12 @@ namespace Εducational_Software
                         button_start.Visible = true;
                         ClearQuestions();
 
-                        // If the student fails 3 times, suggest them to revise the theory
+                        // If the student fails 3 times, suggest them to revise the theory of the unit
                         if (++failures >= 3)
                         {
-                            MessageBox.Show("Μια επανάληψη στην προπαίδεια του " + unit[0].ToString() + " θα σε βοηθήσει να τα πας καλύτερα! \n Μετά την επανάληψη δοκίμασε πάλι ένα 'Τεστ Αυτοαξιολόγησης'!");
+                            MessageBox.Show("Μια επανάληψη στην προπαίδεια του " + unit[0].ToString() + " θα σε βοηθήσει να τα πας καλύτερα! \nΜετά την επανάληψη πρέπει να ξανακάνεις ένα 'Τεστ Αυτοαξιολόγησης'!");
                             this.Hide();
-                            TheoryForm theoryForm = new TheoryForm(auth, statisticsService, unit[0]);
+                            TheoryForm theoryForm = new TheoryForm(auth, statisticsService, unit[0], true);
                             theoryForm.ShowDialog();
                             this.Close();
                         }
@@ -180,6 +187,8 @@ namespace Εducational_Software
                         button_start.Text = "ΤΕΛΟΣ";
                         button_start.BackColor = Color.BurlyWood;
                         button_start.Enabled = false;
+                        backToolStripMenuItem.Visible = true;
+                        backToolStripMenuItem.Enabled = true;
                     }
 
                     // Hide all the question panels
