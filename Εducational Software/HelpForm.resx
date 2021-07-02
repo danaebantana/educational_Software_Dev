@@ -120,30 +120,12 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="menuStrip1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="panel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="pictureBox6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="pictureBox8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Στην περίπτωση  που  κάνεις  "Τεστ Αυτοαξιολόγησης"  μίας ενότητας  και αποτύχεις στο 
+τεστ τρεις συνεχόμενες φορές θα σε  μεταφέρει αυτόματα  το  σύστημα στη  θεωρία  της 
+αντίστοιχης ενότητας για να κάνεις επανάληψη, αφού σου έχει εμφανιστεί αντίστοιχο μή-
+νυμα. </value>
+  </data>
   <data name="label8.Text" xml:space="preserve">
     <value>Ακόμη, επιλέγοντας στο μενού της αρχικής σελίδας το κουμπί "Προφίλ", μπορείς να δείς 
 τα προσωπικά σου στοιχεία καθώς και τα στατιστικά σου στοιχεία. Τα  στατιστικά στοιχεία
@@ -152,36 +134,25 @@
 θμό των επιτυχιών-αποτυχιών στα "Επαναληπτικά Τεστ" καθώς και σε ποιες ενότητες έχεις 
 πρόβλημα.</value>
   </data>
-  <metadata name="pictureBox5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="label7.Text" xml:space="preserve">
     <value>Επιπλέον, στην αρχική σελίδα μπορείς να πατήσεις το κουμπί "Επαναληπτικό Τεστ".Αυτό 
 θα σε  οδηγήσει σε παρόμοια  σελίδα  του "Τεστ Αυτοαξιολόγησης", απλά  με  ερωτήσεις
 όλων των περασμένων με επιτυχία  κεφαλαίων. Έτσι  θα μπορείς να ξαναθυμηθείς αυτά
 που έμαθες και να γίνεις καλύτερος στη προπαίδεια των μαθηματικών.</value>
   </data>
-  <metadata name="pictureBox4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Καλώς ήρθες στο "Mathster"! 
-
-Σε αυτή την εφαρμογή μπορείς να μάθεις και να κάνεις επανάληψη τη προπαίδεια των
-μαθηματικών από το 1 έως το 9.
-Μπορείς να επιλέξεις ένα από τα διαθέσιμα κεφάλαια που βρίσκονται στην  αρχική  σε-
-λίδα με  τη μορφή  ζώων.  Κάθε ζώο αντιπροσωπεύει  μία ενότητα θεωρίας,όπου δίπλα 
-του φαίνεται  ο αριθμός της ενότητας  και άρα  ποιά  προπαίδεια θα διδαχθείς. </value>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Στην αρχική σελίδα,  επιλέγοντας το κουμπί με το  ερωτηματικό δίπλα από το  ζωάκι κάθε 
+κεφαλαίου μπορείς να κάνεις κατευθείαν ένα "Τεστ Αυτοαξιολόγησης" χωρίς να  διαβά-
+σεις τη  θεωρία. Έτσι  μπορείς να  δοκιμάζεις τις γνώσεις  σου  συνεχώς σε  κάθε  ενότητα  
+που έχεις ξεκλειδώσει.</value>
   </data>
-  <metadata name="pictureBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Επιλέγοντας το "Τεστ Αυτοαξιολόγησης" και πατώντας το κουμπί "Έναρξη" ξεκινά το τεστ. 
+Πρέπει να  το ολοκληρώσεις επιτυχώς για να μπορέσεις  να πας  στην επόμενη  ενότητα 
+και να  προχωρήσεις  στο  εκπαιδευτικό παιχνίδι.  Βέβαια,  σε κάθε  στιγμή  επιλέγοντας το 
+κουμπί  "Πίσω" θα μεταφερθείς στη   αρχική σελίδα  για  να επιλέξεις  άλλο κεφάλαιο ή να  
+κάνεις άλλο "Τεστ Αυτοαξιολόγησης".</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3986,52 +3957,15 @@
         dCqxdJJQilQKgiAIgiAIo/BIRSyDXvNfz2vd/b0f/wctVWTdDlorWgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="label6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Στην αρχική σελίδα,  επιλέγοντας το κουμπί με το  ερωτηματικό δίπλα από το  ζωάκι κάθε 
-κεφαλαίου μπορείς να κάνεις κατευθείαν ένα "Τεστ Αυτοαξιολόγησης" χωρίς να  διαβά-
-σεις τη  θεωρία. Έτσι  μπορείς να  δοκιμάζεις τις γνώσεις  σου  συνεχώς σε  κάθε  ενότητα  
-που έχεις ξεκλειδώσει.</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Καλώς ήρθες στο "Mathster"! 
+
+Σε αυτή την εφαρμογή μπορείς να μάθεις και να κάνεις επανάληψη τη προπαίδεια των
+μαθηματικών από το 1 έως το 9.
+Μπορείς να επιλέξεις ένα από τα διαθέσιμα κεφάλαια που βρίσκονται στην  αρχική  σε-
+λίδα με  τη μορφή  ζώων.  Κάθε ζώο αντιπροσωπεύει  μία ενότητα θεωρίας,όπου δίπλα 
+του φαίνεται  ο αριθμός της ενότητας  και άρα  ποιά  προπαίδεια θα διδαχθείς. </value>
   </data>
-  <metadata name="label9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="label9.Text" xml:space="preserve">
-    <value>Στην περίπτωση  που  κάνεις  "Τεστ Αυτοαξιολόγησης"  μίας ενότητας  και αποτύχεις στο 
-τεστ τρεις συνεχόμενες φορές θα σε  μεταφέρει αυτόματα  το  σύστημα στη  θεωρία  της 
-αντίστοιχης ενότητας για να κάνεις επανάληψη, αφού σου έχει εμφανιστεί αντίστοιχο μή-
-νυμα. </value>
-  </data>
-  <metadata name="label5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Επιλέγοντας το "Τεστ Αυτοαξιολόγησης" και πατώντας το κουμπί "Έναρξη" ξεκινά το τεστ. 
-Πρέπει να  το ολοκληρώσεις επιτυχώς για να μπορέσεις  να πας  στην επόμενη  ενότητα 
-και να  προχωρήσεις  στο  εκπαιδευτικό παιχνίδι.  Βέβαια,  σε κάθε  στιγμή  επιλέγοντας το 
-κουμπί  "Πίσω" θα μεταφερθείς στη   αρχική σελίδα  για  να επιλέξεις  άλλο κεφάλαιο ή να  
-κάνεις άλλο "Τεστ Αυτοαξιολόγησης".</value>
-  </data>
-  <metadata name="label4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="pictureBox2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="pictureBox7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="pictureBox3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label11.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>

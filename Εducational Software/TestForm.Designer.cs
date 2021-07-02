@@ -35,6 +35,8 @@
             this.label_Test = new System.Windows.Forms.Label();
             this.panel_testForm = new System.Windows.Forms.Panel();
             this.panel_test = new System.Windows.Forms.Panel();
+            this.label_correct = new System.Windows.Forms.Label();
+            this.label_correctLabel = new System.Windows.Forms.Label();
             this.panel_trueOrFalse = new System.Windows.Forms.Panel();
             this.radioButton_false = new System.Windows.Forms.RadioButton();
             this.radioButton_true = new System.Windows.Forms.RadioButton();
@@ -63,8 +65,6 @@
             this.button_help = new System.Windows.Forms.Button();
             this.pictureBox_helper = new System.Windows.Forms.PictureBox();
             this.pictureBox_message = new System.Windows.Forms.PictureBox();
-            this.label_correctLabel = new System.Windows.Forms.Label();
-            this.label_correct = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel_testForm.SuspendLayout();
             this.panel_test.SuspendLayout();
@@ -141,6 +141,28 @@
             this.panel_test.Name = "panel_test";
             this.panel_test.Size = new System.Drawing.Size(436, 306);
             this.panel_test.TabIndex = 10;
+            // 
+            // label_correct
+            // 
+            this.label_correct.AutoSize = true;
+            this.label_correct.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_correct.Location = new System.Drawing.Point(366, 16);
+            this.label_correct.Name = "label_correct";
+            this.label_correct.Size = new System.Drawing.Size(53, 21);
+            this.label_correct.TabIndex = 11;
+            this.label_correct.Text = "10/10";
+            this.label_correct.Visible = false;
+            // 
+            // label_correctLabel
+            // 
+            this.label_correctLabel.AutoSize = true;
+            this.label_correctLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_correctLabel.Location = new System.Drawing.Point(297, 16);
+            this.label_correctLabel.Name = "label_correctLabel";
+            this.label_correctLabel.Size = new System.Drawing.Size(63, 21);
+            this.label_correctLabel.TabIndex = 10;
+            this.label_correctLabel.Text = "Σωστά:";
+            this.label_correctLabel.Visible = false;
             // 
             // panel_trueOrFalse
             // 
@@ -450,28 +472,6 @@
             this.pictureBox_message.TabIndex = 11;
             this.pictureBox_message.TabStop = false;
             // 
-            // label_correctLabel
-            // 
-            this.label_correctLabel.AutoSize = true;
-            this.label_correctLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_correctLabel.Location = new System.Drawing.Point(297, 16);
-            this.label_correctLabel.Name = "label_correctLabel";
-            this.label_correctLabel.Size = new System.Drawing.Size(63, 21);
-            this.label_correctLabel.TabIndex = 10;
-            this.label_correctLabel.Text = "Σωστά:";
-            this.label_correctLabel.Visible = false;
-            // 
-            // label_correct
-            // 
-            this.label_correct.AutoSize = true;
-            this.label_correct.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_correct.Location = new System.Drawing.Point(366, 16);
-            this.label_correct.Name = "label_correct";
-            this.label_correct.Size = new System.Drawing.Size(53, 21);
-            this.label_correct.TabIndex = 11;
-            this.label_correct.Text = "10/10";
-            this.label_correct.Visible = false;
-            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -485,6 +485,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "TestForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mathster";

@@ -37,6 +37,14 @@
             this.label_welcome = new System.Windows.Forms.Label();
             this.label_username = new System.Windows.Forms.Label();
             this.panel_units = new System.Windows.Forms.Panel();
+            this.pictureBox_problem_7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_problem_6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_problem_5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_problem_8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_problem_9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_problem_4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_problem_3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_problem_2 = new System.Windows.Forms.PictureBox();
             this.pictureBox_problem_1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox_Test_9 = new System.Windows.Forms.PictureBox();
@@ -67,16 +75,16 @@
             this.pictureBox_9 = new System.Windows.Forms.PictureBox();
             this.pictureBox_3 = new System.Windows.Forms.PictureBox();
             this.pictureBox_6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_problem_2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_problem_3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_problem_4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_problem_9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_problem_8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_problem_5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_problem_6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_problem_7 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.panel_units.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Test_9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Test_8)).BeginInit();
@@ -96,14 +104,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_7)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -217,6 +217,110 @@
             this.panel_units.Name = "panel_units";
             this.panel_units.Size = new System.Drawing.Size(668, 380);
             this.panel_units.TabIndex = 15;
+            // 
+            // pictureBox_problem_7
+            // 
+            this.pictureBox_problem_7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_problem_7.BackgroundImage = global::Εducational_Software.Properties.Resources.problem;
+            this.pictureBox_problem_7.Enabled = false;
+            this.pictureBox_problem_7.Location = new System.Drawing.Point(370, 272);
+            this.pictureBox_problem_7.Name = "pictureBox_problem_7";
+            this.pictureBox_problem_7.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox_problem_7.TabIndex = 40;
+            this.pictureBox_problem_7.TabStop = false;
+            this.pictureBox_problem_7.Visible = false;
+            this.pictureBox_problem_7.Click += new System.EventHandler(this.ReadTheory);
+            // 
+            // pictureBox_problem_6
+            // 
+            this.pictureBox_problem_6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_problem_6.BackgroundImage = global::Εducational_Software.Properties.Resources.problem;
+            this.pictureBox_problem_6.Enabled = false;
+            this.pictureBox_problem_6.Location = new System.Drawing.Point(149, 196);
+            this.pictureBox_problem_6.Name = "pictureBox_problem_6";
+            this.pictureBox_problem_6.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox_problem_6.TabIndex = 39;
+            this.pictureBox_problem_6.TabStop = false;
+            this.pictureBox_problem_6.Visible = false;
+            this.pictureBox_problem_6.Click += new System.EventHandler(this.ReadTheory);
+            // 
+            // pictureBox_problem_5
+            // 
+            this.pictureBox_problem_5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_problem_5.BackgroundImage = global::Εducational_Software.Properties.Resources.problem;
+            this.pictureBox_problem_5.Enabled = false;
+            this.pictureBox_problem_5.Location = new System.Drawing.Point(71, 170);
+            this.pictureBox_problem_5.Name = "pictureBox_problem_5";
+            this.pictureBox_problem_5.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox_problem_5.TabIndex = 38;
+            this.pictureBox_problem_5.TabStop = false;
+            this.pictureBox_problem_5.Visible = false;
+            this.pictureBox_problem_5.Click += new System.EventHandler(this.ReadTheory);
+            // 
+            // pictureBox_problem_8
+            // 
+            this.pictureBox_problem_8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_problem_8.BackgroundImage = global::Εducational_Software.Properties.Resources.problem;
+            this.pictureBox_problem_8.Enabled = false;
+            this.pictureBox_problem_8.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox_problem_8.Name = "pictureBox_problem_8";
+            this.pictureBox_problem_8.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox_problem_8.TabIndex = 37;
+            this.pictureBox_problem_8.TabStop = false;
+            this.pictureBox_problem_8.Visible = false;
+            this.pictureBox_problem_8.Click += new System.EventHandler(this.ReadTheory);
+            // 
+            // pictureBox_problem_9
+            // 
+            this.pictureBox_problem_9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_problem_9.BackgroundImage = global::Εducational_Software.Properties.Resources.problem;
+            this.pictureBox_problem_9.Enabled = false;
+            this.pictureBox_problem_9.Location = new System.Drawing.Point(171, 64);
+            this.pictureBox_problem_9.Name = "pictureBox_problem_9";
+            this.pictureBox_problem_9.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox_problem_9.TabIndex = 36;
+            this.pictureBox_problem_9.TabStop = false;
+            this.pictureBox_problem_9.Visible = false;
+            this.pictureBox_problem_9.Click += new System.EventHandler(this.ReadTheory);
+            // 
+            // pictureBox_problem_4
+            // 
+            this.pictureBox_problem_4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_problem_4.BackgroundImage = global::Εducational_Software.Properties.Resources.problem;
+            this.pictureBox_problem_4.Enabled = false;
+            this.pictureBox_problem_4.Location = new System.Drawing.Point(292, 10);
+            this.pictureBox_problem_4.Name = "pictureBox_problem_4";
+            this.pictureBox_problem_4.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox_problem_4.TabIndex = 35;
+            this.pictureBox_problem_4.TabStop = false;
+            this.pictureBox_problem_4.Visible = false;
+            this.pictureBox_problem_4.Click += new System.EventHandler(this.ReadTheory);
+            // 
+            // pictureBox_problem_3
+            // 
+            this.pictureBox_problem_3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_problem_3.BackgroundImage = global::Εducational_Software.Properties.Resources.problem;
+            this.pictureBox_problem_3.Enabled = false;
+            this.pictureBox_problem_3.Location = new System.Drawing.Point(407, 106);
+            this.pictureBox_problem_3.Name = "pictureBox_problem_3";
+            this.pictureBox_problem_3.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox_problem_3.TabIndex = 34;
+            this.pictureBox_problem_3.TabStop = false;
+            this.pictureBox_problem_3.Visible = false;
+            this.pictureBox_problem_3.Click += new System.EventHandler(this.ReadTheory);
+            // 
+            // pictureBox_problem_2
+            // 
+            this.pictureBox_problem_2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_problem_2.BackgroundImage = global::Εducational_Software.Properties.Resources.problem;
+            this.pictureBox_problem_2.Enabled = false;
+            this.pictureBox_problem_2.Location = new System.Drawing.Point(630, 3);
+            this.pictureBox_problem_2.Name = "pictureBox_problem_2";
+            this.pictureBox_problem_2.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox_problem_2.TabIndex = 33;
+            this.pictureBox_problem_2.TabStop = false;
+            this.pictureBox_problem_2.Visible = false;
+            this.pictureBox_problem_2.Click += new System.EventHandler(this.ReadTheory);
             // 
             // pictureBox_problem_1
             // 
@@ -599,110 +703,6 @@
             this.pictureBox_6.Visible = false;
             this.pictureBox_6.Click += new System.EventHandler(this.SelectUnit);
             // 
-            // pictureBox_problem_2
-            // 
-            this.pictureBox_problem_2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_problem_2.BackgroundImage = global::Εducational_Software.Properties.Resources.problem;
-            this.pictureBox_problem_2.Enabled = false;
-            this.pictureBox_problem_2.Location = new System.Drawing.Point(630, 3);
-            this.pictureBox_problem_2.Name = "pictureBox_problem_2";
-            this.pictureBox_problem_2.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox_problem_2.TabIndex = 33;
-            this.pictureBox_problem_2.TabStop = false;
-            this.pictureBox_problem_2.Visible = false;
-            this.pictureBox_problem_2.Click += new System.EventHandler(this.ReadTheory);
-            // 
-            // pictureBox_problem_3
-            // 
-            this.pictureBox_problem_3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_problem_3.BackgroundImage = global::Εducational_Software.Properties.Resources.problem;
-            this.pictureBox_problem_3.Enabled = false;
-            this.pictureBox_problem_3.Location = new System.Drawing.Point(407, 106);
-            this.pictureBox_problem_3.Name = "pictureBox_problem_3";
-            this.pictureBox_problem_3.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox_problem_3.TabIndex = 34;
-            this.pictureBox_problem_3.TabStop = false;
-            this.pictureBox_problem_3.Visible = false;
-            this.pictureBox_problem_3.Click += new System.EventHandler(this.ReadTheory);
-            // 
-            // pictureBox_problem_4
-            // 
-            this.pictureBox_problem_4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_problem_4.BackgroundImage = global::Εducational_Software.Properties.Resources.problem;
-            this.pictureBox_problem_4.Enabled = false;
-            this.pictureBox_problem_4.Location = new System.Drawing.Point(292, 10);
-            this.pictureBox_problem_4.Name = "pictureBox_problem_4";
-            this.pictureBox_problem_4.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox_problem_4.TabIndex = 35;
-            this.pictureBox_problem_4.TabStop = false;
-            this.pictureBox_problem_4.Visible = false;
-            this.pictureBox_problem_4.Click += new System.EventHandler(this.ReadTheory);
-            // 
-            // pictureBox_problem_9
-            // 
-            this.pictureBox_problem_9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_problem_9.BackgroundImage = global::Εducational_Software.Properties.Resources.problem;
-            this.pictureBox_problem_9.Enabled = false;
-            this.pictureBox_problem_9.Location = new System.Drawing.Point(171, 64);
-            this.pictureBox_problem_9.Name = "pictureBox_problem_9";
-            this.pictureBox_problem_9.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox_problem_9.TabIndex = 36;
-            this.pictureBox_problem_9.TabStop = false;
-            this.pictureBox_problem_9.Visible = false;
-            this.pictureBox_problem_9.Click += new System.EventHandler(this.ReadTheory);
-            // 
-            // pictureBox_problem_8
-            // 
-            this.pictureBox_problem_8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_problem_8.BackgroundImage = global::Εducational_Software.Properties.Resources.problem;
-            this.pictureBox_problem_8.Enabled = false;
-            this.pictureBox_problem_8.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox_problem_8.Name = "pictureBox_problem_8";
-            this.pictureBox_problem_8.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox_problem_8.TabIndex = 37;
-            this.pictureBox_problem_8.TabStop = false;
-            this.pictureBox_problem_8.Visible = false;
-            this.pictureBox_problem_8.Click += new System.EventHandler(this.ReadTheory);
-            // 
-            // pictureBox_problem_5
-            // 
-            this.pictureBox_problem_5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_problem_5.BackgroundImage = global::Εducational_Software.Properties.Resources.problem;
-            this.pictureBox_problem_5.Enabled = false;
-            this.pictureBox_problem_5.Location = new System.Drawing.Point(71, 170);
-            this.pictureBox_problem_5.Name = "pictureBox_problem_5";
-            this.pictureBox_problem_5.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox_problem_5.TabIndex = 38;
-            this.pictureBox_problem_5.TabStop = false;
-            this.pictureBox_problem_5.Visible = false;
-            this.pictureBox_problem_5.Click += new System.EventHandler(this.ReadTheory);
-            // 
-            // pictureBox_problem_6
-            // 
-            this.pictureBox_problem_6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_problem_6.BackgroundImage = global::Εducational_Software.Properties.Resources.problem;
-            this.pictureBox_problem_6.Enabled = false;
-            this.pictureBox_problem_6.Location = new System.Drawing.Point(149, 196);
-            this.pictureBox_problem_6.Name = "pictureBox_problem_6";
-            this.pictureBox_problem_6.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox_problem_6.TabIndex = 39;
-            this.pictureBox_problem_6.TabStop = false;
-            this.pictureBox_problem_6.Visible = false;
-            this.pictureBox_problem_6.Click += new System.EventHandler(this.ReadTheory);
-            // 
-            // pictureBox_problem_7
-            // 
-            this.pictureBox_problem_7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_problem_7.BackgroundImage = global::Εducational_Software.Properties.Resources.problem;
-            this.pictureBox_problem_7.Enabled = false;
-            this.pictureBox_problem_7.Location = new System.Drawing.Point(370, 272);
-            this.pictureBox_problem_7.Name = "pictureBox_problem_7";
-            this.pictureBox_problem_7.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox_problem_7.TabIndex = 40;
-            this.pictureBox_problem_7.TabStop = false;
-            this.pictureBox_problem_7.Visible = false;
-            this.pictureBox_problem_7.Click += new System.EventHandler(this.ReadTheory);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -717,6 +717,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mathster";
@@ -725,6 +726,14 @@
             this.menuStrip1.PerformLayout();
             this.panel_units.ResumeLayout(false);
             this.panel_units.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Test_9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Test_8)).EndInit();
@@ -744,14 +753,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_problem_7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
