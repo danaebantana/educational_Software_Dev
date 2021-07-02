@@ -17,18 +17,24 @@ namespace Εducational_Software
         private AuthenticationService auth;
         private StatisticsService statisticsService;
         private int[] units;
+        private ProgressService progressService;
+        private List<double> unitsTestsSuccess;
+        private List<double> unitsTestsFailure;
 
         public MainForm(AuthenticationService auth)
         {
             InitializeComponent();
             this.auth = auth;
             this.statisticsService = new StatisticsService(auth.GetUser());
+            this.progressService = new ProgressService(auth.GetUser());
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             User user = auth.GetUser();
             label_username.Text = user.GetName() + " " + user.GetSurname();
+            unitsTestsSuccess = progressService.GetUnitTestScore(true);
+            unitsTestsFailure = progressService.GetUnitTestScore(false);
             LoadUnlockedUnits();
         }
 
@@ -49,7 +55,7 @@ namespace Εducational_Software
             {
                 foreach (PictureBox pictureBox in pictureBoxUnits)
                 {
-                    if (pictureBox.Name.Contains(unit.ToString()))
+                    if (pictureBox.Name.Contains(unit.ToString()) && !pictureBox.Name.Contains("problem"))
                     {
                         pictureBox.Visible = true;
                         pictureBox.Enabled = true;
@@ -58,6 +64,19 @@ namespace Εducational_Software
                 foreach (Label label in panel_units.Controls.OfType<Label>().Where(n => n.Text.Contains(unit.ToString())))
                 {
                     label.Visible = true;
+                }
+            }  
+            foreach(int unit in progressService.GetUnlockedUnits())
+            {
+                //Unit problem
+                if(unitsTestsFailure.ElementAt(unit - 1) > unitsTestsSuccess.ElementAt(unit - 1))
+                {
+                    string pbName = "pictureBox_problem_" + unit.ToString();
+                    foreach (PictureBox pb in pictureBoxUnits.Where(p => p.Name.Equals(pbName)))
+                    {
+                        pb.Visible = true;
+                        pb.Enabled = true;
+                    }  
                 }
             }
         }
@@ -130,6 +149,20 @@ namespace Εducational_Software
                 "Εάν θες να κάνεις ένα επαναληπτικό τεστ πάνω στις ενότητες που έχεις ολοκληρώσει πάτα το κουμπί 'Επαναληπτικό Τεστ'.\n" +
                 "Τέλος για την παρουσιάση των στοιχείων σου, τη σύντομη αναφορά στη λειτουργία της εφαρμογής και για την αποσύνδεσή " +
                 "σου από την εφαρμογή επέλεξε τα αντίστοιχα κουμπιά του μενού 'Προφίλ', 'Βοήθεια' και 'Αποσύνδεση'.");
+        }
+
+        private void ReadTheory(object sender, EventArgs e)
+        {
+            PictureBox clickedPictureBox = sender as PictureBox;
+            //Get the selected unit
+            string[] pictureBoxName = clickedPictureBox.Name.Split('_');
+            int unit = Int32.Parse(pictureBoxName[2]);
+
+            MessageBox.Show("Πρέπει να κάνεις επανάληψη τη θεωρία του κεφαλαίου "+unit.ToString() +" και να κάνεις ένα 'Τεστ Αυτοαξιολόγησης'.");
+            this.Hide();
+            TheoryForm theoryForm = new TheoryForm(auth, statisticsService, unit, true);
+            theoryForm.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -343,6 +343,16 @@ namespace Εducational_Software.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap problem {
+            get {
+                object obj = ResourceManager.GetObject("problem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap profileForm {
             get {
                 object obj = ResourceManager.GetObject("profileForm", resourceCulture);
