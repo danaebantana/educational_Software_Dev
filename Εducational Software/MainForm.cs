@@ -94,6 +94,22 @@ namespace Εducational_Software
             this.Close();
         }
 
+        private void profileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ProfileForm profileForm = new ProfileForm(auth);
+            profileForm.ShowDialog();
+            this.Show();
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HelpForm helpForm = new HelpForm();
+            helpForm.ShowDialog();
+            this.Show();
+        }
+
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -111,14 +127,6 @@ namespace Εducational_Software
             this.Close();
         }
 
-        private void profileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ProfileForm profileForm = new ProfileForm(auth);
-            profileForm.ShowDialog();
-            this.Show();
-        }
-
         private void TakeUnitSelfAssessmentTest(object sender, EventArgs e)
         {
             PictureBox clickedPictureBox = sender as PictureBox;
@@ -130,14 +138,6 @@ namespace Εducational_Software
             TestForm testForm = new TestForm(auth, statisticsService, unit.ToString(), new int[] { unit }, false);
             testForm.ShowDialog();
             this.Close();
-        }
-
-        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            HelpForm helpForm = new HelpForm();
-            helpForm.ShowDialog();
-            this.Show();
         }
 
         private void button_help_Click(object sender, EventArgs e)

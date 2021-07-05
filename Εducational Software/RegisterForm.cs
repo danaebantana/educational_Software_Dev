@@ -38,8 +38,7 @@ namespace Εducational_Software
                     MessageBox.Show("Η εγγραφή έγινε με επιτυχία!");
                     this.Close();
                 } catch (UserExistsException uex) 
-                {
-                    
+                { 
                     MessageBox.Show(String.Format("Ο χρήστης με όνομα \"{0}\" υπάρχει ήδη.Επέλεξε κάτι διαφορετικό", uex.GetUsername()));
                 } catch (Exception)
                 {

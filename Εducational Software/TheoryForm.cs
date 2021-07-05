@@ -37,7 +37,8 @@ namespace Εducational_Software
             // Keep track of the theory revision
             statisticsService.AddTheoryRevision(unit.ToString());
 
-            //If Theory page is loaded after 3 failed attempts from unitTest -> Self-assessment test has to be mandatory.
+            //If Theory page is loaded after 3 failed attempts from TestForm or from pressing the problem button in MainForm 
+            //-> Self-assessment test has to be mandatory.
             if (mandatoryTest)
             {
                 backToolStripMenuItem.Visible = false;

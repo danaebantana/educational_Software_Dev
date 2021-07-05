@@ -76,6 +76,7 @@ namespace Εducational_Software
             questionCount = 1;
             label_correctLabel.Visible = false;
             label_correct.Visible = false;
+            answerList.Clear();
             GenerateQuestion(unit);
         }
 
@@ -170,7 +171,7 @@ namespace Εducational_Software
                         ClearQuestions();
 
                         // If the student fails 3 times, suggest them to revise the theory of the unit
-                        if (++failures >= 3)
+                        if (++failures >= 3 && !quiz_id.Equals("revision"))
                         {
                             MessageBox.Show("Μια επανάληψη στην προπαίδεια του " + unit[0].ToString() + " θα σε βοηθήσει να τα πας καλύτερα! \nΜετά την επανάληψη πρέπει να ξανακάνεις ένα 'Τεστ Αυτοαξιολόγησης'!");
                             this.Hide();

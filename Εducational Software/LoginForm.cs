@@ -22,14 +22,6 @@ namespace Εducational_Software
             auth = new AuthenticationService();
         }
 
-        private void linkLabel_register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            RegisterForm rf = new RegisterForm(auth);
-            rf.ShowDialog();
-            this.Show();
-        }
-
         private void button_login_Click(object sender, EventArgs e)
         {
             try
@@ -45,6 +37,14 @@ namespace Εducational_Software
                 textBox_username.Clear();
                 textBox_password.Clear();
             }
+        }
+
+        private void linkLabel_register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            RegisterForm rf = new RegisterForm(auth);
+            rf.ShowDialog();
+            this.Show();
         }
 
         private void button_help_Click(object sender, EventArgs e)
